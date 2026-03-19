@@ -107,19 +107,6 @@ DeePAW uses a **dual-graph message-passing** architecture:
 
 ---
 
-## Grid Size Guide
-
-Choose `nx/ny/nz` based on your k-point density from the DFT calculation (refer to the VASP documentation). As a general reference:
-
-| Grid | Density | Recommended Use |
-|---|---|---|
-| 32³ | Low | Quick tests |
-| 48³ | Medium | General use |
-| 56³ | High | High-precision studies |
-| 64³ | Very high | Publication-quality results |
-
-Larger grids increase CHGCAR file size and GPU memory usage proportionally.
-
 ---
 
 ## Visualization
@@ -130,7 +117,7 @@ The output CHGCAR file is compatible with standard charge density tools:
 |---|---|
 | [VESTA](https://jp-minerals.org/vesta/en/) | Open CHGCAR directly for isosurface and slice rendering |
 | [Ovito](https://www.ovito.org/) | Supports volumetric data import |
-| [Device Studio](https://iresearch.net.cn/DeviceStudio.html) | Integrated materials modeling platform; supports CHGCAR visualization |
+| Device Studio (鸿之微) | Integrated materials modeling platform; supports CHGCAR visualization |
 | Web frontend | Built-in 3D isosurface + 2D slice viewer at [deepaw.tech](https://deepaw.tech) |
 | Python / ASE | Scriptable analysis with `ase.io.vasp.VaspChargeDensity` |
 

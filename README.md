@@ -186,13 +186,17 @@ Pre-trained model weights are publicly available on Zenodo:
 If you use DeePAW in your research, please cite:
 
 ```bibtex
-@misc{deepaw2025,
-  title  = {DeePAW: Deep Learning Prediction of Electron Charge Density},
-  author = {DeePAW Team},
-  year   = {2025},
-  note   = {Model weights: \url{https://zenodo.org/records/18311602}}
+@misc{deepaw2025weights,
+  title     = {{DeePAW}: Pre-trained model weights for 3D electron density prediction},
+  author    = {DeePAW Team},
+  year      = {2025},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.18311602},
+  url       = {https://zenodo.org/records/18311602}
 }
 ```
+
+> A manuscript describing the method is in preparation. The citation will be updated with a paper DOI when available.
 
 ---
 

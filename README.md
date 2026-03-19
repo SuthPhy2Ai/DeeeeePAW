@@ -64,7 +64,7 @@ Custom grid and output path:
 ./start.sh --db your_structure.db --id 1 --device cuda --grid 56 56 56 --output ./results/CHGCAR
 ```
 
-<img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180247.png" width="600"/>
+<img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180247.png" width="100%"/>
 
 *Launching the DeePAW C++ inference engine in the container*
 

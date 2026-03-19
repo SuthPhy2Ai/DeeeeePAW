@@ -4,7 +4,7 @@ DeePAW Method
 Method Overview
 ---------------
 
-DeePAW (Deep Augmented Way) is a general-purpose machine learning method for predicting OFDFT electron density functionals and formation energies. Its name is inspired by the Projector Augmented-Wave (PAW) method. DeePAW employs an E(3)-equivariant graph neural network architecture based on the e3nn library, simultaneously predicting electron densities and formation energies through end-to-end automated representation learning.
+DeePAW (Deep Augmented Way) is a machine learning method for predicting electron density functionals. Its name is inspired by the Projector Augmented-Wave (PAW) method. DeePAW employs an E(3)-equivariant graph neural network architecture based on the e3nn library, predicting electron densities through end-to-end automated representation learning.
 
 Dual-Graph Message Passing Architecture
 ---------------------------------------
@@ -33,7 +33,7 @@ The electronic potential module operates at the level of grid points. Node embed
 
 The output head comprises three modules:
 
-- **GAT head**: Based on a Graph Attention Network (GAT), it extracts formation energies or any atom-level output quantity from the node embeddings of all layers of the atomic representation.
+- **GAT head**: Based on a Graph Attention Network (GAT), it extracts atom-level output quantities from the node embeddings of all layers of the atomic representation.
 - **MLP head**: Generates a smoothly varying electron density profile from the node embeddings of all layers of the electronic potential module.
 - **KAN head**: Based on a Kolmogorov-Arnold Network (KAN), it computes the residual electron density from the node embeddings of the final layer of the electronic potential module.
 
@@ -61,7 +61,7 @@ Training Strategy
 
 DeePAW training proceeds in two stages using the L1 loss function:
 
-- **Stage 1**: The MLP head and GAT head are jointly trained, simultaneously optimizing for electron density and formation energy.
+- **Stage 1**: The MLP head and GAT head are jointly trained, optimizing for electron density prediction.
 - **Stage 2**: The MLP head is trained with a very small learning rate while the KAN head uses a larger learning rate, implementing an adaptive PAW scheme that captures the fine structure of the residual electron density.
 
 Training data are sourced from the Materials Project (MP) database. Electron density labels are computed from KSDFT orbital wavefunctions using VASP.

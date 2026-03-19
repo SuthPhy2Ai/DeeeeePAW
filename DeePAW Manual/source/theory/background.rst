@@ -19,8 +19,6 @@ Orbital-Free Density Functional Theory
 
 Orbital-free density functional theory (Orbital-Free DFT, OFDFT) provides an alternative route that bypasses the Kohn-Sham equations entirely. Within the OFDFT framework, ground-state materials properties are expressed directly through the variational minimization of an energy functional of the electron density, without explicitly solving for orbital wavefunctions.
 
-Deep learning models for the electron density offer a promising pathway toward OFDFT-based electronic structure prediction. By learning a direct mapping from atomic structure to electron density via machine learning, it is possible to substantially reduce computational cost while retaining high accuracy.
-
 E(3) Equivariance
 -----------------
 

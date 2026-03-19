@@ -60,8 +60,7 @@ Custom grid and output path:
 
 *Launching the DeePAW C++ inference engine in the container*
 
-<details>
-<summary>Manual <code>podman run</code> (advanced)</summary>
+#### Manual `podman run` (advanced)
 
 If `start.sh` does not fit your environment, you can mount GPU devices manually. Replace `525.60.13` with your actual driver version (`cat /sys/module/nvidia/version`):
 
@@ -81,7 +80,6 @@ podman run --rm -it \
     deepaw-cpp:v1 \
     python predict_chgcar.py --db /data/your_structure.db --id 1 --device cuda
 ```
-</details>
 
 ---
 

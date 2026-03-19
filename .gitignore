@@ -8,9 +8,6 @@ archive/
 # 推理输出文件
 output/
 
-# 推理输出文件
-output/
-
 # Python 缓存
 __pycache__/
 *.pyc

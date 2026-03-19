@@ -33,15 +33,15 @@ DeePAW predicts three-dimensional electron charge density directly from atomic s
 4. Submit the job — monitor real-time GPU status
 5. Download the resulting **CHGCAR** from *My Files* (available for 3 days)
 
-![Prediction Workspace](https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180331.jpg)
+<img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180331.jpg" width="600"/>
 
 *Prediction workspace: GPU cluster status (left), file upload and task configuration (center), visualization (right)*
 
-![2D Slice Visualization](https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180338.jpg)
+<img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180338.jpg" width="600"/>
 
 *2D charge density slice along (hkl) plane*
 
-![3D Isosurface Visualization](https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180345.jpg)
+<img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180345.jpg" width="600"/>
 
 *Interactive 3D isosurface with unit cell boundary and lattice parameters*
 
@@ -63,11 +63,11 @@ Custom grid and output path:
 ./start.sh --db your_structure.db --id 1 --device cuda --grid 56 56 56 --output ./results/CHGCAR
 ```
 
-![CLI Container Launch](https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180247.png)
+<img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180247.png" width="600"/>
 
 *Launching the DeePAW C++ inference engine in the container*
 
-![CLI Prediction Running](https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180307.png)
+<img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180307.png" width="600"/>
 
 *Running charge density prediction via Python command*
 
@@ -117,7 +117,7 @@ The output CHGCAR file is compatible with standard charge density tools:
 |---|---|
 | [VESTA](https://jp-minerals.org/vesta/en/) | Open CHGCAR directly for isosurface and slice rendering |
 | [Ovito](https://www.ovito.org/) | Supports volumetric data import |
-| Device Studio (鸿之微) | Integrated materials modeling platform; supports CHGCAR visualization |
+| [Device Studio](https://hzwtech.com/Help/index.html) (鸿之微) | Integrated materials modeling platform; supports CHGCAR visualization |
 | Web frontend | Built-in 3D isosurface + 2D slice viewer at [deepaw.tech](https://deepaw.tech) |
 | Python / ASE | Scriptable analysis with `ase.io.vasp.VaspChargeDensity` |
 

@@ -151,6 +151,7 @@ The output CHGCAR file is compatible with standard charge density tools:
 |---|---|
 | [VESTA](https://jp-minerals.org/vesta/en/) | Open CHGCAR directly for isosurface and slice rendering |
 | [Ovito](https://www.ovito.org/) | Supports volumetric data import |
+| [Device Studio](https://iresearch.net.cn/DeviceStudio.html) | Integrated materials modeling platform; supports CHGCAR visualization |
 | Web frontend | Built-in 3D isosurface + 2D slice viewer at [deepaw.tech](https://deepaw.tech) |
 | Python / ASE | Scriptable analysis with `ase.io.vasp.VaspChargeDensity` |
 
@@ -183,7 +184,7 @@ Pre-trained model weights are publicly available on Zenodo:
 
 ## Citation
 
-If you use DeePAW in your research, please cite:
+If you use DeePAW in your research, please cite the Zenodo record for the model weights:
 
 ```bibtex
 @misc{deepaw2025weights,
@@ -197,6 +198,7 @@ If you use DeePAW in your research, please cite:
 ```
 
 > A manuscript describing the method is in preparation. The citation will be updated with a paper DOI when available.
+> For citation inquiries or collaboration, contact: **thsu0407@gmail.com**
 
 ---
 

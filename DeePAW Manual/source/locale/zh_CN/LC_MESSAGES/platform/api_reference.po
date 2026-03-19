@@ -1,0 +1,555 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024-2026, DeePAW Team
+# This file is distributed under the same license as the DeePAW package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DeePAW \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 23:20+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../platform/api_reference.rst:2
+msgid "API Reference"
+msgstr ""
+
+#: ../../platform/api_reference.rst:5
+msgid "Authentication"
+msgstr ""
+
+#: ../../platform/api_reference.rst:11
+#: ../../platform/api_reference.rst:101
+#: ../../platform/api_reference.rst:190
+#: ../../platform/api_reference.rst:303
+#: ../../platform/api_reference.rst:331
+msgid "Endpoint"
+msgstr ""
+
+#: ../../platform/api_reference.rst:12
+#: ../../platform/api_reference.rst:102
+#: ../../platform/api_reference.rst:191
+#: ../../platform/api_reference.rst:304
+#: ../../platform/api_reference.rst:332
+msgid "Method"
+msgstr ""
+
+#: ../../platform/api_reference.rst:13
+#: ../../platform/api_reference.rst:103
+#: ../../platform/api_reference.rst:192
+#: ../../platform/api_reference.rst:305
+#: ../../platform/api_reference.rst:333
+msgid "Auth"
+msgstr ""
+
+#: ../../platform/api_reference.rst:14
+#: ../../platform/api_reference.rst:104
+#: ../../platform/api_reference.rst:131
+#: ../../platform/api_reference.rst:193
+#: ../../platform/api_reference.rst:306
+#: ../../platform/api_reference.rst:334
+msgid "Description"
+msgstr ""
+
+#: ../../platform/api_reference.rst:15
+msgid "``/api/auth/register-with-code``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:16
+#: ../../platform/api_reference.rst:20
+#: ../../platform/api_reference.rst:28
+#: ../../platform/api_reference.rst:32
+#: ../../platform/api_reference.rst:110
+#: ../../platform/api_reference.rst:114
+#: ../../platform/api_reference.rst:195
+#: ../../platform/api_reference.rst:316
+msgid "POST"
+msgstr ""
+
+#: ../../platform/api_reference.rst:17
+#: ../../platform/api_reference.rst:21
+#: ../../platform/api_reference.rst:29
+#: ../../platform/api_reference.rst:33
+#: ../../platform/api_reference.rst:107
+#: ../../platform/api_reference.rst:321
+#: ../../platform/api_reference.rst:337
+#: ../../platform/api_reference.rst:341
+#: ../../platform/api_reference.rst:345
+#: ../../platform/api_reference.rst:349
+msgid "No"
+msgstr ""
+
+#: ../../platform/api_reference.rst:18
+msgid "Register a new user (invitation code required)"
+msgstr ""
+
+#: ../../platform/api_reference.rst:19
+msgid "``/api/auth/login``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:22
+msgid "User login, returns JWT token"
+msgstr ""
+
+#: ../../platform/api_reference.rst:23
+msgid "``/api/auth/profile``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:24
+#: ../../platform/api_reference.rst:106
+#: ../../platform/api_reference.rst:199
+#: ../../platform/api_reference.rst:203
+#: ../../platform/api_reference.rst:207
+#: ../../platform/api_reference.rst:211
+#: ../../platform/api_reference.rst:308
+#: ../../platform/api_reference.rst:312
+#: ../../platform/api_reference.rst:320
+#: ../../platform/api_reference.rst:336
+#: ../../platform/api_reference.rst:340
+#: ../../platform/api_reference.rst:344
+#: ../../platform/api_reference.rst:348
+msgid "GET"
+msgstr ""
+
+#: ../../platform/api_reference.rst:25
+#: ../../platform/api_reference.rst:111
+#: ../../platform/api_reference.rst:115
+#: ../../platform/api_reference.rst:134
+#: ../../platform/api_reference.rst:138
+#: ../../platform/api_reference.rst:142
+#: ../../platform/api_reference.rst:146
+#: ../../platform/api_reference.rst:196
+#: ../../platform/api_reference.rst:200
+#: ../../platform/api_reference.rst:204
+#: ../../platform/api_reference.rst:208
+#: ../../platform/api_reference.rst:212
+#: ../../platform/api_reference.rst:309
+#: ../../platform/api_reference.rst:313
+#: ../../platform/api_reference.rst:317
+msgid "Yes"
+msgstr ""
+
+#: ../../platform/api_reference.rst:26
+msgid "Retrieve current user information"
+msgstr ""
+
+#: ../../platform/api_reference.rst:27
+msgid "``/api/auth/send-reset-code``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:30
+msgid "Send password reset verification code"
+msgstr ""
+
+#: ../../platform/api_reference.rst:31
+msgid "``/api/auth/reset-password``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:34
+msgid "Reset password using verification code"
+msgstr ""
+
+#: ../../platform/api_reference.rst:37
+msgid "POST /api/auth/register-with-code"
+msgstr ""
+
+#: ../../platform/api_reference.rst:39
+#: ../../platform/api_reference.rst:53
+#: ../../platform/api_reference.rst:75
+#: ../../platform/api_reference.rst:84
+#: ../../platform/api_reference.rst:218
+msgid "Request body:"
+msgstr ""
+
+#: ../../platform/api_reference.rst:51
+msgid "POST /api/auth/login"
+msgstr ""
+
+#: ../../platform/api_reference.rst:59
+#: ../../platform/api_reference.rst:162
+#: ../../platform/api_reference.rst:230
+#: ../../platform/api_reference.rst:244
+#: ../../platform/api_reference.rst:265
+#: ../../platform/api_reference.rst:355
+msgid "Response:"
+msgstr ""
+
+#: ../../platform/api_reference.rst:73
+msgid "POST /api/auth/send-reset-code"
+msgstr ""
+
+#: ../../platform/api_reference.rst:82
+msgid "POST /api/auth/reset-password"
+msgstr ""
+
+#: ../../platform/api_reference.rst:95
+msgid "File Upload"
+msgstr ""
+
+#: ../../platform/api_reference.rst:105
+msgid "``/api/files/supported-formats``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:108
+msgid "Query supported file formats"
+msgstr ""
+
+#: ../../platform/api_reference.rst:109
+msgid "``/api/files/upload-structures``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:112
+msgid "Upload and convert structure files"
+msgstr ""
+
+#: ../../platform/api_reference.rst:113
+msgid "``/api/files/upload``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:116
+msgid "Upload a .db file (legacy interface)"
+msgstr ""
+
+#: ../../platform/api_reference.rst:119
+msgid "POST /api/files/upload-structures"
+msgstr ""
+
+#: ../../platform/api_reference.rst:121
+msgid "Upload a structure file and automatically convert it to an ASE database."
+msgstr ""
+
+#: ../../platform/api_reference.rst:123
+msgid "Parameters (multipart/form-data):"
+msgstr ""
+
+#: ../../platform/api_reference.rst:128
+msgid "Parameter"
+msgstr ""
+
+#: ../../platform/api_reference.rst:129
+msgid "Type"
+msgstr ""
+
+#: ../../platform/api_reference.rst:130
+msgid "Required"
+msgstr ""
+
+#: ../../platform/api_reference.rst:132
+msgid "``file``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:133
+msgid "File"
+msgstr ""
+
+#: ../../platform/api_reference.rst:135
+msgid "Structure file (CIF, VASP, XYZ, etc.)"
+msgstr ""
+
+#: ../../platform/api_reference.rst:136
+msgid "``nx``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:137
+#: ../../platform/api_reference.rst:141
+#: ../../platform/api_reference.rst:145
+msgid "int"
+msgstr ""
+
+#: ../../platform/api_reference.rst:139
+msgid "Number of grid points in the X direction"
+msgstr ""
+
+#: ../../platform/api_reference.rst:140
+msgid "``ny``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:143
+msgid "Number of grid points in the Y direction"
+msgstr ""
+
+#: ../../platform/api_reference.rst:144
+msgid "``nz``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:147
+msgid "Number of grid points in the Z direction"
+msgstr ""
+
+#: ../../platform/api_reference.rst:149
+msgid "Supported single-file formats: CIF, VASP (.vasp/.poscar/.contcar), XYZ, PDB, MOL, SDF, JSON, TRAJ, DB"
+msgstr ""
+
+#: ../../platform/api_reference.rst:151
+msgid "Supported archive formats: ZIP, TAR, TAR.GZ / TGZ"
+msgstr ""
+
+#: ../../platform/api_reference.rst:153
+msgid "Example:"
+msgstr ""
+
+#: ../../platform/api_reference.rst:181
+msgid "Each upload generates a unique database filename with a timestamp to prevent data conflicts caused by overwriting files with the same name."
+msgstr ""
+
+#: ../../platform/api_reference.rst:184
+msgid "Prediction Tasks"
+msgstr ""
+
+#: ../../platform/api_reference.rst:194
+msgid "``/api/predictions/batch``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:197
+msgid "Submit a batch prediction job"
+msgstr ""
+
+#: ../../platform/api_reference.rst:198
+msgid "``/api/predictions/batch/{batch_id}``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:201
+msgid "Query batch status"
+msgstr ""
+
+#: ../../platform/api_reference.rst:202
+msgid "``/api/predictions/result/{task_id}``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:205
+msgid "Retrieve results in JSON format"
+msgstr ""
+
+#: ../../platform/api_reference.rst:206
+msgid "``/api/predictions/download/{task_id}``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:209
+msgid "Download CHGCAR file"
+msgstr ""
+
+#: ../../platform/api_reference.rst:210
+msgid "``/api/predictions/slice/{task_id}``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:213
+msgid "Retrieve 2D slice data"
+msgstr ""
+
+#: ../../platform/api_reference.rst:216
+msgid "POST /api/predictions/batch"
+msgstr ""
+
+#: ../../platform/api_reference.rst:228
+msgid "``db_path`` is optional; if omitted, the system default database is used."
+msgstr ""
+
+#: ../../platform/api_reference.rst:242
+msgid "GET /api/predictions/batch/{batch_id}"
+msgstr ""
+
+#: ../../platform/api_reference.rst:263
+msgid "GET /api/predictions/result/{task_id}"
+msgstr ""
+
+#: ../../platform/api_reference.rst:286
+msgid "``gridDimensions`` is determined by the nx/ny/nz values stored in the database; different structures may return different grid sizes."
+msgstr ""
+
+#: ../../platform/api_reference.rst:289
+msgid "GET /api/predictions/slice/{task_id}"
+msgstr ""
+
+#: ../../platform/api_reference.rst:291
+msgid "Query parameters:"
+msgstr ""
+
+#: ../../platform/api_reference.rst:293
+msgid "``h`` / ``k`` / ``l`` (int): Miller indices, default (1,0,0)"
+msgstr ""
+
+#: ../../platform/api_reference.rst:294
+msgid "``distance`` (float): Distance along the normal direction, default 0.0"
+msgstr ""
+
+#: ../../platform/api_reference.rst:297
+msgid "User Management"
+msgstr ""
+
+#: ../../platform/api_reference.rst:307
+msgid "``/api/user/files``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:310
+msgid "Retrieve the list of files uploaded by the user"
+msgstr ""
+
+#: ../../platform/api_reference.rst:311
+msgid "``/api/user/predictions``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:314
+msgid "Retrieve user prediction history"
+msgstr ""
+
+#: ../../platform/api_reference.rst:315
+msgid "``/api/database/parse``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:318
+msgid "Parse an uploaded database file"
+msgstr ""
+
+#: ../../platform/api_reference.rst:319
+msgid "``/api/database/load-demo``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:322
+msgid "Load the demo database"
+msgstr ""
+
+#: ../../platform/api_reference.rst:325
+msgid "System Status"
+msgstr ""
+
+#: ../../platform/api_reference.rst:335
+msgid "``/api/tasks/system/status``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:338
+msgid "GPU status and task statistics"
+msgstr ""
+
+#: ../../platform/api_reference.rst:339
+msgid "``/health``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:342
+msgid "Health check"
+msgstr ""
+
+#: ../../platform/api_reference.rst:343
+msgid "``/api/docs``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:346
+msgid "Swagger interactive documentation"
+msgstr ""
+
+#: ../../platform/api_reference.rst:347
+msgid "``/api/redoc``"
+msgstr ""
+
+#: ../../platform/api_reference.rst:350
+msgid "ReDoc documentation"
+msgstr ""
+
+#: ../../platform/api_reference.rst:353
+msgid "GET /api/tasks/system/status"
+msgstr ""
+
+#: ../../platform/api_reference.rst:381
+msgid "HTTP Status Codes"
+msgstr ""
+
+#: ../../platform/api_reference.rst:386
+msgid "Status Code"
+msgstr ""
+
+#: ../../platform/api_reference.rst:387
+msgid "Meaning"
+msgstr ""
+
+#: ../../platform/api_reference.rst:388
+msgid "Action"
+msgstr ""
+
+#: ../../platform/api_reference.rst:389
+msgid "200"
+msgstr ""
+
+#: ../../platform/api_reference.rst:390
+msgid "Success"
+msgstr ""
+
+#: ../../platform/api_reference.rst:391
+msgid "Handle normally"
+msgstr ""
+
+#: ../../platform/api_reference.rst:392
+msgid "400"
+msgstr ""
+
+#: ../../platform/api_reference.rst:393
+msgid "Bad request"
+msgstr ""
+
+#: ../../platform/api_reference.rst:394
+msgid "Check request parameters"
+msgstr ""
+
+#: ../../platform/api_reference.rst:395
+msgid "401"
+msgstr ""
+
+#: ../../platform/api_reference.rst:396
+msgid "Unauthorized"
+msgstr ""
+
+#: ../../platform/api_reference.rst:397
+msgid "Check if token is valid"
+msgstr ""
+
+#: ../../platform/api_reference.rst:398
+msgid "404"
+msgstr ""
+
+#: ../../platform/api_reference.rst:399
+msgid "Not found"
+msgstr ""
+
+#: ../../platform/api_reference.rst:400
+msgid "Check if ID is correct"
+msgstr ""
+
+#: ../../platform/api_reference.rst:401
+msgid "422"
+msgstr ""
+
+#: ../../platform/api_reference.rst:402
+msgid "Validation error"
+msgstr ""
+
+#: ../../platform/api_reference.rst:403
+msgid "Check parameter format (e.g. missing required nx/ny/nz)"
+msgstr ""
+
+#: ../../platform/api_reference.rst:404
+msgid "500"
+msgstr ""
+
+#: ../../platform/api_reference.rst:405
+msgid "Server error"
+msgstr ""
+
+#: ../../platform/api_reference.rst:406
+msgid "Check backend logs"
+msgstr ""
+
+#: ../../platform/api_reference.rst:407
+msgid "503"
+msgstr ""
+
+#: ../../platform/api_reference.rst:408
+msgid "Service unavailable"
+msgstr ""
+
+#: ../../platform/api_reference.rst:409
+msgid "ML component not loaded or converter unavailable"
+msgstr ""

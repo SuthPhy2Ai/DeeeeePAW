@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024-2026, DeePAW Team
+# This file is distributed under the same license as the DeePAW package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DeePAW \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 23:20+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../platform/faq.rst:2
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: ../../platform/faq.rst:5
+msgid "How to choose grid dimensions nx/ny/nz?"
+msgstr ""
+
+#: ../../platform/faq.rst:7
+msgid "The grid dimensions nx/ny/nz should be determined based on the k-point density used in your first-principles calculation. Refer to the relevant VASP documentation for guidance on selecting appropriate grid dimensions."
+msgstr ""
+
+#: ../../platform/faq.rst:9
+msgid "Larger grids produce larger CHGCAR files and consume more GPU VRAM."
+msgstr ""
+
+#: ../../platform/faq.rst:12
+msgid "Are nx/ny/nz required when uploading files?"
+msgstr ""
+
+#: ../../platform/faq.rst:14
+msgid "Yes. The ``/api/files/upload-structures`` endpoint requires ``nx``, ``ny``, and ``nz`` to be specified explicitly. No default values are provided, in order to prevent users from inadvertently using an unsuitable grid size."
+msgstr ""
+
+#: ../../platform/faq.rst:17
+msgid "If you upload a ``.db`` file directly (``/api/files/upload``), the grid settings already stored in the database are used."
+msgstr ""
+
+#: ../../platform/faq.rst:20
+msgid "How to troubleshoot failed predictions?"
+msgstr ""
+
+#: ../../platform/faq.rst:22
+msgid "Query the batch status to identify which tasks have failed"
+msgstr ""
+
+#: ../../platform/faq.rst:23
+msgid "Inspect the backend log: ``tail -f /tmp/deepaw_backend.log``"
+msgstr ""
+
+#: ../../platform/faq.rst:24
+msgid "Check GPU status: ``curl http://localhost:8080/api/tasks/system/status``"
+msgstr ""
+
+#: ../../platform/faq.rst:27
+msgid "Are molecular structures supported?"
+msgstr ""
+
+#: ../../platform/faq.rst:29
+msgid "Yes. When using the local CLI deployment, periodic boundary conditions must be disabled. When using the online version (deepaw.tech), setting periodic boundary conditions is not supported by default."
+msgstr ""
+
+#: ../../platform/faq.rst:32
+msgid "How to visualize CHGCAR files?"
+msgstr ""
+
+#: ../../platform/faq.rst:34
+msgid "**VESTA** (free): open the CHGCAR file directly"
+msgstr ""
+
+#: ../../platform/faq.rst:35
+msgid "**Ovito**: supports isosurface rendering"
+msgstr ""
+
+#: ../../platform/faq.rst:36
+msgid "**Web Frontend**: built-in Plotly 3D isosurface visualization"
+msgstr ""
+
+#: ../../platform/faq.rst:37
+msgid "**Python**: plot manually using ASE + Plotly"
+msgstr ""
+
+#: ../../platform/faq.rst:40
+msgid "What to do if GPU VRAM is insufficient?"
+msgstr ""
+
+#: ../../platform/faq.rst:42
+msgid "Reduce the grid dimensions (e.g., from 64³ to 48³)"
+msgstr ""
+
+#: ../../platform/faq.rst:43
+msgid "Reduce the number of GPUs used simultaneously: ``export DEEPAW_GPUS=\"1,2\"``"
+msgstr ""
+
+#: ../../platform/faq.rst:44
+msgid "Check whether other processes are consuming VRAM: ``nvidia-smi``"
+msgstr ""
+
+#: ../../platform/faq.rst:47
+msgid "What is the difference between the two upload methods?"
+msgstr ""
+
+#: ../../platform/faq.rst:52
+msgid "Feature"
+msgstr ""
+
+#: ../../platform/faq.rst:53
+msgid "upload-structures"
+msgstr ""
+
+#: ../../platform/faq.rst:54
+msgid "upload"
+msgstr ""
+
+#: ../../platform/faq.rst:55
+msgid "Supported formats"
+msgstr ""
+
+#: ../../platform/faq.rst:56
+msgid "15 formats"
+msgstr ""
+
+#: ../../platform/faq.rst:57
+msgid ".db only"
+msgstr ""
+
+#: ../../platform/faq.rst:58
+msgid "Format conversion"
+msgstr ""
+
+#: ../../platform/faq.rst:59
+msgid "Automatic"
+msgstr ""
+
+#: ../../platform/faq.rst:60
+msgid "Not required"
+msgstr ""
+
+#: ../../platform/faq.rst:61
+msgid "Grid dimensions"
+msgstr ""
+
+#: ../../platform/faq.rst:62
+msgid "Required parameter"
+msgstr ""
+
+#: ../../platform/faq.rst:63
+msgid "Uses existing database settings"
+msgstr ""
+
+#: ../../platform/faq.rst:64
+msgid "Archive"
+msgstr ""
+
+#: ../../platform/faq.rst:65
+msgid "Supported"
+msgstr ""
+
+#: ../../platform/faq.rst:66
+msgid "Not supported"
+msgstr ""

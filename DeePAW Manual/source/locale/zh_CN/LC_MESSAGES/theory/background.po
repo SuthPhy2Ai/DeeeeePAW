@@ -1,0 +1,97 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024-2026, DeePAW Team
+# This file is distributed under the same license as the DeePAW package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DeePAW \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 23:20+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../theory/background.rst:2
+msgid "Scientific Background"
+msgstr ""
+
+#: ../../theory/background.rst:5
+msgid "Electron Density and Density Functional Theory"
+msgstr ""
+
+#: ../../theory/background.rst:7
+msgid "The electron density is one of the most fundamental physical quantities in condensed matter physics and materials science. According to the Hohenberg-Kohn theorem, the ground-state electron density uniquely determines all ground-state properties of a many-electron system, including the total energy, forces, stress tensor, and related observables."
+msgstr ""
+
+#: ../../theory/background.rst:9
+msgid "Traditionally, obtaining an accurate electron density distribution requires self-consistent field iterations within Kohn-Sham density functional theory (KSDFT). KSDFT obtains orbital wavefunctions by solving the single-particle Kohn-Sham equations, from which the electron density is constructed:"
+msgstr ""
+
+#: ../../theory/background.rst:11
+msgid "n(\\mathbf{r}) = \\sum_i f_i |\\psi_i(\\mathbf{r})|^2"
+msgstr ""
+
+#: ../../theory/background.rst:15
+msgid "where :math:`\\psi_i` are the Kohn-Sham orbitals and :math:`f_i` are the corresponding occupation numbers. The computational complexity of this procedure scales steeply with system size, limiting its applicability to large-scale materials screening."
+msgstr ""
+
+#: ../../theory/background.rst:18
+msgid "Orbital-Free Density Functional Theory"
+msgstr ""
+
+#: ../../theory/background.rst:20
+msgid "Orbital-free density functional theory (Orbital-Free DFT, OFDFT) provides an alternative route that bypasses the Kohn-Sham equations entirely. Within the OFDFT framework, ground-state materials properties are expressed directly through the variational minimization of an energy functional of the electron density, without explicitly solving for orbital wavefunctions."
+msgstr ""
+
+#: ../../theory/background.rst:23
+msgid "E(3) Equivariance"
+msgstr ""
+
+#: ../../theory/background.rst:25
+msgid "The electron density of a physical system must satisfy the symmetry constraints of the three-dimensional Euclidean group E(3), remaining equivariant under rotations, translations, and inversion:"
+msgstr ""
+
+#: ../../theory/background.rst:27
+msgid "**Translation equivariance**: A global translation of the atomic structure results in an identical translation of the electron density field."
+msgstr ""
+
+#: ../../theory/background.rst:28
+msgid "**Rotation equivariance**: A rotation of the atomic structure induces the same rotation in the electron density field."
+msgstr ""
+
+#: ../../theory/background.rst:29
+msgid "**Inversion equivariance**: Spatial inversion of the atomic structure produces a corresponding inversion of the electron density field."
+msgstr ""
+
+#: ../../theory/background.rst:31
+msgid "Embedding E(3) equivariance as a hard constraint into the neural network architecture significantly improves data efficiency and generalization, ensuring that predicted electron densities are physically consistent by construction."
+msgstr ""
+
+#: ../../theory/background.rst:34
+msgid "Message Passing Neural Networks"
+msgstr ""
+
+#: ../../theory/background.rst:36
+msgid "Message passing neural networks (MPNNs), a class of graph neural networks (GNNs), are a natural framework for processing atomic structure data. Within the MPNN formalism:"
+msgstr ""
+
+#: ../../theory/background.rst:38
+msgid "Atoms are represented as nodes of a graph, carrying features such as element type."
+msgstr ""
+
+#: ../../theory/background.rst:39
+msgid "Chemical bonds or nearest-neighbor relationships between atoms are represented as edges of the graph."
+msgstr ""
+
+#: ../../theory/background.rst:40
+msgid "Through multiple rounds of message passing, each atom aggregates information from its neighbors, progressively building a representation of its local chemical environment."
+msgstr ""
+
+#: ../../theory/background.rst:42
+msgid "This mechanism is naturally suited to describing interatomic interactions in materials and can handle crystal structures of arbitrary size and composition."
+msgstr ""

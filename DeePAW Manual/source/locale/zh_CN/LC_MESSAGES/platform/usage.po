@@ -1,0 +1,189 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024-2026, DeePAW Team
+# This file is distributed under the same license as the DeePAW package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DeePAW \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 23:20+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../platform/usage.rst:2
+msgid "Usage Guide"
+msgstr ""
+
+#: ../../platform/usage.rst:5
+msgid "Authentication"
+msgstr ""
+
+#: ../../platform/usage.rst:7
+msgid "All API requests (except login, register, and health check) require a JWT token in the request header:"
+msgstr ""
+
+#: ../../platform/usage.rst:13
+msgid "Tokens are valid for 24 hours."
+msgstr ""
+
+#: ../../platform/usage.rst:16
+msgid "Register Account"
+msgstr ""
+
+#: ../../platform/usage.rst:18
+msgid "Register using an invitation code:"
+msgstr ""
+
+#: ../../platform/usage.rst:32
+msgid "Login and Obtain Token"
+msgstr ""
+
+#: ../../platform/usage.rst:40
+msgid "``data.access_token`` in the response is the JWT token required for subsequent requests."
+msgstr ""
+
+#: ../../platform/usage.rst:43
+msgid "Complete Workflow"
+msgstr ""
+
+#: ../../platform/usage.rst:45
+msgid "The typical workflow is: upload structure file → submit prediction → poll status → download results."
+msgstr ""
+
+#: ../../platform/usage.rst:48
+msgid "Step 1: Upload Structure Files"
+msgstr ""
+
+#: ../../platform/usage.rst:50
+msgid "Supports CIF, VASP (POSCAR/CONTCAR), XYZ, PDB, MOL, SDF, JSON, TRAJ, DB formats, as well as ZIP / TAR / TAR.GZ archives."
+msgstr ""
+
+#: ../../platform/usage.rst:62
+msgid "``nx``, ``ny``, ``nz`` are required parameters that specify the three-dimensional grid dimensions for charge density prediction. Grid size directly affects prediction accuracy and computation time; choose appropriate values based on the actual structure."
+msgstr ""
+
+#: ../../platform/usage.rst:66
+msgid "Grid Size Reference:"
+msgstr ""
+
+#: ../../platform/usage.rst:71
+msgid "Grid Size"
+msgstr ""
+
+#: ../../platform/usage.rst:72
+msgid "Accuracy"
+msgstr ""
+
+#: ../../platform/usage.rst:73
+msgid "Recommended Use"
+msgstr ""
+
+#: ../../platform/usage.rst:74
+msgid "32\\ :sup:`3`"
+msgstr ""
+
+#: ../../platform/usage.rst:75
+msgid "Low"
+msgstr ""
+
+#: ../../platform/usage.rst:76
+msgid "Quick test"
+msgstr ""
+
+#: ../../platform/usage.rst:77
+msgid "48\\ :sup:`3`"
+msgstr ""
+
+#: ../../platform/usage.rst:78
+msgid "Medium"
+msgstr ""
+
+#: ../../platform/usage.rst:79
+msgid "General use"
+msgstr ""
+
+#: ../../platform/usage.rst:80
+msgid "56\\ :sup:`3`"
+msgstr ""
+
+#: ../../platform/usage.rst:81
+msgid "High"
+msgstr ""
+
+#: ../../platform/usage.rst:82
+msgid "High precision"
+msgstr ""
+
+#: ../../platform/usage.rst:83
+msgid "64\\ :sup:`3`"
+msgstr ""
+
+#: ../../platform/usage.rst:84
+msgid "Very High"
+msgstr ""
+
+#: ../../platform/usage.rst:85
+msgid "Publication quality"
+msgstr ""
+
+#: ../../platform/usage.rst:88
+msgid "Step 2: Submit Batch Prediction"
+msgstr ""
+
+#: ../../platform/usage.rst:98
+msgid "Step 3: Check Progress"
+msgstr ""
+
+#: ../../platform/usage.rst:105
+msgid "Batch status values:"
+msgstr ""
+
+#: ../../platform/usage.rst:107
+msgid "``processing``: Job in progress"
+msgstr ""
+
+#: ../../platform/usage.rst:108
+msgid "``completed``: All tasks finished"
+msgstr ""
+
+#: ../../platform/usage.rst:109
+msgid "``failed``: All tasks failed"
+msgstr ""
+
+#: ../../platform/usage.rst:112
+msgid "Step 4: Download Results"
+msgstr ""
+
+#: ../../platform/usage.rst:114
+msgid "**Download CHGCAR file:**"
+msgstr ""
+
+#: ../../platform/usage.rst:122
+msgid "**Retrieve results in JSON format:**"
+msgstr ""
+
+#: ../../platform/usage.rst:129
+msgid "The JSON response contains ``gridDimensions`` (grid dimensions) and ``densityArray`` (flattened 3D density array)."
+msgstr ""
+
+#: ../../platform/usage.rst:132
+msgid "Python Client"
+msgstr ""
+
+#: ../../platform/usage.rst:178
+msgid "Visualize Results"
+msgstr ""
+
+#: ../../platform/usage.rst:180
+msgid "**VESTA (recommended):**"
+msgstr ""
+
+#: ../../platform/usage.rst:186
+msgid "**Python + ASE verification:**"
+msgstr ""

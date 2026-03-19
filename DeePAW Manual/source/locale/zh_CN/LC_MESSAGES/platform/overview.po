@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024-2026, DeePAW Team
+# This file is distributed under the same license as the DeePAW package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DeePAW \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 23:20+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../platform/overview.rst:2
+msgid "Platform Overview"
+msgstr ""
+
+#: ../../platform/overview.rst:4
+msgid "DeePAW is an online inference service platform for the DeePAW method, offering both a web interface and a RESTful API. It is designed to provide materials science researchers with efficient, high-throughput charge density calculation services."
+msgstr ""
+
+#: ../../platform/overview.rst:7
+msgid "Core Features"
+msgstr ""
+
+#: ../../platform/overview.rst:9
+msgid "**Batch charge density prediction**: Predicts three-dimensional charge density distributions from atomic structure files"
+msgstr ""
+
+#: ../../platform/overview.rst:10
+msgid "**Multi-format file support**: Supports 15 structure file formats including CIF, VASP, XYZ, and PDB"
+msgstr ""
+
+#: ../../platform/overview.rst:11
+msgid "**Multi-GPU parallel scheduling**: Built-in priority queue and GPU task scheduler supporting concurrent multi-task execution"
+msgstr ""
+
+#: ../../platform/overview.rst:12
+msgid "**RESTful API**: Comprehensive programmatic access interface for seamless integration into automated workflows"
+msgstr ""
+
+#: ../../platform/overview.rst:13
+msgid "**CHGCAR output**: VASP-compatible format, directly visualizable with tools such as VESTA and Ovito"
+msgstr ""
+
+#: ../../platform/overview.rst:14
+msgid "**Real-time progress tracking**: Live task status updates delivered via WebSocket"
+msgstr ""
+
+#: ../../platform/overview.rst:15
+msgid "**Web frontend**: React-based interactive interface with 3D isosurface visualization"
+msgstr ""
+
+#: ../../platform/overview.rst:16
+msgid "**Model warm-start**: GPU model caching mechanism that keeps the model resident in VRAM after the first inference, eliminating repeated loading overhead for subsequent tasks"
+msgstr ""
+
+#: ../../platform/overview.rst:19
+msgid "Technology Stack"
+msgstr ""
+
+#: ../../platform/overview.rst:21
+msgid "**Frontend**: React 19 + TypeScript + Vite + Plotly.js"
+msgstr ""
+
+#: ../../platform/overview.rst:22
+msgid "**Backend**: FastAPI + Uvicorn (ASGI)"
+msgstr ""
+
+#: ../../platform/overview.rst:23
+msgid "**Inference**: PyTorch + E3NN + ASE"
+msgstr ""
+
+#: ../../platform/overview.rst:24
+msgid "**Data format**: Multiple formats -> ASE Database -> CHGCAR (VASP)"
+msgstr ""
+
+#: ../../platform/overview.rst:27
+msgid "System Architecture"
+msgstr ""
+
+#: ../../platform/overview.rst:41
+msgid "GPU Task Scheduling"
+msgstr ""
+
+#: ../../platform/overview.rst:43
+msgid "One worker thread per GPU, with exclusive access enforced via ``threading.Lock``"
+msgstr ""
+
+#: ../../platform/overview.rst:44
+msgid "Tasks are processed in order of a priority queue (PriorityQueue)"
+msgstr ""
+
+#: ../../platform/overview.rst:45
+msgid "Model caching: the first task loads the model into GPU VRAM (~5-10 s); subsequent tasks reuse the cached instance (<0.1 s overhead)"
+msgstr ""
+
+#: ../../platform/overview.rst:46
+msgid "One model instance cached per GPU, occupying approximately 2-4 GB of VRAM"
+msgstr ""
+
+#: ../../platform/overview.rst:49
+msgid "System Requirements"
+msgstr ""
+
+#: ../../platform/overview.rst:52
+msgid "Server Side"
+msgstr ""
+
+#: ../../platform/overview.rst:54
+msgid "Python 3.10+"
+msgstr ""
+
+#: ../../platform/overview.rst:55
+msgid "CUDA 11.8+ / 12.x"
+msgstr ""
+
+#: ../../platform/overview.rst:56
+msgid "GPU: 8 GB+ VRAM (16 GB+ recommended)"
+msgstr ""
+
+#: ../../platform/overview.rst:57
+msgid "Disk: approximately 5-10 MB per CHGCAR file"
+msgstr ""
+
+#: ../../platform/overview.rst:58
+msgid "Memory: 16 GB+ (32 GB+ recommended)"
+msgstr ""
+
+#: ../../platform/overview.rst:61
+msgid "Client Side"
+msgstr ""
+
+#: ../../platform/overview.rst:63
+msgid "Python 3.7+ (only the ``requests`` library required)"
+msgstr ""
+
+#: ../../platform/overview.rst:64
+msgid "Or any programming language with HTTP request support"
+msgstr ""
+
+#: ../../platform/overview.rst:65
+msgid "No GPU requirement"
+msgstr ""

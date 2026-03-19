@@ -14,4 +14,9 @@ __pycache__/
 
 # Claude Code 配置
 .claude/
+
+# Sphinx 文档构建产物
 DeePAW Manual/build/
+DeePAW Manual/_build/
+DeePAW Manual/source/_build/
+**/*.mo

@@ -1,0 +1,141 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024-2026, DeePAW Team
+# This file is distributed under the same license as the DeePAW package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DeePAW \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 23:20+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../theory/method.rst:2
+msgid "DeePAW Method"
+msgstr ""
+
+#: ../../theory/method.rst:5
+msgid "Method Overview"
+msgstr ""
+
+#: ../../theory/method.rst:7
+msgid "DeePAW (Deep Augmented Way) is a machine learning method for predicting electron density functionals. Its name is inspired by the Projector Augmented-Wave (PAW) method. DeePAW employs an E(3)-equivariant graph neural network architecture based on the e3nn library, predicting electron densities through end-to-end automated representation learning."
+msgstr ""
+
+#: ../../theory/method.rst:10
+msgid "Dual-Graph Message Passing Architecture"
+msgstr ""
+
+#: ../../theory/method.rst:12
+msgid "DeePAW adopts a Double Graph Message Passing Neural Network (Double Graph MPNN) architecture comprising two collaborating MPNNs and an output head:"
+msgstr ""
+
+#: ../../theory/method.rst:14
+msgid "**Atomic Representation**"
+msgstr ""
+
+#: ../../theory/method.rst:16
+msgid "The atomic representation module is responsible for learning atom-level representations. Initial edge embeddings are constructed using Gaussian basis functions (GBF):"
+msgstr ""
+
+#: ../../theory/method.rst:18
+msgid "e_{ij} = \\exp\\left(-\\frac{(d_{ij} - \\mu)^2}{2\\sigma^2}\\right)"
+msgstr ""
+
+#: ../../theory/method.rst:22
+msgid "where :math:`d_{ij}` is the distance between nodes i and j, and :math:`\\mu` is uniformly distributed between 0 and 6 |angstrom|."
+msgstr ""
+
+#: ../../theory/method.rst:24
+msgid "The message function constructs equivariant messages using Clebsch-Gordan coefficients and spherical harmonics; each atom aggregates messages from all neighbors before updating its node embedding. A dynamic rotation angle mechanism is introduced during node embedding updates, dynamically adjusting the directional information of equivariant features through the gating mechanism of e3nn."
+msgstr ""
+
+#: ../../theory/method.rst:28
+msgid "**Electronic Potential**"
+msgstr ""
+
+#: ../../theory/method.rst:30
+msgid "The electronic potential module operates at the level of grid points. Node embeddings from the atomic representation are fed into the electronic potential module, where grid points update their own embeddings by aggregating information from neighboring atomic nuclei. Shared weight vectors and interaction weight vectors are used during the embedding update to control the relative contributions of a node's own features and the incoming neighbor messages."
+msgstr ""
+
+#: ../../theory/method.rst:32
+msgid "**Output Heads**"
+msgstr ""
+
+#: ../../theory/method.rst:34
+msgid "The output head comprises three modules:"
+msgstr ""
+
+#: ../../theory/method.rst:36
+msgid "**GAT head**: Based on a Graph Attention Network (GAT), it extracts atom-level output quantities from the node embeddings of all layers of the atomic representation."
+msgstr ""
+
+#: ../../theory/method.rst:37
+msgid "**MLP head**: Generates a smoothly varying electron density profile from the node embeddings of all layers of the electronic potential module."
+msgstr ""
+
+#: ../../theory/method.rst:38
+msgid "**KAN head**: Based on a Kolmogorov-Arnold Network (KAN), it computes the residual electron density from the node embeddings of the final layer of the electronic potential module."
+msgstr ""
+
+#: ../../theory/method.rst:41
+msgid "Charge Density Grid Construction"
+msgstr ""
+
+#: ../../theory/method.rst:43
+msgid "DeePAW constructs the electron density grid following VASP's coarse-fine grid scheme. The grid density is determined according to the Nyquist-Shannon sampling theorem to ensure adequate sampling of the electron density field."
+msgstr ""
+
+#: ../../theory/method.rst:45
+msgid "Users must specify the grid dimensions (nx, ny, nz) when using the platform. These three parameters determine:"
+msgstr ""
+
+#: ../../theory/method.rst:47
+msgid "The sampling resolution of the charge density in three-dimensional space."
+msgstr ""
+
+#: ../../theory/method.rst:48
+msgid "The total number of probe points to be predicted (nx * ny * nz)."
+msgstr ""
+
+#: ../../theory/method.rst:49
+msgid "The grid dimensions of the output CHGCAR file."
+msgstr ""
+
+#: ../../theory/method.rst:51
+msgid "The Cartesian coordinates of grid points are obtained by transforming fractional coordinates with the unit cell matrix:"
+msgstr ""
+
+#: ../../theory/method.rst:53
+msgid "\\mathbf{r}_{ijk} = \\frac{i}{n_x} \\mathbf{a} + \\frac{j}{n_y} \\mathbf{b} + \\frac{k}{n_z} \\mathbf{c}"
+msgstr ""
+
+#: ../../theory/method.rst:57
+msgid "where :math:`\\mathbf{a}, \\mathbf{b}, \\mathbf{c}` are the unit cell basis vectors."
+msgstr ""
+
+#: ../../theory/method.rst:60
+msgid "Training Strategy"
+msgstr ""
+
+#: ../../theory/method.rst:62
+msgid "DeePAW training proceeds in two stages using the L1 loss function:"
+msgstr ""
+
+#: ../../theory/method.rst:64
+msgid "**Stage 1**: The MLP head and GAT head are jointly trained, optimizing for electron density prediction."
+msgstr ""
+
+#: ../../theory/method.rst:65
+msgid "**Stage 2**: The MLP head is trained with a very small learning rate while the KAN head uses a larger learning rate, implementing an adaptive PAW scheme that captures the fine structure of the residual electron density."
+msgstr ""
+
+#: ../../theory/method.rst:67
+msgid "Training data are sourced from the Materials Project (MP) database. Electron density labels are computed from KSDFT orbital wavefunctions using VASP."
+msgstr ""

@@ -1,0 +1,349 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024-2026, DeePAW Team
+# This file is distributed under the same license as the DeePAW package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DeePAW \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 23:20+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../platform/web_frontend.rst:2
+msgid "Web Frontend"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:4
+msgid "DeePAW provides an online web application that allows users to perform charge density predictions and visualization directly in the browser, without writing any code."
+msgstr ""
+
+#: ../../platform/web_frontend.rst:6
+msgid "Access URL: **https://deepaw.tech**"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:8
+msgid "The locally deployed version is accessible via ``http://localhost:3000`` (local) or remotely through an SSH tunnel."
+msgstr ""
+
+#: ../../platform/web_frontend.rst:11
+msgid "Login and Registration"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:13
+msgid "First-time users must register an account. An invitation code is required during registration."
+msgstr ""
+
+#: ../../platform/web_frontend.rst:15
+msgid "DeePAW Login Page"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:19
+msgid "Login page: DeePAW branding on the left, login/registration form on the right"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:21
+msgid "Enter your username, password, and email address"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:22
+msgid "Enter the invitation code (default: ``deepawdeepaw``)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:23
+msgid "After successful registration, you will be redirected to the main interface automatically"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:25
+msgid "Existing users can log in by entering their username and password directly. If you forget your password, it can be reset via email verification code."
+msgstr ""
+
+#: ../../platform/web_frontend.rst:28
+msgid "Main Interface Layout"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:30
+msgid "After logging in, the main interface is displayed. The top navigation bar contains two view-switching buttons:"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:32
+msgid "**Predictions**: Prediction workspace (default view)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:33
+msgid "**My Files**: File and history management"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:35
+msgid "The currently logged-in username and a disconnect button are shown in the upper-right corner."
+msgstr ""
+
+#: ../../platform/web_frontend.rst:38
+msgid "Prediction Workspace (Predictions)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:40
+msgid "The prediction workspace uses a three-panel layout:"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:42
+msgid "Prediction Workspace - File Upload and Parameter Configuration"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:46
+msgid "Prediction workspace interface: left panel shows GPU cluster status, center panel shows file upload and task configuration, right panel shows the visualization area"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:49
+msgid "Left Panel: GPU Cluster Status"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:51
+msgid "Displays the real-time operating status of each GPU:"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:53
+msgid "GPU name and index"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:54
+msgid "VRAM usage (used / total in MB)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:55
+msgid "GPU utilization (%)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:56
+msgid "Temperature"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:57
+msgid "Status indicator (idle/busy)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:59
+msgid "Data is refreshed automatically every 5 seconds via WebSocket."
+msgstr ""
+
+#: ../../platform/web_frontend.rst:62
+msgid "Center Panel: Prediction Task Configuration"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:64
+msgid "**Upload Structure Files**"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:66
+msgid "Click the upload area to select files. Supported formats include CIF, VASP, XYZ, PDB, and 14 others (15 formats total), as well as ZIP/TAR archives. The grid dimensions nx, ny, and nz must be specified at upload time."
+msgstr ""
+
+#: ../../platform/web_frontend.rst:68
+msgid "Alternatively, click \"Load Demo\" to quickly load the built-in demonstration database."
+msgstr ""
+
+#: ../../platform/web_frontend.rst:70
+msgid "**Submit Prediction**"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:72
+msgid "Select the structure ID range (start_id ~ end_id)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:73
+msgid "Click the submit button"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:74
+msgid "Tasks enter the GPU queue; each task card displays its status in real time:"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:76
+msgid "Grey: pending"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:77
+msgid "Blue: processing"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:78
+msgid "Green: completed"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:79
+msgid "Red: failed"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:82
+msgid "Right Panel: Visualization"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:84
+msgid "Once a task is complete, click its task card to view the prediction results in the right panel. Two visualization modes are available:"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:86
+msgid "**2D Slice (Slice)**"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:88
+msgid "A two-dimensional charge density slice along a specified Miller index (hkl) plane:"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:90
+msgid "2D Charge Density Slice Visualization"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:94
+msgid "2D slice view: heatmap of charge density distribution along the (hkl) plane, with optional contour overlay and Gaussian blur"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:96
+msgid "Select the slice direction (h, k, l)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:97
+msgid "Adjust the slice distance (distance)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:98
+msgid "Gaussian blur smoothing supported"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:99
+msgid "Contour overlay display supported"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:100
+msgid "Viridis colormap"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:102
+msgid "**3D Isosurface (Isosurface)**"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:104
+msgid "Interactive three-dimensional isosurface rendering powered by Plotly.js:"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:106
+msgid "3D Charge Density Isosurface Visualization"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:110
+msgid "3D isosurface view: interactive three-dimensional charge density rendering showing the unit cell boundary and lattice parameters"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:112
+msgid "Click and drag to rotate the view"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:113
+msgid "Scroll to zoom"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:114
+msgid "Adjustable isosurface threshold (ISO MIN/MAX)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:115
+msgid "Adjustable resolution and number of isosurface levels"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:116
+msgid "Displays the unit cell boundary (gold wireframe) and lattice parameters (a, b, c, alpha, beta, gamma)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:119
+msgid "File Management (My Files)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:121
+msgid "Switch to the \"My Files\" view to manage uploaded files and prediction history:"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:123
+msgid "File Management and Result Storage Page"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:127
+msgid "My Files view: uploaded file list and prediction history, showing download status and expiration information"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:129
+msgid "**Uploaded File List**"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:131
+msgid "File name and upload time"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:132
+msgid "Days since upload"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:133
+msgid "Download status (available / expired)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:134
+msgid "Files are available for download for 3 days"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:136
+msgid "**Prediction History**"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:138
+msgid "Task ID and creation time"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:139
+msgid "CHGCAR file path"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:140
+msgid "Download status and expiration"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:143
+msgid "Performance Tips"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:145
+msgid "**3D Visualization Optimization**"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:147
+msgid "For large CHGCAR files (grid > 48^3), it is recommended to preview at reduced resolution first"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:148
+msgid "Reducing the number of isosurface levels improves browser rendering performance"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:149
+msgid "Raising the ISO MIN threshold to display only high-density regions reduces the number of rendered polygons"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:151
+msgid "**Browser Compatibility**"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:153
+msgid "Chrome / Edge (Chromium-based) is recommended"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:154
+msgid "WebGL support is required (for Plotly 3D rendering)"
+msgstr ""
+
+#: ../../platform/web_frontend.rst:155
+msgid "A screen resolution of >= 1920x1080 is recommended"
+msgstr ""

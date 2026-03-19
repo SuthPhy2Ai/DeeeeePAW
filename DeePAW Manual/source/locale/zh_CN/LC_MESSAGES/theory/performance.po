@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024-2026, DeePAW Team
+# This file is distributed under the same license as the DeePAW package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DeePAW \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 23:20+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../theory/performance.rst:2
+msgid "Prediction Performance"
+msgstr ""
+
+#: ../../theory/performance.rst:5
+msgid "Generalization Capability"
+msgstr ""
+
+#: ../../theory/performance.rst:7
+msgid "Although trained exclusively on three-dimensional bulk crystals from the MP database, DeePAW demonstrates remarkable zero-shot generalization capability:"
+msgstr ""
+
+#: ../../theory/performance.rst:9
+msgid "**3D Crystals**"
+msgstr ""
+
+#: ../../theory/performance.rst:11
+msgid "Good predictive performance on unseen three-dimensional perfect crystals outside the MP database"
+msgstr ""
+
+#: ../../theory/performance.rst:12
+msgid "Capable of handling crystal structures containing point defects (vacancies, interstitial atoms, and substitutional atoms)"
+msgstr ""
+
+#: ../../theory/performance.rst:13
+msgid "Successfully applied to large supercells containing 154 atoms per unit cell (e.g., V4C6B144)"
+msgstr ""
+
+#: ../../theory/performance.rst:15
+msgid "**Low-Dimensional Materials**"
+msgstr ""
+
+#: ../../theory/performance.rst:17
+msgid "Two-dimensional materials: monolayer structures (e.g., CsF monolayer)"
+msgstr ""
+
+#: ../../theory/performance.rst:18
+msgid "One-dimensional materials: nanotube structures (e.g., carbon nanotubes)"
+msgstr ""
+
+#: ../../theory/performance.rst:20
+msgid "**Application Scenarios**"
+msgstr ""
+
+#: ../../theory/performance.rst:22
+msgid "Catalysis research: analysis of surface oxygen evolution reaction (OER) pathways (e.g., Na-doped RuO2)"
+msgstr ""
+
+#: ../../theory/performance.rst:23
+msgid "Ferroelectric materials: polarization charge density analysis of orthorhombic-phase HfO2"
+msgstr ""
+
+#: ../../theory/performance.rst:24
+msgid "Interstitial site discovery: prediction of energetically favorable interstitial occupation sites based on charge density"
+msgstr ""
+
+#: ../../theory/performance.rst:27
+msgid "Supported Material Types"
+msgstr ""
+
+#: ../../theory/performance.rst:32
+msgid "Material Type"
+msgstr ""
+
+#: ../../theory/performance.rst:33
+msgid "Support Level"
+msgstr ""
+
+#: ../../theory/performance.rst:34
+msgid "Notes"
+msgstr ""
+
+#: ../../theory/performance.rst:35
+msgid "Oxides"
+msgstr ""
+
+#: ../../theory/performance.rst:36
+#: ../../theory/performance.rst:39
+#: ../../theory/performance.rst:42
+msgid "Full support"
+msgstr ""
+
+#: ../../theory/performance.rst:37
+msgid "Abundantly represented in the training set"
+msgstr ""
+
+#: ../../theory/performance.rst:38
+msgid "Metals and Alloys"
+msgstr ""
+
+#: ../../theory/performance.rst:40
+msgid "Covers a wide range of metallic elements"
+msgstr ""
+
+#: ../../theory/performance.rst:41
+msgid "Semiconductors"
+msgstr ""
+
+#: ../../theory/performance.rst:43
+msgid "Includes Group IV, III-V, and related compounds"
+msgstr ""
+
+#: ../../theory/performance.rst:44
+msgid "2D Materials"
+msgstr ""
+
+#: ../../theory/performance.rst:45
+#: ../../theory/performance.rst:48
+#: ../../theory/performance.rst:51
+msgid "Zero-shot generalization"
+msgstr ""
+
+#: ../../theory/performance.rst:46
+msgid "Not present in training set but predictable"
+msgstr ""
+
+#: ../../theory/performance.rst:47
+msgid "1D Materials"
+msgstr ""
+
+#: ../../theory/performance.rst:49
+msgid "Nanotube and related structures"
+msgstr ""
+
+#: ../../theory/performance.rst:50
+msgid "Defect Structures"
+msgstr ""
+
+#: ../../theory/performance.rst:52
+msgid "Vacancy, interstitial, and substitutional defects"
+msgstr ""
+
+#: ../../theory/performance.rst:53
+msgid "Molecular Structures"
+msgstr ""
+
+#: ../../theory/performance.rst:54
+msgid "Partial support"
+msgstr ""
+
+#: ../../theory/performance.rst:55
+msgid "Requires periodic boundary conditions"
+msgstr ""
+
+#: ../../theory/performance.rst:58
+msgid "Known Limitations"
+msgstr ""
+
+#: ../../theory/performance.rst:60
+msgid "The coverage of training data is limited by the availability of KSDFT calculations in the MP database"
+msgstr ""
+
+#: ../../theory/performance.rst:61
+msgid "Predictive accuracy may degrade for elemental combinations that are underrepresented in the training set"
+msgstr ""
+
+#: ../../theory/performance.rst:62
+msgid "Molecular structures require the manual imposition of periodic boundary conditions"
+msgstr ""
+
+#: ../../theory/performance.rst:63
+msgid "For certain elements, inconsistent POTCAR usage within the dataset may cause errors in the total electron count during inference; fine-tuning on a case-by-case basis may be necessary"
+msgstr ""

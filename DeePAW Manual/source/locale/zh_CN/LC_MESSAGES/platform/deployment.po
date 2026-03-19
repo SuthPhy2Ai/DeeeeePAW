@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2024-2026, DeePAW Team
+# This file is distributed under the same license as the DeePAW package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: DeePAW \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-19 23:20+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../platform/deployment.rst:2
+msgid "Local CLI Deployment"
+msgstr ""
+
+#: ../../platform/deployment.rst:4
+msgid "DeePAW provides a containerized local CLI deployment, running encrypted neural network model inference via Podman/Docker containers."
+msgstr ""
+
+#: ../../platform/deployment.rst:7
+msgid "Requirements"
+msgstr ""
+
+#: ../../platform/deployment.rst:9
+msgid "Linux x86_64"
+msgstr ""
+
+#: ../../platform/deployment.rst:10
+msgid "NVIDIA GPU (CUDA support)"
+msgstr ""
+
+#: ../../platform/deployment.rst:11
+msgid "Podman or Docker"
+msgstr ""
+
+#: ../../platform/deployment.rst:12
+msgid "NVIDIA driver"
+msgstr ""
+
+#: ../../platform/deployment.rst:15
+msgid "Quick Start"
+msgstr ""
+
+#: ../../platform/deployment.rst:17
+msgid "**1. Load the container image (first-time setup)**"
+msgstr ""
+
+#: ../../platform/deployment.rst:27
+msgid "**2. Start the container**"
+msgstr ""
+
+#: ../../platform/deployment.rst:37
+msgid "The ``start.sh`` script automatically performs the following:"
+msgstr ""
+
+#: ../../platform/deployment.rst:39
+msgid "Detects the NVIDIA driver version"
+msgstr ""
+
+#: ../../platform/deployment.rst:40
+msgid "Mounts GPU devices and libraries"
+msgstr ""
+
+#: ../../platform/deployment.rst:41
+msgid "Sets the required environment variables"
+msgstr ""
+
+#: ../../platform/deployment.rst:42
+msgid "Mounts data and output directories"
+msgstr ""
+
+#: ../../platform/deployment.rst:44
+msgid "**3. Run inference**"
+msgstr ""
+
+#: ../../platform/deployment.rst:46
+msgid "Execute inside the container:"
+msgstr ""
+
+#: ../../platform/deployment.rst:62
+msgid "After exiting the container, output files are located in the ``output/`` directory on the host."
+msgstr ""
+
+#: ../../platform/deployment.rst:65
+msgid "Important Notes"
+msgstr ""
+
+#: ../../platform/deployment.rst:67
+msgid "**CUDA only**"
+msgstr ""
+
+#: ../../platform/deployment.rst:69
+msgid "The decryption logic for the encrypted models is compiled into the C++ engine and can only be initialized on a CUDA device. Using ``--device cpu`` will cause silent model initialization failure."
+msgstr ""
+
+#: ../../platform/deployment.rst:71
+msgid "**GPU mounting**"
+msgstr ""
+
+#: ../../platform/deployment.rst:73
+msgid "On some systems (e.g., Rocky Linux 9.2), CDI mode (``--device nvidia.com/gpu=all``) may not work correctly. ``start.sh`` resolves this by manually mounting ``/dev/nvidia*`` devices and the host NVIDIA libraries."
+msgstr ""
+
+#: ../../platform/deployment.rst:76
+msgid "Container Structure"
+msgstr ""
+
+#: ../../platform/deployment.rst:93
+msgid "Manual Run"
+msgstr ""
+
+#: ../../platform/deployment.rst:95
+msgid "If ``start.sh`` does not suit your environment:"
+msgstr ""
+
+#: ../../platform/deployment.rst:119
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../../platform/deployment.rst:124
+msgid "Issue"
+msgstr ""
+
+#: ../../platform/deployment.rst:125
+msgid "Cause"
+msgstr ""
+
+#: ../../platform/deployment.rst:126
+msgid "Solution"
+msgstr ""
+
+#: ../../platform/deployment.rst:127
+msgid "\"Models not initialized\""
+msgstr ""
+
+#: ../../platform/deployment.rst:128
+msgid "Using ``--device cpu``"
+msgstr ""
+
+#: ../../platform/deployment.rst:129
+msgid "Switch to ``--device cuda``"
+msgstr ""
+
+#: ../../platform/deployment.rst:130
+msgid "\"failed to stat CDI host device\""
+msgstr ""
+
+#: ../../platform/deployment.rst:131
+msgid "CDI mode unavailable"
+msgstr ""
+
+#: ../../platform/deployment.rst:132
+msgid "Use ``start.sh`` (handled manually)"
+msgstr ""
+
+#: ../../platform/deployment.rst:133
+msgid "``ModuleNotFoundError: deepaw_cpp``"
+msgstr ""
+
+#: ../../platform/deployment.rst:134
+msgid "Missing environment variables"
+msgstr ""
+
+#: ../../platform/deployment.rst:135
+#: ../../platform/deployment.rst:138
+msgid "Use ``start.sh`` (sets automatically)"
+msgstr ""
+
+#: ../../platform/deployment.rst:136
+msgid "``libtorch.so: cannot open``"
+msgstr ""
+
+#: ../../platform/deployment.rst:137
+msgid "LD_LIBRARY_PATH not set"
+msgstr ""
+
+#: ../../platform/deployment.rst:139
+msgid "nvidia-smi unavailable inside container"
+msgstr ""
+
+#: ../../platform/deployment.rst:140
+msgid "NVIDIA libraries not mounted"
+msgstr ""
+
+#: ../../platform/deployment.rst:141
+msgid "Use ``start.sh`` (mounts automatically)"
+msgstr ""
+
+#: ../../platform/deployment.rst:142
+msgid "``.so`` file not found"
+msgstr ""
+
+#: ../../platform/deployment.rst:143
+msgid "Driver version mismatch"
+msgstr ""
+
+#: ../../platform/deployment.rst:144
+msgid "``start.sh`` detects driver version automatically"
+msgstr ""

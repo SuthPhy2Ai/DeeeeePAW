@@ -27,7 +27,7 @@ DeePAW predicts three-dimensional electron charge density directly from atomic s
 
 ### Option 1 — Web (no installation)
 
-1. Register at **[deepaw.tech](https://deepaw.tech)** (invitation code: `deepawdeepaw`)
+1. Request access at **[deepaw.tech](https://deepaw.tech)** — send an email to **thsu0407@gmail.com** to obtain an invitation code
 2. Upload your structure file (CIF, VASP POSCAR, XYZ, PDB, ZIP/TAR, and 10 more formats)
 3. Set the charge density grid dimensions (e.g. `nx=40 ny=40 nz=40`)
 4. Submit the job — monitor real-time GPU status
@@ -199,6 +199,20 @@ If you use DeePAW in your research, please cite the Zenodo record for the model 
 
 > A manuscript describing the method is in preparation. The citation will be updated with a paper DOI when available.
 > For citation inquiries or collaboration, contact: **thsu0407@gmail.com**
+
+---
+
+## Acknowledgements
+
+We gratefully acknowledge the following resources and projects that made DeePAW possible:
+
+- **[Materials Project](https://materialsproject.org/)** — training data source; charge density labels computed from DFT calculations in the MP database
+- **[VASP](https://www.vasp.at/)** — electronic structure calculations used to generate the training labels via Kohn-Sham DFT
+- **[e3nn](https://e3nn.org/)** — E(3)-equivariant neural network library forming the backbone of the GNN architecture
+- **[PyTorch](https://pytorch.org/)** — deep learning framework
+- **[ASE (Atomic Simulation Environment)](https://wiki.fysik.dtu.dk/ase/)** — crystal structure handling, graph construction, and CHGCAR I/O
+- **[Zenodo](https://zenodo.org/)** — open-access hosting of pre-trained model weights
+- **[Kolmogorov-Arnold Networks (KAN)](https://github.com/KindXiaoming/pykan)** — residual correction module
 
 ---
 

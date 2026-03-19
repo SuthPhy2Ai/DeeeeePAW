@@ -113,17 +113,8 @@ The output CHGCAR file is compatible with standard charge density tools:
 | [VESTA](https://jp-minerals.org/vesta/en/) | Open CHGCAR directly for isosurface and slice rendering |
 | [Ovito](https://www.ovito.org/) | Supports volumetric data import |
 | [Device Studio](https://hzwtech.com/Help/index.html) | Integrated materials modeling platform; supports CHGCAR visualization |
-| Web frontend | Built-in 3D isosurface + 2D slice viewer at [deepaw.tech](https://deepaw.tech) |
-| Python / ASE | Scriptable analysis with `ase.io.vasp.VaspChargeDensity` |
-
-```python
-from ase.io.vasp import VaspChargeDensity
-
-chg = VaspChargeDensity('CHGCAR')
-density = chg.chg[0]          # numpy array, shape (nx, ny, nz)
-atoms = chg.atoms[0]          # ASE Atoms object
-print(density.shape, atoms.get_chemical_formula())
-```
+| [Web frontend](https://deepaw.tech) | Built-in 3D isosurface + 2D slice viewer |
+| [ASE](https://wiki.fysik.dtu.dk/ase/) | Scriptable analysis and CHGCAR I/O via Python |
 
 ---
 

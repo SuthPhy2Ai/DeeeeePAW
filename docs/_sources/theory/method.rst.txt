@@ -1,67 +1,67 @@
-DeePAW 方法
-===========
+DeePAW Method
+=============
 
-方法概述
---------
+Method Overview
+---------------
 
-DeePAW (Deep Augmented Way) 是一种面向 OFDFT 电子密度泛函和形成能预测的通用机器学习方法。其命名灵感来源于投影缀加波 (Projector Augmented-Wave, PAW) 方法。DeePAW 采用基于 e3nn 库的 E(3) 等变图神经网络架构，通过端到端的自动化表征学习，同时实现电子密度和形成能的预测。
+DeePAW (Deep Augmented Way) is a general-purpose machine learning method for predicting OFDFT electron density functionals and formation energies. Its name is inspired by the Projector Augmented-Wave (PAW) method. DeePAW employs an E(3)-equivariant graph neural network architecture based on the e3nn library, simultaneously predicting electron densities and formation energies through end-to-end automated representation learning.
 
-双图消息传递架构
-----------------
+Dual-Graph Message Passing Architecture
+---------------------------------------
 
-DeePAW 采用双图消息传递神经网络 (Double Graph MPNN) 架构，包含两个协同工作的 MPNN 和一个输出头:
+DeePAW adopts a Double Graph Message Passing Neural Network (Double Graph MPNN) architecture comprising two collaborating MPNNs and an output head:
 
-**原子表示**
+**Atomic Representation**
 
-原子表示负责学习原子级别的表征。初始边嵌入通过高斯基函数 (Gaussian Basis Function, GBF) 构建:
+The atomic representation module is responsible for learning atom-level representations. Initial edge embeddings are constructed using Gaussian basis functions (GBF):
 
 .. math::
 
    e_{ij} = \exp\left(-\frac{(d_{ij} - \mu)^2}{2\sigma^2}\right)
 
-其中 :math:`d_{ij}` 为节点 i 和 j 之间的距离，:math:`\mu` 在 0 到 6 |angstrom| 之间均匀分布。
+where :math:`d_{ij}` is the distance between nodes i and j, and :math:`\mu` is uniformly distributed between 0 and 6 |angstrom|.
 
-消息函数利用 Clebsch-Gordan 系数和球谐函数构建等变消息，每个原子聚合来自所有邻居的消息后更新节点嵌入。节点嵌入的更新过程中引入了动态旋转角机制，通过 e3nn 的门控机制动态调整等变特征的方向信息。
+The message function constructs equivariant messages using Clebsch-Gordan coefficients and spherical harmonics; each atom aggregates messages from all neighbors before updating its node embedding. A dynamic rotation angle mechanism is introduced during node embedding updates, dynamically adjusting the directional information of equivariant features through the gating mechanism of e3nn.
 
 .. |angstrom| unicode:: U+00C5
 
-**电子势能**
+**Electronic Potential**
 
-电子势能模块在网格点级别工作。原子表示的节点嵌入被馈入电子势能模块，网格点通过聚合来自邻近原子核的信息来更新自身嵌入。嵌入更新过程中使用共享权重向量和交互权重向量来控制节点自身特征与邻居消息的相对贡献。
+The electronic potential module operates at the level of grid points. Node embeddings from the atomic representation are fed into the electronic potential module, where grid points update their own embeddings by aggregating information from neighboring atomic nuclei. Shared weight vectors and interaction weight vectors are used during the embedding update to control the relative contributions of a node's own features and the incoming neighbor messages.
 
-**输出头**
+**Output Heads**
 
-输出头包含三个模块:
+The output head comprises three modules:
 
-- **GAT 头**: 基于图注意力网络 (Graph Attention Network)，从原子表示所有层的节点嵌入中提取形成能或任何原子级的输出任务
-- **MLP 头**: 从电子势能模块所有层的节点嵌入中生成平滑变化的电子密度轮廓
-- **KAN 头**: 基于 Kolmogorov-Arnold 网络，从电子势能模块最后一层的节点嵌入中计算残差电子密度
+- **GAT head**: Based on a Graph Attention Network (GAT), it extracts formation energies or any atom-level output quantity from the node embeddings of all layers of the atomic representation.
+- **MLP head**: Generates a smoothly varying electron density profile from the node embeddings of all layers of the electronic potential module.
+- **KAN head**: Based on a Kolmogorov-Arnold Network (KAN), it computes the residual electron density from the node embeddings of the final layer of the electronic potential module.
 
-电荷密度网格构建
-----------------
+Charge Density Grid Construction
+--------------------------------
 
-DeePAW 采用 VASP 的粗-细网格方案 (coarse-fine grid scheme) 构建电子密度网格。网格密度的确定遵循 Nyquist-Shannon 采样定理，确保对电子密度场的充分采样。
+DeePAW constructs the electron density grid following VASP's coarse-fine grid scheme. The grid density is determined according to the Nyquist-Shannon sampling theorem to ensure adequate sampling of the electron density field.
 
-用户在使用平台时需要指定网格维度 (nx, ny, nz)，这三个参数决定了:
+Users must specify the grid dimensions (nx, ny, nz) when using the platform. These three parameters determine:
 
-- 三维空间中电荷密度的采样分辨率
-- 预测的总探针点数 (nx * ny * nz)
-- 输出 CHGCAR 文件的网格尺寸
+- The sampling resolution of the charge density in three-dimensional space.
+- The total number of probe points to be predicted (nx * ny * nz).
+- The grid dimensions of the output CHGCAR file.
 
-网格点的笛卡尔坐标通过分数坐标与晶胞矩阵的变换获得:
+The Cartesian coordinates of grid points are obtained by transforming fractional coordinates with the unit cell matrix:
 
 .. math::
 
    \mathbf{r}_{ijk} = \frac{i}{n_x} \mathbf{a} + \frac{j}{n_y} \mathbf{b} + \frac{k}{n_z} \mathbf{c}
 
-其中 :math:`\mathbf{a}, \mathbf{b}, \mathbf{c}` 为晶胞基矢。
+where :math:`\mathbf{a}, \mathbf{b}, \mathbf{c}` are the unit cell basis vectors.
 
-训练策略
---------
+Training Strategy
+-----------------
 
-DeePAW 的训练分为两个阶段，使用 L1 损失函数:
+DeePAW training proceeds in two stages using the L1 loss function:
 
-- **第一阶段**: 联合训练 MLP 头和 GAT 头，同时优化电子密度和形成能
-- **第二阶段**: MLP 头使用极小的学习率，KAN 头使用较大的学习率，进行 PAW 的自适应实现，捕获残差电子密度的精细结构
+- **Stage 1**: The MLP head and GAT head are jointly trained, simultaneously optimizing for electron density and formation energy.
+- **Stage 2**: The MLP head is trained with a very small learning rate while the KAN head uses a larger learning rate, implementing an adaptive PAW scheme that captures the fine structure of the residual electron density.
 
-训练数据来自 Materials Project (MP) 数据库。电子密度标签由基于 VASP 的 KSDFT 轨道波函数计算得到。
+Training data are sourced from the Materials Project (MP) database. Electron density labels are computed from KSDFT orbital wavefunctions using VASP.

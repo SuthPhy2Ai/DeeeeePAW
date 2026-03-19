@@ -1,42 +1,42 @@
-API 参考
-========
+API Reference
+=============
 
-认证相关
---------
+Authentication
+--------------
 
 .. list-table::
    :header-rows: 1
    :widths: 35 10 10 45
 
-   * - 端点
-     - 方法
-     - 认证
-     - 描述
+   * - Endpoint
+     - Method
+     - Auth
+     - Description
    * - ``/api/auth/register-with-code``
      - POST
-     - 否
-     - 注册新用户（需邀请码）
+     - No
+     - Register a new user (invitation code required)
    * - ``/api/auth/login``
      - POST
-     - 否
-     - 用户登录，返回 JWT token
+     - No
+     - User login, returns JWT token
    * - ``/api/auth/profile``
      - GET
-     - 是
-     - 获取当前用户信息
+     - Yes
+     - Retrieve current user information
    * - ``/api/auth/send-reset-code``
      - POST
-     - 否
-     - 发送密码重置验证码
+     - No
+     - Send password reset verification code
    * - ``/api/auth/reset-password``
      - POST
-     - 否
-     - 使用验证码重置密码
+     - No
+     - Reset password using verification code
 
 POST /api/auth/register-with-code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-请求体：
+Request body:
 
 .. code-block:: json
 
@@ -50,13 +50,13 @@ POST /api/auth/register-with-code
 POST /api/auth/login
 ^^^^^^^^^^^^^^^^^^^^
 
-请求体：
+Request body:
 
 .. code-block:: json
 
    {"username": "demo_user", "password": "Demo@2026"}
 
-响应：
+Response:
 
 .. code-block:: json
 
@@ -72,7 +72,7 @@ POST /api/auth/login
 POST /api/auth/send-reset-code
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-请求体：
+Request body:
 
 .. code-block:: json
 
@@ -81,7 +81,7 @@ POST /api/auth/send-reset-code
 POST /api/auth/reset-password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-请求体：
+Request body:
 
 .. code-block:: json
 
@@ -91,66 +91,66 @@ POST /api/auth/reset-password
      "new_password": "new_secure_password"
    }
 
-文件上传
---------
+File Upload
+-----------
 
 .. list-table::
    :header-rows: 1
    :widths: 35 10 10 45
 
-   * - 端点
-     - 方法
-     - 认证
-     - 描述
+   * - Endpoint
+     - Method
+     - Auth
+     - Description
    * - ``/api/files/supported-formats``
      - GET
-     - 否
-     - 查询支持的文件格式
+     - No
+     - Query supported file formats
    * - ``/api/files/upload-structures``
      - POST
-     - 是
-     - 上传并转换结构文件
+     - Yes
+     - Upload and convert structure files
    * - ``/api/files/upload``
      - POST
-     - 是
-     - 上传 .db 文件（兼容旧接口）
+     - Yes
+     - Upload a .db file (legacy interface)
 
 POST /api/files/upload-structures
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-上传结构文件并自动转换为 ASE 数据库。
+Upload a structure file and automatically convert it to an ASE database.
 
-参数（multipart/form-data）：
+Parameters (multipart/form-data):
 
 .. list-table::
    :header-rows: 1
 
-   * - 参数
-     - 类型
-     - 必填
-     - 说明
+   * - Parameter
+     - Type
+     - Required
+     - Description
    * - ``file``
      - File
-     - 是
-     - 结构文件（CIF、VASP、XYZ 等）
+     - Yes
+     - Structure file (CIF, VASP, XYZ, etc.)
    * - ``nx``
      - int
-     - 是
-     - X 方向网格数
+     - Yes
+     - Number of grid points in the X direction
    * - ``ny``
      - int
-     - 是
-     - Y 方向网格数
+     - Yes
+     - Number of grid points in the Y direction
    * - ``nz``
      - int
-     - 是
-     - Z 方向网格数
+     - Yes
+     - Number of grid points in the Z direction
 
-支持的单文件格式：CIF、VASP（.vasp/.poscar/.contcar）、XYZ、PDB、MOL、SDF、JSON、TRAJ、DB
+Supported single-file formats: CIF, VASP (.vasp/.poscar/.contcar), XYZ, PDB, MOL, SDF, JSON, TRAJ, DB
 
-支持的压缩包格式：ZIP、TAR、TAR.GZ / TGZ
+Supported archive formats: ZIP, TAR, TAR.GZ / TGZ
 
-示例：
+Example:
 
 .. code-block:: bash
 
@@ -159,7 +159,7 @@ POST /api/files/upload-structures
      -F "file=@structure.cif" \
      -F "nx=56" -F "ny=56" -F "nz=80"
 
-响应：
+Response:
 
 .. code-block:: json
 
@@ -178,44 +178,44 @@ POST /api/files/upload-structures
 
 .. note::
 
-   每次上传会生成带时间戳的唯一数据库文件名，避免同名文件覆盖导致数据混淆。
+   Each upload generates a unique database filename with a timestamp to prevent data conflicts caused by overwriting files with the same name.
 
-预测相关
---------
+Prediction Tasks
+----------------
 
 .. list-table::
    :header-rows: 1
    :widths: 40 10 10 40
 
-   * - 端点
-     - 方法
-     - 认证
-     - 描述
+   * - Endpoint
+     - Method
+     - Auth
+     - Description
    * - ``/api/predictions/batch``
      - POST
-     - 是
-     - 提交批量预测
+     - Yes
+     - Submit a batch prediction job
    * - ``/api/predictions/batch/{batch_id}``
      - GET
-     - 是
-     - 查询批次状态
+     - Yes
+     - Query batch status
    * - ``/api/predictions/result/{task_id}``
      - GET
-     - 是
-     - 获取 JSON 格式结果
+     - Yes
+     - Retrieve results in JSON format
    * - ``/api/predictions/download/{task_id}``
      - GET
-     - 是
-     - 下载 CHGCAR 文件
+     - Yes
+     - Download CHGCAR file
    * - ``/api/predictions/slice/{task_id}``
      - GET
-     - 是
-     - 获取 2D 切片数据
+     - Yes
+     - Retrieve 2D slice data
 
 POST /api/predictions/batch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-请求体：
+Request body:
 
 .. code-block:: json
 
@@ -225,9 +225,9 @@ POST /api/predictions/batch
      "db_path": "/path/to/database.db"
    }
 
-``db_path`` 可选，不传则使用系统默认数据库。
+``db_path`` is optional; if omitted, the system default database is used.
 
-响应：
+Response:
 
 .. code-block:: json
 
@@ -241,7 +241,7 @@ POST /api/predictions/batch
 GET /api/predictions/batch/{batch_id}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-响应：
+Response:
 
 .. code-block:: json
 
@@ -262,7 +262,7 @@ GET /api/predictions/batch/{batch_id}
 GET /api/predictions/result/{task_id}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-响应：
+Response:
 
 .. code-block:: json
 
@@ -283,76 +283,76 @@ GET /api/predictions/result/{task_id}
      }
    }
 
-``gridDimensions`` 由数据库中存储的 nx/ny/nz 决定，不同结构可能返回不同网格尺寸。
+``gridDimensions`` is determined by the nx/ny/nz values stored in the database; different structures may return different grid sizes.
 
 GET /api/predictions/slice/{task_id}
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-查询参数：
+Query parameters:
 
-- ``h`` / ``k`` / ``l`` (int): Miller 指数，默认 (1,0,0)
-- ``distance`` (float): 沿法线方向的距离，默认 0.0
+- ``h`` / ``k`` / ``l`` (int): Miller indices, default (1,0,0)
+- ``distance`` (float): Distance along the normal direction, default 0.0
 
-用户管理
---------
+User Management
+---------------
 
 .. list-table::
    :header-rows: 1
    :widths: 35 10 10 45
 
-   * - 端点
-     - 方法
-     - 认证
-     - 描述
+   * - Endpoint
+     - Method
+     - Auth
+     - Description
    * - ``/api/user/files``
      - GET
-     - 是
-     - 获取用户上传文件列表
+     - Yes
+     - Retrieve the list of files uploaded by the user
    * - ``/api/user/predictions``
      - GET
-     - 是
-     - 获取用户预测历史
+     - Yes
+     - Retrieve user prediction history
    * - ``/api/database/parse``
      - POST
-     - 是
-     - 解析上传的数据库文件
+     - Yes
+     - Parse an uploaded database file
    * - ``/api/database/load-demo``
      - GET
-     - 否
-     - 加载演示数据库
+     - No
+     - Load the demo database
 
-系统相关
---------
+System Status
+-------------
 
 .. list-table::
    :header-rows: 1
    :widths: 35 10 10 45
 
-   * - 端点
-     - 方法
-     - 认证
-     - 描述
+   * - Endpoint
+     - Method
+     - Auth
+     - Description
    * - ``/api/tasks/system/status``
      - GET
-     - 否
-     - GPU 状态和任务统计
+     - No
+     - GPU status and task statistics
    * - ``/health``
      - GET
-     - 否
-     - 健康检查
+     - No
+     - Health check
    * - ``/api/docs``
      - GET
-     - 否
-     - Swagger 交互文档
+     - No
+     - Swagger interactive documentation
    * - ``/api/redoc``
      - GET
-     - 否
-     - ReDoc 文档
+     - No
+     - ReDoc documentation
 
 GET /api/tasks/system/status
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-响应：
+Response:
 
 .. code-block:: json
 
@@ -377,33 +377,33 @@ GET /api/tasks/system/status
      }
    }
 
-HTTP 状态码
------------
+HTTP Status Codes
+-----------------
 
 .. list-table::
    :header-rows: 1
 
-   * - 状态码
-     - 含义
-     - 处理方式
+   * - Status Code
+     - Meaning
+     - Action
    * - 200
-     - 成功
-     - 正常处理
+     - Success
+     - Handle normally
    * - 400
-     - 请求错误
-     - 检查请求参数
+     - Bad request
+     - Check request parameters
    * - 401
-     - 未认证
-     - 检查 token 是否有效
+     - Unauthorized
+     - Check if token is valid
    * - 404
-     - 资源不存在
-     - 检查 ID 是否正确
+     - Not found
+     - Check if ID is correct
    * - 422
-     - 参数验证失败
-     - 检查参数格式（如缺少必填的 nx/ny/nz）
+     - Validation error
+     - Check parameter format (e.g. missing required nx/ny/nz)
    * - 500
-     - 服务器错误
-     - 查看后端日志
+     - Server error
+     - Check backend logs
    * - 503
-     - 服务不可用
-     - ML 组件未加载或转换器不可用
+     - Service unavailable
+     - ML component not loaded or converter unavailable

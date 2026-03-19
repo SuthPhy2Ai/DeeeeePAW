@@ -1,63 +1,63 @@
-预测性能
-========
+Prediction Performance
+======================
 
-泛化能力
---------
+Generalization Capability
+--------------------------
 
-尽管仅在 MP 数据库的三维体相晶体上训练，DeePAW 展现出显著的零样本泛化能力:
+Although trained exclusively on three-dimensional bulk crystals from the MP database, DeePAW demonstrates remarkable zero-shot generalization capability:
 
-**三维晶体**
+**3D Crystals**
 
-- 对 MP 数据库外的未见三维完美晶体具有良好预测能力
-- 可处理含点缺陷 (空位、间隙原子、替位原子) 的晶体结构
-- 成功预测了含 154 个原子/单胞的大体系 (如 V4C6B144)
+- Good predictive performance on unseen three-dimensional perfect crystals outside the MP database
+- Capable of handling crystal structures containing point defects (vacancies, interstitial atoms, and substitutional atoms)
+- Successfully applied to large supercells containing 154 atoms per unit cell (e.g., V4C6B144)
 
-**低维材料**
+**Low-Dimensional Materials**
 
-- 二维材料: 单层结构 (如 CsF 单层)
-- 一维材料: 纳米管结构 (如碳纳米管)
+- Two-dimensional materials: monolayer structures (e.g., CsF monolayer)
+- One-dimensional materials: nanotube structures (e.g., carbon nanotubes)
 
-**应用场景**
+**Application Scenarios**
 
-- 催化研究: 表面氧析出反应 (OER) 路径分析 (如 Na 掺杂 RuO2)
-- 铁电材料: 正交相 HfO2 的极化电荷密度分析
-- 嵌入位点发现: 基于电荷密度预测间隙原子的有利占位
+- Catalysis research: analysis of surface oxygen evolution reaction (OER) pathways (e.g., Na-doped RuO2)
+- Ferroelectric materials: polarization charge density analysis of orthorhombic-phase HfO2
+- Interstitial site discovery: prediction of energetically favorable interstitial occupation sites based on charge density
 
-适用材料类型
-------------
+Supported Material Types
+------------------------
 
 .. list-table::
    :header-rows: 1
 
-   * - 材料类型
-     - 支持程度
-     - 说明
-   * - 氧化物
-     - 完全支持
-     - 训练集中大量样本
-   * - 金属与合金
-     - 完全支持
-     - 覆盖多种金属元素
-   * - 半导体
-     - 完全支持
-     - 包括 IV 族、III-V 族等
-   * - 二维材料
-     - 零样本泛化
-     - 未在训练集中但可预测
-   * - 一维材料
-     - 零样本泛化
-     - 纳米管等结构
-   * - 缺陷结构
-     - 零样本泛化
-     - 空位、间隙、替位缺陷
-   * - 分子结构
-     - 部分支持
-     - 需要周期性边界条件
+   * - Material Type
+     - Support Level
+     - Notes
+   * - Oxides
+     - Full support
+     - Abundantly represented in the training set
+   * - Metals and Alloys
+     - Full support
+     - Covers a wide range of metallic elements
+   * - Semiconductors
+     - Full support
+     - Includes Group IV, III-V, and related compounds
+   * - 2D Materials
+     - Zero-shot generalization
+     - Not present in training set but predictable
+   * - 1D Materials
+     - Zero-shot generalization
+     - Nanotube and related structures
+   * - Defect Structures
+     - Zero-shot generalization
+     - Vacancy, interstitial, and substitutional defects
+   * - Molecular Structures
+     - Partial support
+     - Requires periodic boundary conditions
 
-已知局限
---------
+Known Limitations
+-----------------
 
-- 训练数据的覆盖范围受限于 MP 数据库中 KSDFT 计算的可用性
-- 对于训练集中未充分覆盖的元素组合，预测精度可能下降
-- 分子结构需要人为添加周期性边界条件
-- 部分元素可能因为数据集的 POTCAR 使用不统一，导致预测时总电子数出现问题，需要根据具体问题进行微调
+- The coverage of training data is limited by the availability of KSDFT calculations in the MP database
+- Predictive accuracy may degrade for elemental combinations that are underrepresented in the training set
+- Molecular structures require the manual imposition of periodic boundary conditions
+- For certain elements, inconsistent POTCAR usage within the dataset may cause errors in the total electron count during inference; fine-tuning on a case-by-case basis may be necessary

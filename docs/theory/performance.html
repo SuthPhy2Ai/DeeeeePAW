@@ -1,27 +1,26 @@
 
 
 <!DOCTYPE html>
-<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>预测性能 &mdash; DeePAW 2.2.0 文档</title>
+  <title>Prediction Performance &mdash; DeePAW 2.2.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=54a955ad"></script>
+      <script src="../_static/documentation_options.js?v=b21de401"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
-      <script src="../_static/translations.js?v=540d3cec"></script>
     <script src="../_static/js/theme.js"></script>
-    <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="本地 CLI 部署" href="../platform/deployment.html" />
-    <link rel="prev" title="DeePAW 方法" href="method.html" /> 
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Local CLI Deployment" href="../platform/deployment.html" />
+    <link rel="prev" title="DeePAW Method" href="method.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -37,150 +36,150 @@
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
-              <p class="caption" role="heading"><span class="caption-text">第一部分：理论基础</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Part I: Theoretical Background</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="background.html">科学背景</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="background.html#id2">电荷密度与密度泛函理论</a></li>
-<li class="toctree-l2"><a class="reference internal" href="background.html#id3">无轨道密度泛函理论</a></li>
-<li class="toctree-l2"><a class="reference internal" href="background.html#e-3">E(3) 等变性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="background.html#id4">消息传递神经网络</a></li>
+<li class="toctree-l1"><a class="reference internal" href="background.html">Scientific Background</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="background.html#electron-density-and-density-functional-theory">Electron Density and Density Functional Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="background.html#orbital-free-density-functional-theory">Orbital-Free Density Functional Theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="background.html#e-3-equivariance">E(3) Equivariance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="background.html#message-passing-neural-networks">Message Passing Neural Networks</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="method.html">DeePAW 方法</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="method.html#id1">方法概述</a></li>
-<li class="toctree-l2"><a class="reference internal" href="method.html#id2">双图消息传递架构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="method.html#id3">电荷密度网格构建</a></li>
-<li class="toctree-l2"><a class="reference internal" href="method.html#id4">训练策略</a></li>
+<li class="toctree-l1"><a class="reference internal" href="method.html">DeePAW Method</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="method.html#method-overview">Method Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="method.html#dual-graph-message-passing-architecture">Dual-Graph Message Passing Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="method.html#charge-density-grid-construction">Charge Density Grid Construction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="method.html#training-strategy">Training Strategy</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">预测性能</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">泛化能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">适用材料类型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">已知局限</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Prediction Performance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#generalization-capability">Generalization Capability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-material-types">Supported Material Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#known-limitations">Known Limitations</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">第二部分：本地 CLI 部署</span></p>
+<p class="caption" role="heading"><span class="caption-text">Part II: Local CLI Deployment</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../platform/deployment.html">本地 CLI 部署</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id1">环境要求</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id2">快速开始</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id3">重要说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id4">容器结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id5">手动运行</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id6">故障排除</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/deployment.html">Local CLI Deployment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#quick-start">Quick Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#important-notes">Important Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#container-structure">Container Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#manual-run">Manual Run</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">第三部分：API 调用与平台介绍</span></p>
+<p class="caption" role="heading"><span class="caption-text">Part III: API and Platform</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../platform/overview.html">平台介绍</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#id2">核心功能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#id3">技术栈</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#id4">系统架构</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/overview.html#gpu">GPU 任务调度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/overview.html">Platform Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#core-features">Core Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#technology-stack">Technology Stack</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#system-architecture">System Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/overview.html#gpu-task-scheduling">GPU Task Scheduling</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#id5">系统要求</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/overview.html#id6">服务器端</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/overview.html#id7">客户端</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#system-requirements">System Requirements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/overview.html#server-side">Server Side</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/overview.html#client-side">Client Side</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../platform/web_frontend.html">Web 前端应用</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#id1">登录与注册</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#id2">主界面布局</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#predictions">预测工作台 (Predictions)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web_frontend.html#gpu">左栏: GPU 集群状态</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web_frontend.html#id3">中栏: 预测任务配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/web_frontend.html#id4">右栏: 可视化</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/web_frontend.html">Web Frontend</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#login-and-registration">Login and Registration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#main-interface-layout">Main Interface Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#prediction-workspace-predictions">Prediction Workspace (Predictions)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web_frontend.html#left-panel-gpu-cluster-status">Left Panel: GPU Cluster Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web_frontend.html#center-panel-prediction-task-configuration">Center Panel: Prediction Task Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web_frontend.html#right-panel-visualization">Right Panel: Visualization</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#my-files">文件管理 (My Files)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#id5">性能建议</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#file-management-my-files">File Management (My Files)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#performance-tips">Performance Tips</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../platform/usage.html">使用指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#id2">认证</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#id3">注册账户</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#token">登录获取 Token</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/usage.html">Usage Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#authentication">Authentication</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#register-account">Register Account</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#login-and-obtain-token">Login and Obtain Token</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#id4">完整工作流</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#id5">步骤 1：上传结构文件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#id6">步骤 2：提交批量预测</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#id7">步骤 3：查询进度</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#id8">步骤 4：下载结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#complete-workflow">Complete Workflow</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#step-1-upload-structure-files">Step 1: Upload Structure Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#step-2-submit-batch-prediction">Step 2: Submit Batch Prediction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#step-3-check-progress">Step 3: Check Progress</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#step-4-download-results">Step 4: Download Results</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#python">Python 客户端</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#id9">可视化结果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#python-client">Python Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#visualize-results">Visualize Results</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../platform/api_reference.html">API 参考</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#id1">认证相关</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/api_reference.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#authentication">Authentication</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-auth-register-with-code">POST /api/auth/register-with-code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-auth-login">POST /api/auth/login</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-auth-send-reset-code">POST /api/auth/send-reset-code</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-auth-reset-password">POST /api/auth/reset-password</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#id2">文件上传</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#file-upload">File Upload</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-files-upload-structures">POST /api/files/upload-structures</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#id3">预测相关</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#prediction-tasks">Prediction Tasks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-predictions-batch">POST /api/predictions/batch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#get-api-predictions-batch-batch-id">GET /api/predictions/batch/{batch_id}</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#get-api-predictions-result-task-id">GET /api/predictions/result/{task_id}</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#get-api-predictions-slice-task-id">GET /api/predictions/slice/{task_id}</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#id4">用户管理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#id5">系统相关</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#user-management">User Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#system-status">System Status</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#get-api-tasks-system-status">GET /api/tasks/system/status</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#http">HTTP 状态码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#http-status-codes">HTTP Status Codes</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../platform/faq.html">常见问题</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#nx-ny-nz">如何选择网格尺寸 nx/ny/nz？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id2">上传文件时 nx/ny/nz 必须填吗？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id3">预测失败怎么排查？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id4">支持分子结构吗？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#chgcar">CHGCAR 文件如何可视化？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#gpu">GPU 显存不足怎么办？</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id5">两种上传方式有什么区别？</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/faq.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#how-to-choose-grid-dimensions-nx-ny-nz">How to choose grid dimensions nx/ny/nz?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#are-nx-ny-nz-required-when-uploading-files">Are nx/ny/nz required when uploading files?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#how-to-troubleshoot-failed-predictions">How to troubleshoot failed predictions?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#are-molecular-structures-supported">Are molecular structures supported?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#how-to-visualize-chgcar-files">How to visualize CHGCAR files?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#what-to-do-if-gpu-vram-is-insufficient">What to do if GPU VRAM is insufficient?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#what-is-the-difference-between-the-two-upload-methods">What is the difference between the two upload methods?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../platform/changelog.html">更新日志</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/changelog.html">Changelog</a></li>
 </ul>
 
         </div>
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">DeePAW</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="页面导航">
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">预测性能</li>
+      <li class="breadcrumb-item active">Prediction Performance</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/theory/performance.rst.txt" rel="nofollow"> 查看页面源码</a>
+            <a href="../_sources/theory/performance.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -188,77 +187,77 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="id1">
-<h1>预测性能<a class="headerlink" href="#id1" title="链接到此标题。"></a></h1>
-<section id="id2">
-<h2>泛化能力<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
-<p>尽管仅在 MP 数据库的三维体相晶体上训练，DeePAW 展现出显著的零样本泛化能力:</p>
-<p><strong>三维晶体</strong></p>
+  <section id="prediction-performance">
+<h1>Prediction Performance<a class="headerlink" href="#prediction-performance" title="Link to this heading"></a></h1>
+<section id="generalization-capability">
+<h2>Generalization Capability<a class="headerlink" href="#generalization-capability" title="Link to this heading"></a></h2>
+<p>Although trained exclusively on three-dimensional bulk crystals from the MP database, DeePAW demonstrates remarkable zero-shot generalization capability:</p>
+<p><strong>3D Crystals</strong></p>
 <ul class="simple">
-<li><p>对 MP 数据库外的未见三维完美晶体具有良好预测能力</p></li>
-<li><p>可处理含点缺陷 (空位、间隙原子、替位原子) 的晶体结构</p></li>
-<li><p>成功预测了含 154 个原子/单胞的大体系 (如 V4C6B144)</p></li>
+<li><p>Good predictive performance on unseen three-dimensional perfect crystals outside the MP database</p></li>
+<li><p>Capable of handling crystal structures containing point defects (vacancies, interstitial atoms, and substitutional atoms)</p></li>
+<li><p>Successfully applied to large supercells containing 154 atoms per unit cell (e.g., V4C6B144)</p></li>
 </ul>
-<p><strong>低维材料</strong></p>
+<p><strong>Low-Dimensional Materials</strong></p>
 <ul class="simple">
-<li><p>二维材料: 单层结构 (如 CsF 单层)</p></li>
-<li><p>一维材料: 纳米管结构 (如碳纳米管)</p></li>
+<li><p>Two-dimensional materials: monolayer structures (e.g., CsF monolayer)</p></li>
+<li><p>One-dimensional materials: nanotube structures (e.g., carbon nanotubes)</p></li>
 </ul>
-<p><strong>应用场景</strong></p>
+<p><strong>Application Scenarios</strong></p>
 <ul class="simple">
-<li><p>催化研究: 表面氧析出反应 (OER) 路径分析 (如 Na 掺杂 RuO2)</p></li>
-<li><p>铁电材料: 正交相 HfO2 的极化电荷密度分析</p></li>
-<li><p>嵌入位点发现: 基于电荷密度预测间隙原子的有利占位</p></li>
+<li><p>Catalysis research: analysis of surface oxygen evolution reaction (OER) pathways (e.g., Na-doped RuO2)</p></li>
+<li><p>Ferroelectric materials: polarization charge density analysis of orthorhombic-phase HfO2</p></li>
+<li><p>Interstitial site discovery: prediction of energetically favorable interstitial occupation sites based on charge density</p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>适用材料类型<a class="headerlink" href="#id3" title="链接到此标题。"></a></h2>
+<section id="supported-material-types">
+<h2>Supported Material Types<a class="headerlink" href="#supported-material-types" title="Link to this heading"></a></h2>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>材料类型</p></th>
-<th class="head"><p>支持程度</p></th>
-<th class="head"><p>说明</p></th>
+<tr class="row-odd"><th class="head"><p>Material Type</p></th>
+<th class="head"><p>Support Level</p></th>
+<th class="head"><p>Notes</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>氧化物</p></td>
-<td><p>完全支持</p></td>
-<td><p>训练集中大量样本</p></td>
+<tr class="row-even"><td><p>Oxides</p></td>
+<td><p>Full support</p></td>
+<td><p>Abundantly represented in the training set</p></td>
 </tr>
-<tr class="row-odd"><td><p>金属与合金</p></td>
-<td><p>完全支持</p></td>
-<td><p>覆盖多种金属元素</p></td>
+<tr class="row-odd"><td><p>Metals and Alloys</p></td>
+<td><p>Full support</p></td>
+<td><p>Covers a wide range of metallic elements</p></td>
 </tr>
-<tr class="row-even"><td><p>半导体</p></td>
-<td><p>完全支持</p></td>
-<td><p>包括 IV 族、III-V 族等</p></td>
+<tr class="row-even"><td><p>Semiconductors</p></td>
+<td><p>Full support</p></td>
+<td><p>Includes Group IV, III-V, and related compounds</p></td>
 </tr>
-<tr class="row-odd"><td><p>二维材料</p></td>
-<td><p>零样本泛化</p></td>
-<td><p>未在训练集中但可预测</p></td>
+<tr class="row-odd"><td><p>2D Materials</p></td>
+<td><p>Zero-shot generalization</p></td>
+<td><p>Not present in training set but predictable</p></td>
 </tr>
-<tr class="row-even"><td><p>一维材料</p></td>
-<td><p>零样本泛化</p></td>
-<td><p>纳米管等结构</p></td>
+<tr class="row-even"><td><p>1D Materials</p></td>
+<td><p>Zero-shot generalization</p></td>
+<td><p>Nanotube and related structures</p></td>
 </tr>
-<tr class="row-odd"><td><p>缺陷结构</p></td>
-<td><p>零样本泛化</p></td>
-<td><p>空位、间隙、替位缺陷</p></td>
+<tr class="row-odd"><td><p>Defect Structures</p></td>
+<td><p>Zero-shot generalization</p></td>
+<td><p>Vacancy, interstitial, and substitutional defects</p></td>
 </tr>
-<tr class="row-even"><td><p>分子结构</p></td>
-<td><p>部分支持</p></td>
-<td><p>需要周期性边界条件</p></td>
+<tr class="row-even"><td><p>Molecular Structures</p></td>
+<td><p>Partial support</p></td>
+<td><p>Requires periodic boundary conditions</p></td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="id4">
-<h2>已知局限<a class="headerlink" href="#id4" title="链接到此标题。"></a></h2>
+<section id="known-limitations">
+<h2>Known Limitations<a class="headerlink" href="#known-limitations" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>训练数据的覆盖范围受限于 MP 数据库中 KSDFT 计算的可用性</p></li>
-<li><p>对于训练集中未充分覆盖的元素组合，预测精度可能下降</p></li>
-<li><p>分子结构需要人为添加周期性边界条件</p></li>
-<li><p>部分元素可能因为数据集的 POTCAR 使用不统一，导致预测时总电子数出现问题，需要根据具体问题进行微调</p></li>
+<li><p>The coverage of training data is limited by the availability of KSDFT calculations in the MP database</p></li>
+<li><p>Predictive accuracy may degrade for elemental combinations that are underrepresented in the training set</p></li>
+<li><p>Molecular structures require the manual imposition of periodic boundary conditions</p></li>
+<li><p>For certain elements, inconsistent POTCAR usage within the dataset may cause errors in the total electron count during inference; fine-tuning on a case-by-case basis may be necessary</p></li>
 </ul>
 </section>
 </section>
@@ -266,20 +265,20 @@
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="method.html" class="btn btn-neutral float-left" title="DeePAW 方法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="../platform/deployment.html" class="btn btn-neutral float-right" title="本地 CLI 部署" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="method.html" class="btn btn-neutral float-left" title="DeePAW Method" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../platform/deployment.html" class="btn btn-neutral float-right" title="Local CLI Deployment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2024-2026, DeePAW Team。</p>
+    <p>&#169; Copyright 2024-2026, DeePAW Team.</p>
   </div>
 
-  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
-    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
    
 
 </footer>

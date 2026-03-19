@@ -1,4 +1,4 @@
-更新日志
-========
+Changelog
+=========
 
-当前为第一版，暂无更新记录。
+This is the first release. No update history yet.

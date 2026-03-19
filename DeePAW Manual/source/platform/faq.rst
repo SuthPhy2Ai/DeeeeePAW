@@ -1,66 +1,66 @@
-常见问题
-========
+Frequently Asked Questions
+==========================
 
-如何选择网格尺寸 nx/ny/nz？
-----------------------------
+How to choose grid dimensions nx/ny/nz?
+---------------------------------------
 
-网格尺寸 nx/ny/nz 需要根据第一性原理计算的 k 点密度来设计，建议查阅 VASP 相关文档了解如何选择合适的网格尺寸。
+The grid dimensions nx/ny/nz should be determined based on the k-point density used in your first-principles calculation. Refer to the relevant VASP documentation for guidance on selecting appropriate grid dimensions.
 
-网格越大，CHGCAR 文件越大，GPU 显存占用越高。
+Larger grids produce larger CHGCAR files and consume more GPU VRAM.
 
-上传文件时 nx/ny/nz 必须填吗？
--------------------------------
+Are nx/ny/nz required when uploading files?
+--------------------------------------------
 
-是的。``/api/files/upload-structures`` 接口要求显式指定 ``nx``、``ny``、``nz``，
-不再提供默认值，以避免用户无意中使用不合适的网格尺寸。
+Yes. The ``/api/files/upload-structures`` endpoint requires ``nx``, ``ny``, and ``nz`` to be specified explicitly.
+No default values are provided, in order to prevent users from inadvertently using an unsuitable grid size.
 
-如果直接上传 ``.db`` 文件（``/api/files/upload``），则使用数据库中已有的网格设置。
+If you upload a ``.db`` file directly (``/api/files/upload``), the grid settings already stored in the database are used.
 
-预测失败怎么排查？
-------------------
+How to troubleshoot failed predictions?
+----------------------------------------
 
-1. 查询批次状态，确认哪些 task 失败
-2. 查看后端日志：``tail -f /tmp/deepaw_backend.log``
-3. 检查 GPU 状态：``curl http://localhost:8080/api/tasks/system/status``
+1. Query the batch status to identify which tasks have failed
+2. Inspect the backend log: ``tail -f /tmp/deepaw_backend.log``
+3. Check GPU status: ``curl http://localhost:8080/api/tasks/system/status``
 
-支持分子结构吗？
-----------------
+Are molecular structures supported?
+-------------------------------------
 
-支持。使用本地 CLI 部署版本时，需要关闭周期性边界条件。使用在线版本 (deepaw.tech) 时，默认不支持设置周期性边界条件。
+Yes. When using the local CLI deployment, periodic boundary conditions must be disabled. When using the online version (deepaw.tech), setting periodic boundary conditions is not supported by default.
 
-CHGCAR 文件如何可视化？
------------------------
+How to visualize CHGCAR files?
+--------------------------------
 
-- **VESTA** (免费): 直接打开 CHGCAR 文件
-- **Ovito**: 支持等值面渲染
-- **Web 前端**：内置 Plotly 3D 等值面可视化
-- **Python**：使用 ASE + Plotly 自行绘制
+- **VESTA** (free): open the CHGCAR file directly
+- **Ovito**: supports isosurface rendering
+- **Web Frontend**: built-in Plotly 3D isosurface visualization
+- **Python**: plot manually using ASE + Plotly
 
-GPU 显存不足怎么办？
---------------------
+What to do if GPU VRAM is insufficient?
+-----------------------------------------
 
-- 减小网格尺寸（如从 64³ 降到 48³）
-- 减少同时使用的 GPU 数量：``export DEEPAW_GPUS="1,2"``
-- 检查是否有其他进程占用显存：``nvidia-smi``
+- Reduce the grid dimensions (e.g., from 64³ to 48³)
+- Reduce the number of GPUs used simultaneously: ``export DEEPAW_GPUS="1,2"``
+- Check whether other processes are consuming VRAM: ``nvidia-smi``
 
-两种上传方式有什么区别？
-------------------------
+What is the difference between the two upload methods?
+-------------------------------------------------------
 
 .. list-table::
    :header-rows: 1
 
-   * - 特性
+   * - Feature
      - upload-structures
      - upload
-   * - 支持格式
-     - 15 种
-     - 仅 .db
-   * - 格式转换
-     - 自动
-     - 不需要
-   * - 网格尺寸
-     - 必填参数
-     - 使用数据库原有设置
-   * - 压缩包
-     - 支持
-     - 不支持
+   * - Supported formats
+     - 15 formats
+     - .db only
+   * - Format conversion
+     - Automatic
+     - Not required
+   * - Grid dimensions
+     - Required parameter
+     - Uses existing database settings
+   * - Archive
+     - Supported
+     - Not supported

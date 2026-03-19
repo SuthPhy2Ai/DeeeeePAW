@@ -1,44 +1,44 @@
-科学背景
-========
+Scientific Background
+=====================
 
-电荷密度与密度泛函理论
-----------------------
+Electron Density and Density Functional Theory
+----------------------------------------------
 
-电子密度 (electron density) 是凝聚态物理和材料科学中最基本的物理量之一。根据 Hohenberg-Kohn 定理，基态电子密度唯一地决定了多电子体系的所有基态性质，包括总能量、力、应力等。
+The electron density is one of the most fundamental physical quantities in condensed matter physics and materials science. According to the Hohenberg-Kohn theorem, the ground-state electron density uniquely determines all ground-state properties of a many-electron system, including the total energy, forces, stress tensor, and related observables.
 
-传统上，获取精确的电子密度分布需要通过 Kohn-Sham 密度泛函理论 (KSDFT) 进行自洽场迭代计算。KSDFT 通过求解单电子 Kohn-Sham 方程获得轨道波函数，再由波函数构造电子密度:
+Traditionally, obtaining an accurate electron density distribution requires self-consistent field iterations within Kohn-Sham density functional theory (KSDFT). KSDFT obtains orbital wavefunctions by solving the single-particle Kohn-Sham equations, from which the electron density is constructed:
 
 .. math::
 
    n(\mathbf{r}) = \sum_i f_i |\psi_i(\mathbf{r})|^2
 
-其中 :math:`\psi_i` 为 Kohn-Sham 轨道，:math:`f_i` 为占据数。这一过程的计算复杂度随体系规模急剧增长，限制了大规模材料筛选的效率。
+where :math:`\psi_i` are the Kohn-Sham orbitals and :math:`f_i` are the corresponding occupation numbers. The computational complexity of this procedure scales steeply with system size, limiting its applicability to large-scale materials screening.
 
-无轨道密度泛函理论
-------------------
+Orbital-Free Density Functional Theory
+--------------------------------------
 
-无轨道密度泛函理论 (Orbital-Free DFT, OFDFT) 提供了一条绕过 Kohn-Sham 方程的替代路径。在 OFDFT 框架下，基态材料性质可由电子密度泛函的最小内能原理直接表达，无需显式求解轨道波函数。
+Orbital-free density functional theory (Orbital-Free DFT, OFDFT) provides an alternative route that bypasses the Kohn-Sham equations entirely. Within the OFDFT framework, ground-state materials properties are expressed directly through the variational minimization of an energy functional of the electron density, without explicitly solving for orbital wavefunctions.
 
-深度学习电子密度模型为基于 OFDFT 的电子结构预测提供了一条有前景的路线。通过机器学习方法直接建立原子结构到电子密度的映射关系，可以在保持较高精度的同时大幅降低计算成本。
+Deep learning models for the electron density offer a promising pathway toward OFDFT-based electronic structure prediction. By learning a direct mapping from atomic structure to electron density via machine learning, it is possible to substantially reduce computational cost while retaining high accuracy.
 
-E(3) 等变性
------------
+E(3) Equivariance
+-----------------
 
-物理系统的电子密度必须满足三维欧几里得群 E(3) 的对称性约束，即对旋转、平移和反演操作保持等变:
+The electron density of a physical system must satisfy the symmetry constraints of the three-dimensional Euclidean group E(3), remaining equivariant under rotations, translations, and inversion:
 
-- **平移等变**: 整体平移原子结构时，电子密度场随之平移
-- **旋转等变**: 旋转原子结构时，电子密度场以相同方式旋转
-- **反演等变**: 空间反演时，电子密度场相应反演
+- **Translation equivariance**: A global translation of the atomic structure results in an identical translation of the electron density field.
+- **Rotation equivariance**: A rotation of the atomic structure induces the same rotation in the electron density field.
+- **Inversion equivariance**: Spatial inversion of the atomic structure produces a corresponding inversion of the electron density field.
 
-将 E(3) 等变性作为硬约束嵌入神经网络架构，可以显著提高模型的数据效率和泛化能力，确保预测结果在物理上自洽。
+Embedding E(3) equivariance as a hard constraint into the neural network architecture significantly improves data efficiency and generalization, ensuring that predicted electron densities are physically consistent by construction.
 
-消息传递神经网络
-----------------
+Message Passing Neural Networks
+-------------------------------
 
-图神经网络 (GNN) 中的消息传递神经网络 (Message Passing Neural Network, MPNN) 是处理原子结构数据的自然选择。在 MPNN 框架中:
+Message passing neural networks (MPNNs), a class of graph neural networks (GNNs), are a natural framework for processing atomic structure data. Within the MPNN formalism:
 
-- 原子被表示为图的节点，携带元素类型等特征
-- 原子间的化学键或近邻关系被表示为图的边
-- 通过多轮消息传递，每个原子聚合来自邻居的信息，逐步构建对局部化学环境的表征
+- Atoms are represented as nodes of a graph, carrying features such as element type.
+- Chemical bonds or nearest-neighbor relationships between atoms are represented as edges of the graph.
+- Through multiple rounds of message passing, each atom aggregates information from its neighbors, progressively building a representation of its local chemical environment.
 
-这一机制天然适合描述材料中原子间的相互作用，并且可以处理任意大小和组成的晶体结构。
+This mechanism is naturally suited to describing interatomic interactions in materials and can handle crystal structures of arbitrary size and composition.

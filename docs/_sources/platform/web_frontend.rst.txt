@@ -1,155 +1,155 @@
-Web 前端应用
+Web Frontend
 ============
 
-DeePAW 提供了一个在线 Web 应用，用户可通过浏览器直接进行电荷密度预测和可视化操作，无需编写任何代码。
+DeePAW provides an online web application that allows users to perform charge density predictions and visualization directly in the browser, without writing any code.
 
-访问地址: **https://deepaw.tech**
+Access URL: **https://deepaw.tech**
 
-本地部署版本可通过 ``http://localhost:3000`` (本地) 或通过 SSH 隧道远程访问。
+The locally deployed version is accessible via ``http://localhost:3000`` (local) or remotely through an SSH tunnel.
 
-登录与注册
-----------
+Login and Registration
+----------------------
 
-首次使用需注册账户，注册时需要提供邀请码。
+First-time users must register an account. An invitation code is required during registration.
 
 .. figure:: /_static/20260319-180321.jpg
    :width: 100%
-   :alt: DeePAW 登录页面
+   :alt: DeePAW Login Page
 
-   登录页面，左侧为 DeePAW 品牌介绍，右侧为登录/注册表单
+   Login page: DeePAW branding on the left, login/registration form on the right
 
-- 输入用户名、密码和邮箱
-- 填写邀请码 (默认: ``deepawdeepaw``)
-- 注册成功后自动跳转到主界面
+- Enter your username, password, and email address
+- Enter the invitation code (default: ``deepawdeepaw``)
+- After successful registration, you will be redirected to the main interface automatically
 
-已有账户直接输入用户名和密码登录。如忘记密码，可通过邮箱验证码重置。
+Existing users can log in by entering their username and password directly. If you forget your password, it can be reset via email verification code.
 
-主界面布局
-----------
+Main Interface Layout
+---------------------
 
-登录后进入主界面，顶部导航栏包含两个视图切换按钮:
+After logging in, the main interface is displayed. The top navigation bar contains two view-switching buttons:
 
-- **Predictions**: 预测工作台 (默认视图)
-- **My Files**: 文件与历史管理
+- **Predictions**: Prediction workspace (default view)
+- **My Files**: File and history management
 
-右上角显示当前登录用户名和断开连接按钮。
+The currently logged-in username and a disconnect button are shown in the upper-right corner.
 
-预测工作台 (Predictions)
-------------------------
+Prediction Workspace (Predictions)
+-----------------------------------
 
-预测工作台采用三栏布局:
+The prediction workspace uses a three-panel layout:
 
 .. figure:: /_static/20260319-180331.jpg
    :width: 100%
-   :alt: 预测工作台 - 上传文件与参数配置
+   :alt: Prediction Workspace - File Upload and Parameter Configuration
 
-   预测工作台界面: 左栏 GPU 集群状态，中栏文件上传与任务配置，右栏可视化区域
+   Prediction workspace interface: left panel shows GPU cluster status, center panel shows file upload and task configuration, right panel shows the visualization area
 
-左栏: GPU 集群状态
-^^^^^^^^^^^^^^^^^^
+Left Panel: GPU Cluster Status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-实时显示各 GPU 的运行状态:
+Displays the real-time operating status of each GPU:
 
-- GPU 名称和编号
-- 显存使用量 (已用/总量 MB)
-- GPU 利用率 (%)
-- 温度
-- 状态指示 (idle/busy)
+- GPU name and index
+- VRAM usage (used / total in MB)
+- GPU utilization (%)
+- Temperature
+- Status indicator (idle/busy)
 
-数据每 5 秒通过 WebSocket 自动刷新。
+Data is refreshed automatically every 5 seconds via WebSocket.
 
-中栏: 预测任务配置
-^^^^^^^^^^^^^^^^^^
+Center Panel: Prediction Task Configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**上传结构文件**
+**Upload Structure Files**
 
-点击上传区域选择文件，支持 CIF、VASP、XYZ、PDB 等 15 种格式以及 ZIP/TAR 压缩包。上传时需指定网格维度 nx、ny、nz。
+Click the upload area to select files. Supported formats include CIF, VASP, XYZ, PDB, and 14 others (15 formats total), as well as ZIP/TAR archives. The grid dimensions nx, ny, and nz must be specified at upload time.
 
-也可点击 "Load Demo" 加载系统内置的演示数据库快速体验。
+Alternatively, click "Load Demo" to quickly load the built-in demonstration database.
 
-**提交预测**
+**Submit Prediction**
 
-- 选择结构 ID 范围 (start_id ~ end_id)
-- 点击提交按钮
-- 任务进入 GPU 队列，每个任务卡片实时显示状态:
+- Select the structure ID range (start_id ~ end_id)
+- Click the submit button
+- Tasks enter the GPU queue; each task card displays its status in real time:
 
-  - 灰色: pending (等待中)
-  - 蓝色: processing (计算中)
-  - 绿色: completed (已完成)
-  - 红色: failed (失败)
+  - Grey: pending
+  - Blue: processing
+  - Green: completed
+  - Red: failed
 
-右栏: 可视化
-^^^^^^^^^^^^^
+Right Panel: Visualization
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-任务完成后，点击对应任务卡片即可在右栏查看预测结果，提供两种可视化模式:
+Once a task is complete, click its task card to view the prediction results in the right panel. Two visualization modes are available:
 
-**2D 切片 (Slice)**
+**2D Slice (Slice)**
 
-沿指定 Miller 指数 (hkl) 平面的二维电荷密度切片:
+A two-dimensional charge density slice along a specified Miller index (hkl) plane:
 
 .. figure:: /_static/20260319-180338.jpg
    :width: 100%
-   :alt: 2D 电荷密度切片可视化
+   :alt: 2D Charge Density Slice Visualization
 
-   2D 切片视图: 沿 (hkl) 平面的电荷密度分布热力图，支持等高线叠加和高斯模糊
+   2D slice view: heatmap of charge density distribution along the (hkl) plane, with optional contour overlay and Gaussian blur
 
-- 可选择切面方向 (h, k, l)
-- 可调节切面距离 (distance)
-- 支持高斯模糊平滑
-- 支持等高线叠加显示
-- Viridis 色标映射
+- Select the slice direction (h, k, l)
+- Adjust the slice distance (distance)
+- Gaussian blur smoothing supported
+- Contour overlay display supported
+- Viridis colormap
 
-**3D 等值面 (Isosurface)**
+**3D Isosurface (Isosurface)**
 
-基于 Plotly.js 的交互式三维等值面渲染:
+Interactive three-dimensional isosurface rendering powered by Plotly.js:
 
 .. figure:: /_static/20260319-180345.jpg
    :width: 100%
-   :alt: 3D 电荷密度等值面可视化
+   :alt: 3D Charge Density Isosurface Visualization
 
-   3D 等值面视图: 交互式三维电荷密度渲染，显示晶胞边框和晶格参数
+   3D isosurface view: interactive three-dimensional charge density rendering showing the unit cell boundary and lattice parameters
 
-- 鼠标拖拽旋转视角
-- 滚轮缩放
-- 可调节等值面阈值 (ISO MIN/MAX)
-- 可调节分辨率和等值面层数
-- 显示晶胞边框 (金色线框) 和晶格参数 (a, b, c, alpha, beta, gamma)
+- Click and drag to rotate the view
+- Scroll to zoom
+- Adjustable isosurface threshold (ISO MIN/MAX)
+- Adjustable resolution and number of isosurface levels
+- Displays the unit cell boundary (gold wireframe) and lattice parameters (a, b, c, alpha, beta, gamma)
 
-文件管理 (My Files)
--------------------
+File Management (My Files)
+--------------------------
 
-切换到 "My Files" 视图，管理上传的文件和预测历史:
+Switch to the "My Files" view to manage uploaded files and prediction history:
 
 .. figure:: /_static/20260319-180351.jpg
    :width: 100%
-   :alt: 文件管理与结果存储页面
+   :alt: File Management and Result Storage Page
 
-   My Files 视图: 上传文件列表和预测历史记录，显示下载状态和有效期
+   My Files view: uploaded file list and prediction history, showing download status and expiration information
 
-**上传文件列表**
+**Uploaded File List**
 
-- 文件名、上传时间
-- 距上传天数
-- 下载状态 (available / expired)
-- 文件下载有效期为 3 天
+- File name and upload time
+- Days since upload
+- Download status (available / expired)
+- Files are available for download for 3 days
 
-**预测历史**
+**Prediction History**
 
-- 任务 ID、创建时间
-- CHGCAR 文件路径
-- 下载状态和有效期
+- Task ID and creation time
+- CHGCAR file path
+- Download status and expiration
 
-性能建议
---------
+Performance Tips
+----------------
 
-**3D 可视化优化**
+**3D Visualization Optimization**
 
-- 大型 CHGCAR 文件 (网格 > 48^3) 建议先降低分辨率预览
-- 减少等值面层数可提升浏览器渲染性能
-- 提高 ISO MIN 阈值仅显示高密度区域，减少渲染面片数
+- For large CHGCAR files (grid > 48^3), it is recommended to preview at reduced resolution first
+- Reducing the number of isosurface levels improves browser rendering performance
+- Raising the ISO MIN threshold to display only high-density regions reduces the number of rendered polygons
 
-**浏览器兼容性**
+**Browser Compatibility**
 
-- 推荐使用 Chrome / Edge (Chromium 内核)
-- 需要 WebGL 支持 (用于 Plotly 3D 渲染)
-- 建议屏幕分辨率 >= 1920x1080
+- Chrome / Edge (Chromium-based) is recommended
+- WebGL support is required (for Plotly 3D rendering)
+- A screen resolution of >= 1920x1080 is recommended

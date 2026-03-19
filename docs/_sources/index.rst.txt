@@ -1,9 +1,9 @@
-DeePAW 软件说明书
-==================
+DeePAW Documentation
+====================
 
 .. toctree::
    :maxdepth: 2
-   :caption: 第一部分：理论基础
+   :caption: Part I: Theoretical Background
 
    theory/background
    theory/method
@@ -11,13 +11,13 @@ DeePAW 软件说明书
 
 .. toctree::
    :maxdepth: 2
-   :caption: 第二部分：本地 CLI 部署
+   :caption: Part II: Local CLI Deployment
 
    platform/deployment
 
 .. toctree::
    :maxdepth: 2
-   :caption: 第三部分：API 调用与平台介绍
+   :caption: Part III: API and Platform
 
    platform/overview
    platform/web_frontend

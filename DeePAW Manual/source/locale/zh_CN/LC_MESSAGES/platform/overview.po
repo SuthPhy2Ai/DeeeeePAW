@@ -3,147 +3,176 @@
 # This file is distributed under the same license as the DeePAW package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DeePAW \n"
+"Project-Id-Version: DeePAW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-19 23:20+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-03-20 00:00+0800\n"
+"Last-Translator: DeePAW Documentation Team <docs@deepaw.tech>\n"
+"Language-Team: Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../platform/overview.rst:2
 msgid "Platform Overview"
-msgstr ""
+msgstr "平台概览"
 
 #: ../../platform/overview.rst:4
-msgid "DeePAW is an online inference service platform for the DeePAW method, offering both a web interface and a RESTful API. It is designed to provide materials science researchers with efficient, high-throughput charge density calculation services."
+msgid ""
+"DeePAW is an online inference service platform for the DeePAW method, "
+"offering both a web interface and a RESTful API. It is designed to provide "
+"materials science researchers with efficient, high-throughput charge density"
+" calculation services."
 msgstr ""
+"DeePAW 是面向 DeePAW 方法的在线推理服务平台，同时提供 Web 界面与 RESTful "
+"API。其设计目标是为材料科学研究者提供高效、高通量的电荷密度计算服务。"
 
 #: ../../platform/overview.rst:7
 msgid "Core Features"
-msgstr ""
+msgstr "核心功能"
 
 #: ../../platform/overview.rst:9
-msgid "**Batch charge density prediction**: Predicts three-dimensional charge density distributions from atomic structure files"
-msgstr ""
+msgid ""
+"**Batch charge density prediction**: Predicts three-dimensional charge "
+"density distributions from atomic structure files"
+msgstr "**批量电荷密度预测**：由原子结构文件预测三维电荷密度分布"
 
 #: ../../platform/overview.rst:10
-msgid "**Multi-format file support**: Supports 15 structure file formats including CIF, VASP, XYZ, and PDB"
-msgstr ""
+msgid ""
+"**Multi-format file support**: Supports 15 structure file formats including "
+"CIF, VASP, XYZ, and PDB"
+msgstr "**多格式文件支持**：支持 CIF、VASP、XYZ、PDB 在内的 15 种结构文件格式"
 
 #: ../../platform/overview.rst:11
-msgid "**Multi-GPU parallel scheduling**: Built-in priority queue and GPU task scheduler supporting concurrent multi-task execution"
-msgstr ""
+msgid ""
+"**Multi-GPU parallel scheduling**: Built-in priority queue and GPU task "
+"scheduler supporting concurrent multi-task execution"
+msgstr "**多 GPU 并行调度**：内置优先级队列与 GPU 任务调度器，支持多任务并发执行"
 
 #: ../../platform/overview.rst:12
-msgid "**RESTful API**: Comprehensive programmatic access interface for seamless integration into automated workflows"
-msgstr ""
+msgid ""
+"**RESTful API**: Comprehensive programmatic access interface for seamless "
+"integration into automated workflows"
+msgstr "**RESTful API**：提供完整的程序化访问接口，可无缝集成至自动化工作流"
 
 #: ../../platform/overview.rst:13
-msgid "**CHGCAR output**: VASP-compatible format, directly visualizable with tools such as VESTA and Ovito"
-msgstr ""
+msgid ""
+"**CHGCAR output**: VASP-compatible format, directly visualizable with tools "
+"such as VESTA and Ovito"
+msgstr "**CHGCAR 输出**：兼容 VASP 格式，可直接使用 VESTA、Ovito 等工具可视化"
 
 #: ../../platform/overview.rst:14
-msgid "**Real-time progress tracking**: Live task status updates delivered via WebSocket"
-msgstr ""
+msgid ""
+"**Real-time progress tracking**: Live task status updates delivered via "
+"WebSocket"
+msgstr "**实时进度跟踪**：通过 WebSocket 推送任务状态实时更新"
 
 #: ../../platform/overview.rst:15
-msgid "**Web frontend**: React-based interactive interface with 3D isosurface visualization"
-msgstr ""
+msgid ""
+"**Web frontend**: React-based interactive interface with 3D isosurface "
+"visualization"
+msgstr "**Web 前端**：基于 React 的交互式界面，支持三维等值面可视化"
 
 #: ../../platform/overview.rst:16
-msgid "**Model warm-start**: GPU model caching mechanism that keeps the model resident in VRAM after the first inference, eliminating repeated loading overhead for subsequent tasks"
-msgstr ""
+msgid ""
+"**Model warm-start**: GPU model caching mechanism that keeps the model "
+"resident in VRAM after the first inference, eliminating repeated loading "
+"overhead for subsequent tasks"
+msgstr "**模型预热启动**：GPU 模型缓存机制可在首次推理后将模型常驻于显存，消除后续任务的重复加载开销"
 
 #: ../../platform/overview.rst:19
 msgid "Technology Stack"
-msgstr ""
+msgstr "技术栈"
 
 #: ../../platform/overview.rst:21
 msgid "**Frontend**: React 19 + TypeScript + Vite + Plotly.js"
-msgstr ""
+msgstr "**前端**：React 19 + TypeScript + Vite + Plotly.js"
 
 #: ../../platform/overview.rst:22
 msgid "**Backend**: FastAPI + Uvicorn (ASGI)"
-msgstr ""
+msgstr "**后端**：FastAPI + Uvicorn（ASGI）"
 
 #: ../../platform/overview.rst:23
 msgid "**Inference**: PyTorch + E3NN + ASE"
-msgstr ""
+msgstr "**推理**：PyTorch + E3NN + ASE"
 
 #: ../../platform/overview.rst:24
 msgid "**Data format**: Multiple formats -> ASE Database -> CHGCAR (VASP)"
-msgstr ""
+msgstr "**数据格式**：多种格式 -> ASE Database -> CHGCAR（VASP）"
 
 #: ../../platform/overview.rst:27
 msgid "System Architecture"
-msgstr ""
+msgstr "系统架构"
 
 #: ../../platform/overview.rst:41
 msgid "GPU Task Scheduling"
-msgstr ""
+msgstr "GPU 任务调度"
 
 #: ../../platform/overview.rst:43
-msgid "One worker thread per GPU, with exclusive access enforced via ``threading.Lock``"
-msgstr ""
+msgid ""
+"One worker thread per GPU, with exclusive access enforced via "
+"``threading.Lock``"
+msgstr "每块 GPU 对应一个工作线程，并通过 ``threading.Lock`` 实现独占访问"
 
 #: ../../platform/overview.rst:44
 msgid "Tasks are processed in order of a priority queue (PriorityQueue)"
-msgstr ""
+msgstr "任务按优先级队列（PriorityQueue）顺序处理"
 
 #: ../../platform/overview.rst:45
-msgid "Model caching: the first task loads the model into GPU VRAM (~5-10 s); subsequent tasks reuse the cached instance (<0.1 s overhead)"
-msgstr ""
+msgid ""
+"Model caching: the first task loads the model into GPU VRAM (~5-10 s); "
+"subsequent tasks reuse the cached instance (<0.1 s overhead)"
+msgstr "模型缓存：首个任务将模型加载至 GPU 显存（约 5-10 s）；后续任务复用缓存实例（额外开销 <0.1 s）"
 
 #: ../../platform/overview.rst:46
-msgid "One model instance cached per GPU, occupying approximately 2-4 GB of VRAM"
-msgstr ""
+msgid ""
+"One model instance cached per GPU, occupying approximately 2-4 GB of VRAM"
+msgstr "每块 GPU 缓存一个模型实例，约占用 2-4 GB 显存"
 
 #: ../../platform/overview.rst:49
 msgid "System Requirements"
-msgstr ""
+msgstr "系统要求"
 
 #: ../../platform/overview.rst:52
 msgid "Server Side"
-msgstr ""
+msgstr "服务端"
 
 #: ../../platform/overview.rst:54
 msgid "Python 3.10+"
-msgstr ""
+msgstr "Python 3.10+"
 
 #: ../../platform/overview.rst:55
 msgid "CUDA 11.8+ / 12.x"
-msgstr ""
+msgstr "CUDA 11.8+ / 12.x"
 
 #: ../../platform/overview.rst:56
 msgid "GPU: 8 GB+ VRAM (16 GB+ recommended)"
-msgstr ""
+msgstr "GPU：8 GB+ 显存（推荐 16 GB+）"
 
 #: ../../platform/overview.rst:57
 msgid "Disk: approximately 5-10 MB per CHGCAR file"
-msgstr ""
+msgstr "磁盘：每个 CHGCAR 文件约 5-10 MB"
 
 #: ../../platform/overview.rst:58
 msgid "Memory: 16 GB+ (32 GB+ recommended)"
-msgstr ""
+msgstr "内存：16 GB+（推荐 32 GB+）"
 
 #: ../../platform/overview.rst:61
 msgid "Client Side"
-msgstr ""
+msgstr "客户端"
 
 #: ../../platform/overview.rst:63
 msgid "Python 3.7+ (only the ``requests`` library required)"
-msgstr ""
+msgstr "Python 3.7+（仅需 ``requests`` 库）"
 
 #: ../../platform/overview.rst:64
 msgid "Or any programming language with HTTP request support"
-msgstr ""
+msgstr "或任意支持 HTTP 请求的编程语言"
 
 #: ../../platform/overview.rst:65
 msgid "No GPU requirement"
-msgstr ""
+msgstr "无 GPU 要求"

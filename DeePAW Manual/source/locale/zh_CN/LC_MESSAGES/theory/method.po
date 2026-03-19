@@ -3,139 +3,207 @@
 # This file is distributed under the same license as the DeePAW package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DeePAW \n"
+"Project-Id-Version: DeePAW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-19 23:20+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-03-20 00:00+0800\n"
+"Last-Translator: DeePAW Documentation Team <docs@deepaw.tech>\n"
+"Language-Team: Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../theory/method.rst:2
 msgid "DeePAW Method"
-msgstr ""
+msgstr "DeePAW 方法"
 
 #: ../../theory/method.rst:5
 msgid "Method Overview"
-msgstr ""
+msgstr "方法概述"
 
 #: ../../theory/method.rst:7
-msgid "DeePAW (Deep Augmented Way) is a machine learning method for predicting electron density functionals. Its name is inspired by the Projector Augmented-Wave (PAW) method. DeePAW employs an E(3)-equivariant graph neural network architecture based on the e3nn library, predicting electron densities through end-to-end automated representation learning."
+msgid ""
+"DeePAW (Deep Augmented Way) is a machine learning method for predicting "
+"electron density functionals. Its name is inspired by the Projector "
+"Augmented-Wave (PAW) method. DeePAW employs an E(3)-equivariant graph neural"
+" network architecture based on the e3nn library, predicting electron "
+"densities through end-to-end automated representation learning."
 msgstr ""
+"DeePAW（Deep Augmented Way）是一种用于预测电子密度泛函的机器学习方法，其命名灵感来源于投影缀加波（Projector "
+"Augmented-Wave, PAW）方法。DeePAW 采用基于 e3nn 库的 E(3) "
+"等变图神经网络架构，通过端到端自动表征学习实现电子密度预测。"
 
 #: ../../theory/method.rst:10
 msgid "Dual-Graph Message Passing Architecture"
-msgstr ""
+msgstr "双图消息传递架构"
 
 #: ../../theory/method.rst:12
-msgid "DeePAW adopts a Double Graph Message Passing Neural Network (Double Graph MPNN) architecture comprising two collaborating MPNNs and an output head:"
-msgstr ""
+msgid ""
+"DeePAW adopts a Double Graph Message Passing Neural Network (Double Graph "
+"MPNN) architecture comprising two collaborating MPNNs and an output head:"
+msgstr "DeePAW 采用双图消息传递神经网络（Double Graph MPNN）架构，由两个协同工作的 MPNN 与一个输出头构成："
 
 #: ../../theory/method.rst:14
 msgid "**Atomic Representation**"
-msgstr ""
+msgstr "**原子表征**"
 
 #: ../../theory/method.rst:16
-msgid "The atomic representation module is responsible for learning atom-level representations. Initial edge embeddings are constructed using Gaussian basis functions (GBF):"
-msgstr ""
+msgid ""
+"The atomic representation module is responsible for learning atom-level "
+"representations. Initial edge embeddings are constructed using Gaussian "
+"basis functions (GBF):"
+msgstr "原子表征模块负责学习原子层级表示。初始边嵌入由高斯基函数（Gaussian Basis Function, GBF）构建："
 
 #: ../../theory/method.rst:18
 msgid "e_{ij} = \\exp\\left(-\\frac{(d_{ij} - \\mu)^2}{2\\sigma^2}\\right)"
-msgstr ""
+msgstr "e_{ij} = \\exp\\left(-\\frac{(d_{ij} - \\mu)^2}{2\\sigma^2}\\right)"
 
 #: ../../theory/method.rst:22
-msgid "where :math:`d_{ij}` is the distance between nodes i and j, and :math:`\\mu` is uniformly distributed between 0 and 6 |angstrom|."
+msgid ""
+"where :math:`d_{ij}` is the distance between nodes i and j, and :math:`\\mu`"
+" is uniformly distributed between 0 and 6 |angstrom|."
 msgstr ""
+"其中 :math:`d_{ij}` 为节点 i 与 j 之间的距离，:math:`\\mu` 在 0 至 6 |angstrom| 之间均匀分布。"
 
 #: ../../theory/method.rst:24
-msgid "The message function constructs equivariant messages using Clebsch-Gordan coefficients and spherical harmonics; each atom aggregates messages from all neighbors before updating its node embedding. A dynamic rotation angle mechanism is introduced during node embedding updates, dynamically adjusting the directional information of equivariant features through the gating mechanism of e3nn."
+msgid ""
+"The message function constructs equivariant messages using Clebsch-Gordan "
+"coefficients and spherical harmonics; each atom aggregates messages from all"
+" neighbors before updating its node embedding. A dynamic rotation angle "
+"mechanism is introduced during node embedding updates, dynamically adjusting"
+" the directional information of equivariant features through the gating "
+"mechanism of e3nn."
 msgstr ""
+"消息函数利用 Clebsch-Gordan "
+"系数与球谐函数构造等变消息；每个原子在更新节点嵌入前会聚合其所有邻居的消息。在节点嵌入更新过程中，引入动态旋转角机制，通过 e3nn "
+"的门控机制动态调节等变特征的方向信息。"
 
 #: ../../theory/method.rst:28
 msgid "**Electronic Potential**"
-msgstr ""
+msgstr "**电子势**"
 
 #: ../../theory/method.rst:30
-msgid "The electronic potential module operates at the level of grid points. Node embeddings from the atomic representation are fed into the electronic potential module, where grid points update their own embeddings by aggregating information from neighboring atomic nuclei. Shared weight vectors and interaction weight vectors are used during the embedding update to control the relative contributions of a node's own features and the incoming neighbor messages."
+msgid ""
+"The electronic potential module operates at the level of grid points. Node "
+"embeddings from the atomic representation are fed into the electronic "
+"potential module, where grid points update their own embeddings by "
+"aggregating information from neighboring atomic nuclei. Shared weight "
+"vectors and interaction weight vectors are used during the embedding update "
+"to control the relative contributions of a node's own features and the "
+"incoming neighbor messages."
 msgstr ""
+"电子势模块在网格点层级运行。来自原子表征模块的节点嵌入被输入电子势模块，网格点通过聚合邻近原子核信息更新其自身嵌入。在嵌入更新过程中引入共享权重向量与交互权重向量，用以控制节点自身特征与邻居消息输入的相对贡献。"
 
 #: ../../theory/method.rst:32
 msgid "**Output Heads**"
-msgstr ""
+msgstr "**输出头**"
 
 #: ../../theory/method.rst:34
 msgid "The output head comprises three modules:"
-msgstr ""
+msgstr "输出头由三个模块组成："
 
 #: ../../theory/method.rst:36
-msgid "**GAT head**: Based on a Graph Attention Network (GAT), it extracts atom-level output quantities from the node embeddings of all layers of the atomic representation."
+msgid ""
+"**GAT head**: Based on a Graph Attention Network (GAT), it extracts atom-"
+"level output quantities from the node embeddings of all layers of the atomic"
+" representation."
 msgstr ""
+"**GAT head**：基于图注意力网络（Graph Attention Network, GAT），从原子表征各层的节点嵌入中提取原子层级输出量。"
 
 #: ../../theory/method.rst:37
-msgid "**MLP head**: Generates a smoothly varying electron density profile from the node embeddings of all layers of the electronic potential module."
-msgstr ""
+msgid ""
+"**MLP head**: Generates a smoothly varying electron density profile from the"
+" node embeddings of all layers of the electronic potential module."
+msgstr "**MLP head**：由电子势模块各层节点嵌入生成平滑变化的电子密度分布。"
 
 #: ../../theory/method.rst:38
-msgid "**KAN head**: Based on a Kolmogorov-Arnold Network (KAN), it computes the residual electron density from the node embeddings of the final layer of the electronic potential module."
-msgstr ""
+msgid ""
+"**KAN head**: Based on a Kolmogorov-Arnold Network (KAN), it computes the "
+"residual electron density from the node embeddings of the final layer of the"
+" electronic potential module."
+msgstr "**KAN head**：基于 Kolmogorov-Arnold Network（KAN），由电子势模块末层节点嵌入计算电子密度残差。"
 
 #: ../../theory/method.rst:41
 msgid "Charge Density Grid Construction"
-msgstr ""
+msgstr "电荷密度网格构建"
 
 #: ../../theory/method.rst:43
-msgid "DeePAW constructs the electron density grid following VASP's coarse-fine grid scheme. The grid density is determined according to the Nyquist-Shannon sampling theorem to ensure adequate sampling of the electron density field."
+msgid ""
+"DeePAW constructs the electron density grid following VASP's coarse-fine "
+"grid scheme. The grid density is determined according to the Nyquist-Shannon"
+" sampling theorem to ensure adequate sampling of the electron density field."
 msgstr ""
+"DeePAW 依据 VASP 的粗细网格方案构建电子密度网格。网格密度根据 Nyquist-Shannon 采样定理确定，以保证对电子密度场的充分采样。"
 
 #: ../../theory/method.rst:45
-msgid "Users must specify the grid dimensions (nx, ny, nz) when using the platform. These three parameters determine:"
-msgstr ""
+msgid ""
+"Users must specify the grid dimensions (nx, ny, nz) when using the platform."
+" These three parameters determine:"
+msgstr "用户在使用平台时必须指定网格维度（nx、ny、nz）。这三个参数决定："
 
 #: ../../theory/method.rst:47
-msgid "The sampling resolution of the charge density in three-dimensional space."
-msgstr ""
+msgid ""
+"The sampling resolution of the charge density in three-dimensional space."
+msgstr "三维空间中电荷密度的采样分辨率。"
 
 #: ../../theory/method.rst:48
 msgid "The total number of probe points to be predicted (nx * ny * nz)."
-msgstr ""
+msgstr "待预测探针点总数（nx * ny * nz）。"
 
 #: ../../theory/method.rst:49
 msgid "The grid dimensions of the output CHGCAR file."
-msgstr ""
+msgstr "输出 CHGCAR 文件的网格维度。"
 
 #: ../../theory/method.rst:51
-msgid "The Cartesian coordinates of grid points are obtained by transforming fractional coordinates with the unit cell matrix:"
-msgstr ""
+msgid ""
+"The Cartesian coordinates of grid points are obtained by transforming "
+"fractional coordinates with the unit cell matrix:"
+msgstr "网格点的笛卡尔坐标由分数坐标经晶胞矩阵变换得到："
 
 #: ../../theory/method.rst:53
-msgid "\\mathbf{r}_{ijk} = \\frac{i}{n_x} \\mathbf{a} + \\frac{j}{n_y} \\mathbf{b} + \\frac{k}{n_z} \\mathbf{c}"
+msgid ""
+"\\mathbf{r}_{ijk} = \\frac{i}{n_x} \\mathbf{a} + \\frac{j}{n_y} \\mathbf{b} "
+"+ \\frac{k}{n_z} \\mathbf{c}"
 msgstr ""
+"\\mathbf{r}_{ijk} = \\frac{i}{n_x} \\mathbf{a} + \\frac{j}{n_y} \\mathbf{b} "
+"+ \\frac{k}{n_z} \\mathbf{c}"
 
 #: ../../theory/method.rst:57
-msgid "where :math:`\\mathbf{a}, \\mathbf{b}, \\mathbf{c}` are the unit cell basis vectors."
+msgid ""
+"where :math:`\\mathbf{a}, \\mathbf{b}, \\mathbf{c}` are the unit cell basis "
+"vectors."
 msgstr ""
+"其中 :math:`\\mathbf{a}, \\mathbf{b}, \\mathbf{c}` 为晶胞基矢。"
 
 #: ../../theory/method.rst:60
 msgid "Training Strategy"
-msgstr ""
+msgstr "训练策略"
 
 #: ../../theory/method.rst:62
 msgid "DeePAW training proceeds in two stages using the L1 loss function:"
-msgstr ""
+msgstr "DeePAW 采用 L1 损失函数并分两个阶段进行训练："
 
 #: ../../theory/method.rst:64
-msgid "**Stage 1**: The MLP head and GAT head are jointly trained, optimizing for electron density prediction."
-msgstr ""
+msgid ""
+"**Stage 1**: The MLP head and GAT head are jointly trained, optimizing for "
+"electron density prediction."
+msgstr "**阶段 1**：联合训练 MLP head 与 GAT head，优化电子密度预测。"
 
 #: ../../theory/method.rst:65
-msgid "**Stage 2**: The MLP head is trained with a very small learning rate while the KAN head uses a larger learning rate, implementing an adaptive PAW scheme that captures the fine structure of the residual electron density."
+msgid ""
+"**Stage 2**: The MLP head is trained with a very small learning rate while "
+"the KAN head uses a larger learning rate, implementing an adaptive PAW "
+"scheme that captures the fine structure of the residual electron density."
 msgstr ""
+"**阶段 2**：MLP head 采用极小学习率训练，同时 KAN head 采用较大学习率训练，以实现自适应 PAW "
+"方案并捕捉残余电子密度的精细结构。"
 
 #: ../../theory/method.rst:67
-msgid "Training data are sourced from the Materials Project (MP) database. Electron density labels are computed from KSDFT orbital wavefunctions using VASP."
-msgstr ""
+msgid ""
+"Training data are sourced from the Materials Project (MP) database. Electron"
+" density labels are computed from KSDFT orbital wavefunctions using VASP."
+msgstr "训练数据来源于 Materials Project（MP）数据库。电子密度标签由 VASP 基于 KSDFT 轨道波函数计算获得。"

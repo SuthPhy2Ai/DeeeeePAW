@@ -1,349 +1,399 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2024-2026, DeePAW Team
 # This file is distributed under the same license as the DeePAW package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <EMAIL@ADDRESS> 2024.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DeePAW \n"
+"Project-Id-Version: DeePAW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-19 23:20+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-03-20 00:00+0800\n"
+"Last-Translator: DeePAW Documentation Team <docs@deepaw.tech>\n"
+"Language-Team: Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../platform/web_frontend.rst:2
 msgid "Web Frontend"
-msgstr ""
+msgstr "Web 前端"
 
 #: ../../platform/web_frontend.rst:4
-msgid "DeePAW provides an online web application that allows users to perform charge density predictions and visualization directly in the browser, without writing any code."
-msgstr ""
+msgid ""
+"DeePAW provides an online web application that allows users to perform "
+"charge density predictions and visualization directly in the browser, "
+"without writing any code."
+msgstr "DeePAW 提供在线 Web 应用，用户可在浏览器中直接完成电荷密度预测与可视化，无需编写任何代码。"
 
 #: ../../platform/web_frontend.rst:6
 msgid "Access URL: **https://deepaw.tech**"
-msgstr ""
+msgstr "访问地址：**https://deepaw.tech**"
 
 #: ../../platform/web_frontend.rst:8
-msgid "The locally deployed version is accessible via ``http://localhost:3000`` (local) or remotely through an SSH tunnel."
-msgstr ""
+msgid ""
+"The locally deployed version is accessible via ``http://localhost:3000`` "
+"(local) or remotely through an SSH tunnel."
+msgstr "本地部署版本可通过 ``http://localhost:3000``（本地）或 SSH 隧道远程访问。"
 
 #: ../../platform/web_frontend.rst:11
 msgid "Login and Registration"
-msgstr ""
+msgstr "登录与注册"
 
 #: ../../platform/web_frontend.rst:13
-msgid "First-time users must register an account. An invitation code is required during registration."
-msgstr ""
+msgid ""
+"First-time users must register an account. An invitation code is required "
+"during registration."
+msgstr "首次使用者需注册账号，注册时必须提供邀请码。"
 
 #: ../../platform/web_frontend.rst:15
 msgid "DeePAW Login Page"
-msgstr ""
+msgstr "DeePAW 登录页"
 
 #: ../../platform/web_frontend.rst:19
-msgid "Login page: DeePAW branding on the left, login/registration form on the right"
-msgstr ""
+msgid ""
+"Login page: DeePAW branding on the left, login/registration form on the "
+"right"
+msgstr "登录页面左侧为 DeePAW 品牌，右侧为登录/注册表单"
 
 #: ../../platform/web_frontend.rst:21
 msgid "Enter your username, password, and email address"
-msgstr ""
+msgstr "输入用户名、密码和电子邮件地址"
 
 #: ../../platform/web_frontend.rst:22
 msgid "Enter the invitation code (default: ``deepawdeepaw``)"
-msgstr ""
+msgstr "输入邀请码（默认：``deepawdeepaw``）"
 
 #: ../../platform/web_frontend.rst:23
-msgid "After successful registration, you will be redirected to the main interface automatically"
-msgstr ""
+msgid ""
+"After successful registration, you will be redirected to the main interface "
+"automatically"
+msgstr "注册成功后，系统会自动跳转至主界面"
 
 #: ../../platform/web_frontend.rst:25
-msgid "Existing users can log in by entering their username and password directly. If you forget your password, it can be reset via email verification code."
-msgstr ""
+msgid ""
+"Existing users can log in by entering their username and password directly. "
+"If you forget your password, it can be reset via email verification code."
+msgstr "已有用户可直接使用用户名和密码登录。若忘记密码，可通过邮箱验证码重置。"
 
 #: ../../platform/web_frontend.rst:28
 msgid "Main Interface Layout"
-msgstr ""
+msgstr "主界面布局"
 
 #: ../../platform/web_frontend.rst:30
-msgid "After logging in, the main interface is displayed. The top navigation bar contains two view-switching buttons:"
-msgstr ""
+msgid ""
+"After logging in, the main interface is displayed. The top navigation bar "
+"contains two view-switching buttons:"
+msgstr "登录后展示主界面，顶部导航栏包含两个视图切换按钮："
 
 #: ../../platform/web_frontend.rst:32
 msgid "**Predictions**: Prediction workspace (default view)"
-msgstr ""
+msgstr "**Predictions**：预测工作区（默认视图）"
 
 #: ../../platform/web_frontend.rst:33
 msgid "**My Files**: File and history management"
-msgstr ""
+msgstr "**My Files**：文件及历史管理"
 
 #: ../../platform/web_frontend.rst:35
-msgid "The currently logged-in username and a disconnect button are shown in the upper-right corner."
-msgstr ""
+msgid ""
+"The currently logged-in username and a disconnect button are shown in the "
+"upper-right corner."
+msgstr "右上角显示当前登录用户名及退出按钮"
 
 #: ../../platform/web_frontend.rst:38
 msgid "Prediction Workspace (Predictions)"
-msgstr ""
+msgstr "预测工作区（Predictions）"
 
 #: ../../platform/web_frontend.rst:40
 msgid "The prediction workspace uses a three-panel layout:"
-msgstr ""
+msgstr "预测工作区采用三栏布局："
 
 #: ../../platform/web_frontend.rst:42
 msgid "Prediction Workspace - File Upload and Parameter Configuration"
-msgstr ""
+msgstr "预测工作区——文件上传与参数配置"
 
 #: ../../platform/web_frontend.rst:46
-msgid "Prediction workspace interface: left panel shows GPU cluster status, center panel shows file upload and task configuration, right panel shows the visualization area"
-msgstr ""
+msgid ""
+"Prediction workspace interface: left panel shows GPU cluster status, center "
+"panel shows file upload and task configuration, right panel shows the "
+"visualization area"
+msgstr "预测工作区界面：左侧显示 GPU 集群状态，中心显示文件上传和任务配置，右侧展示可视化区域"
 
 #: ../../platform/web_frontend.rst:49
 msgid "Left Panel: GPU Cluster Status"
-msgstr ""
+msgstr "左侧面板：GPU 集群状态"
 
 #: ../../platform/web_frontend.rst:51
 msgid "Displays the real-time operating status of each GPU:"
-msgstr ""
+msgstr "实时显示每块 GPU 的运行状态："
 
 #: ../../platform/web_frontend.rst:53
 msgid "GPU name and index"
-msgstr ""
+msgstr "GPU 名称和索引"
 
 #: ../../platform/web_frontend.rst:54
 msgid "VRAM usage (used / total in MB)"
-msgstr ""
+msgstr "显存使用情况（已用/总计，单位 MB）"
 
 #: ../../platform/web_frontend.rst:55
 msgid "GPU utilization (%)"
-msgstr ""
+msgstr "GPU 利用率（%）"
 
 #: ../../platform/web_frontend.rst:56
 msgid "Temperature"
-msgstr ""
+msgstr "温度"
 
 #: ../../platform/web_frontend.rst:57
 msgid "Status indicator (idle/busy)"
-msgstr ""
+msgstr "状态指示（空闲/忙碌）"
 
 #: ../../platform/web_frontend.rst:59
 msgid "Data is refreshed automatically every 5 seconds via WebSocket."
-msgstr ""
+msgstr "数据通过 WebSocket 每 5 秒自动刷新。"
 
 #: ../../platform/web_frontend.rst:62
 msgid "Center Panel: Prediction Task Configuration"
-msgstr ""
+msgstr "中间面板：预测任务配置"
 
 #: ../../platform/web_frontend.rst:64
 msgid "**Upload Structure Files**"
-msgstr ""
+msgstr "**上传结构文件**"
 
 #: ../../platform/web_frontend.rst:66
-msgid "Click the upload area to select files. Supported formats include CIF, VASP, XYZ, PDB, and 14 others (15 formats total), as well as ZIP/TAR archives. The grid dimensions nx, ny, and nz must be specified at upload time."
+msgid ""
+"Click the upload area to select files. Supported formats include CIF, VASP, "
+"XYZ, PDB, and 14 others (15 formats total), as well as ZIP/TAR archives. The"
+" grid dimensions nx, ny, and nz must be specified at upload time."
 msgstr ""
+"点击上传区域选择文件。支持 CIF、VASP、XYZ、PDB 等 15 种结构文件格式以及 ZIP/TAR 压缩包。上传时需填写网格尺寸 "
+"nx、ny、nz。"
 
 #: ../../platform/web_frontend.rst:68
-msgid "Alternatively, click \"Load Demo\" to quickly load the built-in demonstration database."
-msgstr ""
+msgid ""
+"Alternatively, click \"Load Demo\" to quickly load the built-in "
+"demonstration database."
+msgstr "亦可点击 \"Load Demo\" 快速加载内置示例数据库。"
 
 #: ../../platform/web_frontend.rst:70
 msgid "**Submit Prediction**"
-msgstr ""
+msgstr "**提交预测**"
 
 #: ../../platform/web_frontend.rst:72
 msgid "Select the structure ID range (start_id ~ end_id)"
-msgstr ""
+msgstr "选择结构 ID 范围（start_id ~ end_id）"
 
 #: ../../platform/web_frontend.rst:73
 msgid "Click the submit button"
-msgstr ""
+msgstr "点击提交按钮"
 
 #: ../../platform/web_frontend.rst:74
-msgid "Tasks enter the GPU queue; each task card displays its status in real time:"
-msgstr ""
+msgid ""
+"Tasks enter the GPU queue; each task card displays its status in real time:"
+msgstr "任务进入 GPU 队列，每个任务卡实时显示状态："
 
 #: ../../platform/web_frontend.rst:76
 msgid "Grey: pending"
-msgstr ""
+msgstr "灰色：待处理"
 
 #: ../../platform/web_frontend.rst:77
 msgid "Blue: processing"
-msgstr ""
+msgstr "蓝色：处理中"
 
 #: ../../platform/web_frontend.rst:78
 msgid "Green: completed"
-msgstr ""
+msgstr "绿色：已完成"
 
 #: ../../platform/web_frontend.rst:79
 msgid "Red: failed"
-msgstr ""
+msgstr "红色：失败"
 
 #: ../../platform/web_frontend.rst:82
 msgid "Right Panel: Visualization"
-msgstr ""
+msgstr "右侧面板：可视化"
 
 #: ../../platform/web_frontend.rst:84
-msgid "Once a task is complete, click its task card to view the prediction results in the right panel. Two visualization modes are available:"
-msgstr ""
+msgid ""
+"Once a task is complete, click its task card to view the prediction results "
+"in the right panel. Two visualization modes are available:"
+msgstr "任务完成后，点击对应任务卡在右侧面板查看预测结果。提供两种可视化模式："
 
 #: ../../platform/web_frontend.rst:86
 msgid "**2D Slice (Slice)**"
-msgstr ""
+msgstr "**2D Slice（切片）**"
 
 #: ../../platform/web_frontend.rst:88
-msgid "A two-dimensional charge density slice along a specified Miller index (hkl) plane:"
-msgstr ""
+msgid ""
+"A two-dimensional charge density slice along a specified Miller index (hkl) "
+"plane:"
+msgstr "沿指定 Miller 指数 (hkl) 平面生成二维电荷密度切片："
 
 #: ../../platform/web_frontend.rst:90
 msgid "2D Charge Density Slice Visualization"
-msgstr ""
+msgstr "二维电荷密度切片可视化"
 
 #: ../../platform/web_frontend.rst:94
-msgid "2D slice view: heatmap of charge density distribution along the (hkl) plane, with optional contour overlay and Gaussian blur"
-msgstr ""
+msgid ""
+"2D slice view: heatmap of charge density distribution along the (hkl) plane,"
+" with optional contour overlay and Gaussian blur"
+msgstr "二维切片视图：展示 (hkl) 平面上的电荷密度热图，可叠加等高线并使用高斯模糊"
 
 #: ../../platform/web_frontend.rst:96
 msgid "Select the slice direction (h, k, l)"
-msgstr ""
+msgstr "选择切片方向（h、k、l）"
 
 #: ../../platform/web_frontend.rst:97
 msgid "Adjust the slice distance (distance)"
-msgstr ""
+msgstr "调节切片距离（distance）"
 
 #: ../../platform/web_frontend.rst:98
 msgid "Gaussian blur smoothing supported"
-msgstr ""
+msgstr "支持高斯模糊平滑"
 
 #: ../../platform/web_frontend.rst:99
 msgid "Contour overlay display supported"
-msgstr ""
+msgstr "支持等高线叠加显示"
 
 #: ../../platform/web_frontend.rst:100
 msgid "Viridis colormap"
-msgstr ""
+msgstr "Viridis 颜色映射"
 
 #: ../../platform/web_frontend.rst:102
 msgid "**3D Isosurface (Isosurface)**"
-msgstr ""
+msgstr "**3D Isosurface（等值面）**"
 
 #: ../../platform/web_frontend.rst:104
-msgid "Interactive three-dimensional isosurface rendering powered by Plotly.js:"
-msgstr ""
+msgid ""
+"Interactive three-dimensional isosurface rendering powered by Plotly.js:"
+msgstr "基于 Plotly.js 的交互式三维等值面渲染："
 
 #: ../../platform/web_frontend.rst:106
 msgid "3D Charge Density Isosurface Visualization"
-msgstr ""
+msgstr "三维电荷密度等值面可视化"
 
 #: ../../platform/web_frontend.rst:110
-msgid "3D isosurface view: interactive three-dimensional charge density rendering showing the unit cell boundary and lattice parameters"
-msgstr ""
+msgid ""
+"3D isosurface view: interactive three-dimensional charge density rendering "
+"showing the unit cell boundary and lattice parameters"
+msgstr "三维等值面视图：交互式渲染电荷密度，展示晶胞边界与晶格参数"
 
 #: ../../platform/web_frontend.rst:112
 msgid "Click and drag to rotate the view"
-msgstr ""
+msgstr "点击拖拽可旋转视图"
 
 #: ../../platform/web_frontend.rst:113
 msgid "Scroll to zoom"
-msgstr ""
+msgstr "滚轮缩放"
 
 #: ../../platform/web_frontend.rst:114
 msgid "Adjustable isosurface threshold (ISO MIN/MAX)"
-msgstr ""
+msgstr "可调节等值面阈值（ISO MIN/MAX）"
 
 #: ../../platform/web_frontend.rst:115
 msgid "Adjustable resolution and number of isosurface levels"
-msgstr ""
+msgstr "可调节分辨率与等值面层数"
 
 #: ../../platform/web_frontend.rst:116
-msgid "Displays the unit cell boundary (gold wireframe) and lattice parameters (a, b, c, alpha, beta, gamma)"
-msgstr ""
+msgid ""
+"Displays the unit cell boundary (gold wireframe) and lattice parameters (a, "
+"b, c, alpha, beta, gamma)"
+msgstr "显示晶胞边界（金色线框）及晶格参数（a、b、c、alpha、beta、gamma）"
 
 #: ../../platform/web_frontend.rst:119
 msgid "File Management (My Files)"
-msgstr ""
+msgstr "文件管理（My Files）"
 
 #: ../../platform/web_frontend.rst:121
-msgid "Switch to the \"My Files\" view to manage uploaded files and prediction history:"
-msgstr ""
+msgid ""
+"Switch to the \"My Files\" view to manage uploaded files and prediction "
+"history:"
+msgstr "切换至 \"My Files\" 页面管理已上传文件和预测历史："
 
 #: ../../platform/web_frontend.rst:123
 msgid "File Management and Result Storage Page"
-msgstr ""
+msgstr "文件管理与结果存储页面"
 
 #: ../../platform/web_frontend.rst:127
-msgid "My Files view: uploaded file list and prediction history, showing download status and expiration information"
-msgstr ""
+msgid ""
+"My Files view: uploaded file list and prediction history, showing download "
+"status and expiration information"
+msgstr "My Files 视图显示上传文件列表及预测历史，包含下载状态和过期信息"
 
 #: ../../platform/web_frontend.rst:129
 msgid "**Uploaded File List**"
-msgstr ""
+msgstr "**已上传文件列表**"
 
 #: ../../platform/web_frontend.rst:131
 msgid "File name and upload time"
-msgstr ""
+msgstr "文件名与上传时间"
 
 #: ../../platform/web_frontend.rst:132
 msgid "Days since upload"
-msgstr ""
+msgstr "上传后天数"
 
 #: ../../platform/web_frontend.rst:133
 msgid "Download status (available / expired)"
-msgstr ""
+msgstr "下载状态（可用/已过期）"
 
 #: ../../platform/web_frontend.rst:134
 msgid "Files are available for download for 3 days"
-msgstr ""
+msgstr "文件在 3 天内可下载"
 
 #: ../../platform/web_frontend.rst:136
 msgid "**Prediction History**"
-msgstr ""
+msgstr "**预测历史**"
 
 #: ../../platform/web_frontend.rst:138
 msgid "Task ID and creation time"
-msgstr ""
+msgstr "任务 ID 与创建时间"
 
 #: ../../platform/web_frontend.rst:139
 msgid "CHGCAR file path"
-msgstr ""
+msgstr "CHGCAR 文件路径"
 
 #: ../../platform/web_frontend.rst:140
 msgid "Download status and expiration"
-msgstr ""
+msgstr "下载状态与过期时间"
 
 #: ../../platform/web_frontend.rst:143
 msgid "Performance Tips"
-msgstr ""
+msgstr "性能提示"
 
 #: ../../platform/web_frontend.rst:145
 msgid "**3D Visualization Optimization**"
-msgstr ""
+msgstr "**3D 可视化优化**"
 
 #: ../../platform/web_frontend.rst:147
-msgid "For large CHGCAR files (grid > 48^3), it is recommended to preview at reduced resolution first"
-msgstr ""
+msgid ""
+"For large CHGCAR files (grid > 48^3), it is recommended to preview at "
+"reduced resolution first"
+msgstr "对于大体积 CHGCAR 文件（网格 > 48^3），建议先使用降低分辨率预览"
 
 #: ../../platform/web_frontend.rst:148
-msgid "Reducing the number of isosurface levels improves browser rendering performance"
-msgstr ""
+msgid ""
+"Reducing the number of isosurface levels improves browser rendering "
+"performance"
+msgstr "降低等值面层数有助于提升浏览器渲染性能"
 
 #: ../../platform/web_frontend.rst:149
-msgid "Raising the ISO MIN threshold to display only high-density regions reduces the number of rendered polygons"
-msgstr ""
+msgid ""
+"Raising the ISO MIN threshold to display only high-density regions reduces "
+"the number of rendered polygons"
+msgstr "提升 ISO MIN 阈值仅显示高密度区域，可减少渲染多边形数量"
 
 #: ../../platform/web_frontend.rst:151
 msgid "**Browser Compatibility**"
-msgstr ""
+msgstr "**浏览器兼容性**"
 
 #: ../../platform/web_frontend.rst:153
 msgid "Chrome / Edge (Chromium-based) is recommended"
-msgstr ""
+msgstr "建议使用基于 Chromium 的 Chrome / Edge 浏览器"
 
 #: ../../platform/web_frontend.rst:154
 msgid "WebGL support is required (for Plotly 3D rendering)"
-msgstr ""
+msgstr "需要支持 WebGL（用于 Plotly 3D 渲染）"
 
 #: ../../platform/web_frontend.rst:155
 msgid "A screen resolution of >= 1920x1080 is recommended"
-msgstr ""
+msgstr "推荐屏幕分辨率不低于 1920×1080"

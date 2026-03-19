@@ -3,553 +3,526 @@
 # This file is distributed under the same license as the DeePAW package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DeePAW \n"
+"Project-Id-Version: DeePAW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-19 23:20+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-03-20 00:00+0800\n"
+"Last-Translator: DeePAW Documentation Team <docs@deepaw.tech>\n"
+"Language-Team: Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../platform/api_reference.rst:2
 msgid "API Reference"
-msgstr ""
+msgstr "API 参考文档"
 
 #: ../../platform/api_reference.rst:5
 msgid "Authentication"
-msgstr ""
+msgstr "身份认证"
 
-#: ../../platform/api_reference.rst:11
-#: ../../platform/api_reference.rst:101
-#: ../../platform/api_reference.rst:190
-#: ../../platform/api_reference.rst:303
+#: ../../platform/api_reference.rst:11 ../../platform/api_reference.rst:101
+#: ../../platform/api_reference.rst:190 ../../platform/api_reference.rst:303
 #: ../../platform/api_reference.rst:331
 msgid "Endpoint"
-msgstr ""
+msgstr "端点"
 
-#: ../../platform/api_reference.rst:12
-#: ../../platform/api_reference.rst:102
-#: ../../platform/api_reference.rst:191
-#: ../../platform/api_reference.rst:304
+#: ../../platform/api_reference.rst:12 ../../platform/api_reference.rst:102
+#: ../../platform/api_reference.rst:191 ../../platform/api_reference.rst:304
 #: ../../platform/api_reference.rst:332
 msgid "Method"
-msgstr ""
+msgstr "方法"
 
-#: ../../platform/api_reference.rst:13
-#: ../../platform/api_reference.rst:103
-#: ../../platform/api_reference.rst:192
-#: ../../platform/api_reference.rst:305
+#: ../../platform/api_reference.rst:13 ../../platform/api_reference.rst:103
+#: ../../platform/api_reference.rst:192 ../../platform/api_reference.rst:305
 #: ../../platform/api_reference.rst:333
 msgid "Auth"
-msgstr ""
+msgstr "认证"
 
-#: ../../platform/api_reference.rst:14
-#: ../../platform/api_reference.rst:104
-#: ../../platform/api_reference.rst:131
-#: ../../platform/api_reference.rst:193
-#: ../../platform/api_reference.rst:306
-#: ../../platform/api_reference.rst:334
+#: ../../platform/api_reference.rst:14 ../../platform/api_reference.rst:104
+#: ../../platform/api_reference.rst:131 ../../platform/api_reference.rst:193
+#: ../../platform/api_reference.rst:306 ../../platform/api_reference.rst:334
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../platform/api_reference.rst:15
 msgid "``/api/auth/register-with-code``"
-msgstr ""
+msgstr "``/api/auth/register-with-code``"
 
-#: ../../platform/api_reference.rst:16
-#: ../../platform/api_reference.rst:20
-#: ../../platform/api_reference.rst:28
-#: ../../platform/api_reference.rst:32
-#: ../../platform/api_reference.rst:110
-#: ../../platform/api_reference.rst:114
-#: ../../platform/api_reference.rst:195
-#: ../../platform/api_reference.rst:316
+#: ../../platform/api_reference.rst:16 ../../platform/api_reference.rst:20
+#: ../../platform/api_reference.rst:28 ../../platform/api_reference.rst:32
+#: ../../platform/api_reference.rst:110 ../../platform/api_reference.rst:114
+#: ../../platform/api_reference.rst:195 ../../platform/api_reference.rst:316
 msgid "POST"
-msgstr ""
+msgstr "POST"
 
-#: ../../platform/api_reference.rst:17
-#: ../../platform/api_reference.rst:21
-#: ../../platform/api_reference.rst:29
-#: ../../platform/api_reference.rst:33
-#: ../../platform/api_reference.rst:107
-#: ../../platform/api_reference.rst:321
-#: ../../platform/api_reference.rst:337
-#: ../../platform/api_reference.rst:341
-#: ../../platform/api_reference.rst:345
-#: ../../platform/api_reference.rst:349
+#: ../../platform/api_reference.rst:17 ../../platform/api_reference.rst:21
+#: ../../platform/api_reference.rst:29 ../../platform/api_reference.rst:33
+#: ../../platform/api_reference.rst:107 ../../platform/api_reference.rst:321
+#: ../../platform/api_reference.rst:337 ../../platform/api_reference.rst:341
+#: ../../platform/api_reference.rst:345 ../../platform/api_reference.rst:349
 msgid "No"
-msgstr ""
+msgstr "否"
 
 #: ../../platform/api_reference.rst:18
 msgid "Register a new user (invitation code required)"
-msgstr ""
+msgstr "注册新用户（需要邀请码）"
 
 #: ../../platform/api_reference.rst:19
 msgid "``/api/auth/login``"
-msgstr ""
+msgstr "``/api/auth/login``"
 
 #: ../../platform/api_reference.rst:22
 msgid "User login, returns JWT token"
-msgstr ""
+msgstr "用户登录，返回 JWT 令牌"
 
 #: ../../platform/api_reference.rst:23
 msgid "``/api/auth/profile``"
-msgstr ""
+msgstr "``/api/auth/profile``"
 
-#: ../../platform/api_reference.rst:24
-#: ../../platform/api_reference.rst:106
-#: ../../platform/api_reference.rst:199
-#: ../../platform/api_reference.rst:203
-#: ../../platform/api_reference.rst:207
-#: ../../platform/api_reference.rst:211
-#: ../../platform/api_reference.rst:308
-#: ../../platform/api_reference.rst:312
-#: ../../platform/api_reference.rst:320
-#: ../../platform/api_reference.rst:336
-#: ../../platform/api_reference.rst:340
-#: ../../platform/api_reference.rst:344
+#: ../../platform/api_reference.rst:24 ../../platform/api_reference.rst:106
+#: ../../platform/api_reference.rst:199 ../../platform/api_reference.rst:203
+#: ../../platform/api_reference.rst:207 ../../platform/api_reference.rst:211
+#: ../../platform/api_reference.rst:308 ../../platform/api_reference.rst:312
+#: ../../platform/api_reference.rst:320 ../../platform/api_reference.rst:336
+#: ../../platform/api_reference.rst:340 ../../platform/api_reference.rst:344
 #: ../../platform/api_reference.rst:348
 msgid "GET"
-msgstr ""
+msgstr "GET"
 
-#: ../../platform/api_reference.rst:25
-#: ../../platform/api_reference.rst:111
-#: ../../platform/api_reference.rst:115
-#: ../../platform/api_reference.rst:134
-#: ../../platform/api_reference.rst:138
-#: ../../platform/api_reference.rst:142
-#: ../../platform/api_reference.rst:146
-#: ../../platform/api_reference.rst:196
-#: ../../platform/api_reference.rst:200
-#: ../../platform/api_reference.rst:204
-#: ../../platform/api_reference.rst:208
-#: ../../platform/api_reference.rst:212
-#: ../../platform/api_reference.rst:309
-#: ../../platform/api_reference.rst:313
+#: ../../platform/api_reference.rst:25 ../../platform/api_reference.rst:111
+#: ../../platform/api_reference.rst:115 ../../platform/api_reference.rst:134
+#: ../../platform/api_reference.rst:138 ../../platform/api_reference.rst:142
+#: ../../platform/api_reference.rst:146 ../../platform/api_reference.rst:196
+#: ../../platform/api_reference.rst:200 ../../platform/api_reference.rst:204
+#: ../../platform/api_reference.rst:208 ../../platform/api_reference.rst:212
+#: ../../platform/api_reference.rst:309 ../../platform/api_reference.rst:313
 #: ../../platform/api_reference.rst:317
 msgid "Yes"
-msgstr ""
+msgstr "是"
 
 #: ../../platform/api_reference.rst:26
 msgid "Retrieve current user information"
-msgstr ""
+msgstr "获取当前用户信息"
 
 #: ../../platform/api_reference.rst:27
 msgid "``/api/auth/send-reset-code``"
-msgstr ""
+msgstr "``/api/auth/send-reset-code``"
 
 #: ../../platform/api_reference.rst:30
 msgid "Send password reset verification code"
-msgstr ""
+msgstr "发送密码重置验证码"
 
 #: ../../platform/api_reference.rst:31
 msgid "``/api/auth/reset-password``"
-msgstr ""
+msgstr "``/api/auth/reset-password``"
 
 #: ../../platform/api_reference.rst:34
 msgid "Reset password using verification code"
-msgstr ""
+msgstr "使用验证码重置密码"
 
 #: ../../platform/api_reference.rst:37
 msgid "POST /api/auth/register-with-code"
-msgstr ""
+msgstr "POST /api/auth/register-with-code"
 
-#: ../../platform/api_reference.rst:39
-#: ../../platform/api_reference.rst:53
-#: ../../platform/api_reference.rst:75
-#: ../../platform/api_reference.rst:84
+#: ../../platform/api_reference.rst:39 ../../platform/api_reference.rst:53
+#: ../../platform/api_reference.rst:75 ../../platform/api_reference.rst:84
 #: ../../platform/api_reference.rst:218
 msgid "Request body:"
-msgstr ""
+msgstr "请求正文："
 
 #: ../../platform/api_reference.rst:51
 msgid "POST /api/auth/login"
-msgstr ""
+msgstr "POST /api/auth/login"
 
-#: ../../platform/api_reference.rst:59
-#: ../../platform/api_reference.rst:162
-#: ../../platform/api_reference.rst:230
-#: ../../platform/api_reference.rst:244
-#: ../../platform/api_reference.rst:265
-#: ../../platform/api_reference.rst:355
+#: ../../platform/api_reference.rst:59 ../../platform/api_reference.rst:162
+#: ../../platform/api_reference.rst:230 ../../platform/api_reference.rst:244
+#: ../../platform/api_reference.rst:265 ../../platform/api_reference.rst:355
 msgid "Response:"
-msgstr ""
+msgstr "响应："
 
 #: ../../platform/api_reference.rst:73
 msgid "POST /api/auth/send-reset-code"
-msgstr ""
+msgstr "POST /api/auth/send-reset-code"
 
 #: ../../platform/api_reference.rst:82
 msgid "POST /api/auth/reset-password"
-msgstr ""
+msgstr "POST /api/auth/reset-password"
 
 #: ../../platform/api_reference.rst:95
 msgid "File Upload"
-msgstr ""
+msgstr "文件上传"
 
 #: ../../platform/api_reference.rst:105
 msgid "``/api/files/supported-formats``"
-msgstr ""
+msgstr "``/api/files/supported-formats``"
 
 #: ../../platform/api_reference.rst:108
 msgid "Query supported file formats"
-msgstr ""
+msgstr "查询支持的文件格式"
 
 #: ../../platform/api_reference.rst:109
 msgid "``/api/files/upload-structures``"
-msgstr ""
+msgstr "``/api/files/upload-structures``"
 
 #: ../../platform/api_reference.rst:112
 msgid "Upload and convert structure files"
-msgstr ""
+msgstr "上传并转换结构文件"
 
 #: ../../platform/api_reference.rst:113
 msgid "``/api/files/upload``"
-msgstr ""
+msgstr "``/api/files/upload``"
 
 #: ../../platform/api_reference.rst:116
 msgid "Upload a .db file (legacy interface)"
-msgstr ""
+msgstr "上传 .db 文件（旧接口）"
 
 #: ../../platform/api_reference.rst:119
 msgid "POST /api/files/upload-structures"
-msgstr ""
+msgstr "POST /api/files/upload-structures"
 
 #: ../../platform/api_reference.rst:121
-msgid "Upload a structure file and automatically convert it to an ASE database."
-msgstr ""
+msgid ""
+"Upload a structure file and automatically convert it to an ASE database."
+msgstr "上传结构文件并自动将其转换为 ASE 数据库。"
 
 #: ../../platform/api_reference.rst:123
 msgid "Parameters (multipart/form-data):"
-msgstr ""
+msgstr "参数（multipart/form-data）："
 
 #: ../../platform/api_reference.rst:128
 msgid "Parameter"
-msgstr ""
+msgstr "参数"
 
 #: ../../platform/api_reference.rst:129
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: ../../platform/api_reference.rst:130
 msgid "Required"
-msgstr ""
+msgstr "必需"
 
 #: ../../platform/api_reference.rst:132
 msgid "``file``"
-msgstr ""
+msgstr "``file``"
 
 #: ../../platform/api_reference.rst:133
 msgid "File"
-msgstr ""
+msgstr "文件"
 
 #: ../../platform/api_reference.rst:135
 msgid "Structure file (CIF, VASP, XYZ, etc.)"
-msgstr ""
+msgstr "结构文件（CIF、VASP、XYZ 等）"
 
 #: ../../platform/api_reference.rst:136
 msgid "``nx``"
-msgstr ""
+msgstr "``nx``"
 
-#: ../../platform/api_reference.rst:137
-#: ../../platform/api_reference.rst:141
+#: ../../platform/api_reference.rst:137 ../../platform/api_reference.rst:141
 #: ../../platform/api_reference.rst:145
 msgid "int"
-msgstr ""
+msgstr "int"
 
 #: ../../platform/api_reference.rst:139
 msgid "Number of grid points in the X direction"
-msgstr ""
+msgstr "X 方向网格点数"
 
 #: ../../platform/api_reference.rst:140
 msgid "``ny``"
-msgstr ""
+msgstr "``ny``"
 
 #: ../../platform/api_reference.rst:143
 msgid "Number of grid points in the Y direction"
-msgstr ""
+msgstr "Y 方向网格点数"
 
 #: ../../platform/api_reference.rst:144
 msgid "``nz``"
-msgstr ""
+msgstr "``nz``"
 
 #: ../../platform/api_reference.rst:147
 msgid "Number of grid points in the Z direction"
-msgstr ""
+msgstr "Z 方向网格点数"
 
 #: ../../platform/api_reference.rst:149
-msgid "Supported single-file formats: CIF, VASP (.vasp/.poscar/.contcar), XYZ, PDB, MOL, SDF, JSON, TRAJ, DB"
+msgid ""
+"Supported single-file formats: CIF, VASP (.vasp/.poscar/.contcar), XYZ, PDB,"
+" MOL, SDF, JSON, TRAJ, DB"
 msgstr ""
+"支持的单文件格式：CIF、VASP (.vasp/.poscar/.contcar)、XYZ、PDB、MOL、SDF、JSON、TRAJ、DB"
 
 #: ../../platform/api_reference.rst:151
 msgid "Supported archive formats: ZIP, TAR, TAR.GZ / TGZ"
-msgstr ""
+msgstr "支持的存档格式：ZIP、TAR、TAR.GZ / TGZ"
 
 #: ../../platform/api_reference.rst:153
 msgid "Example:"
-msgstr ""
+msgstr "示例："
 
 #: ../../platform/api_reference.rst:181
-msgid "Each upload generates a unique database filename with a timestamp to prevent data conflicts caused by overwriting files with the same name."
-msgstr ""
+msgid ""
+"Each upload generates a unique database filename with a timestamp to prevent"
+" data conflicts caused by overwriting files with the same name."
+msgstr "每次上传都会生成一个带有时间戳的唯一数据库文件名，以防止覆盖同名文件引起的数据冲突。"
 
 #: ../../platform/api_reference.rst:184
 msgid "Prediction Tasks"
-msgstr ""
+msgstr "预测任务"
 
 #: ../../platform/api_reference.rst:194
 msgid "``/api/predictions/batch``"
-msgstr ""
+msgstr "``/api/predictions/batch``"
 
 #: ../../platform/api_reference.rst:197
 msgid "Submit a batch prediction job"
-msgstr ""
+msgstr "提交批量预测作业"
 
 #: ../../platform/api_reference.rst:198
 msgid "``/api/predictions/batch/{batch_id}``"
-msgstr ""
+msgstr "``/api/predictions/batch/{batch_id}``"
 
 #: ../../platform/api_reference.rst:201
 msgid "Query batch status"
-msgstr ""
+msgstr "查询批次状态"
 
 #: ../../platform/api_reference.rst:202
 msgid "``/api/predictions/result/{task_id}``"
-msgstr ""
+msgstr "``/api/predictions/result/{task_id}``"
 
 #: ../../platform/api_reference.rst:205
 msgid "Retrieve results in JSON format"
-msgstr ""
+msgstr "以 JSON 格式获取结果"
 
 #: ../../platform/api_reference.rst:206
 msgid "``/api/predictions/download/{task_id}``"
-msgstr ""
+msgstr "``/api/predictions/download/{task_id}``"
 
 #: ../../platform/api_reference.rst:209
 msgid "Download CHGCAR file"
-msgstr ""
+msgstr "下载 CHGCAR 文件"
 
 #: ../../platform/api_reference.rst:210
 msgid "``/api/predictions/slice/{task_id}``"
-msgstr ""
+msgstr "``/api/predictions/slice/{task_id}``"
 
 #: ../../platform/api_reference.rst:213
 msgid "Retrieve 2D slice data"
-msgstr ""
+msgstr "获取二维切片数据"
 
 #: ../../platform/api_reference.rst:216
 msgid "POST /api/predictions/batch"
-msgstr ""
+msgstr "POST /api/predictions/batch"
 
 #: ../../platform/api_reference.rst:228
-msgid "``db_path`` is optional; if omitted, the system default database is used."
-msgstr ""
+msgid ""
+"``db_path`` is optional; if omitted, the system default database is used."
+msgstr "``db_path`` 是可选的；如果省略，则使用系统默认数据库。"
 
 #: ../../platform/api_reference.rst:242
 msgid "GET /api/predictions/batch/{batch_id}"
-msgstr ""
+msgstr "GET /api/predictions/batch/{batch_id}"
 
 #: ../../platform/api_reference.rst:263
 msgid "GET /api/predictions/result/{task_id}"
-msgstr ""
+msgstr "GET /api/predictions/result/{task_id}"
 
 #: ../../platform/api_reference.rst:286
-msgid "``gridDimensions`` is determined by the nx/ny/nz values stored in the database; different structures may return different grid sizes."
-msgstr ""
+msgid ""
+"``gridDimensions`` is determined by the nx/ny/nz values stored in the "
+"database; different structures may return different grid sizes."
+msgstr "``gridDimensions`` 由数据库中存储的 nx/ny/nz 值确定；不同的结构可能返回不同的网格大小。"
 
 #: ../../platform/api_reference.rst:289
 msgid "GET /api/predictions/slice/{task_id}"
-msgstr ""
+msgstr "GET /api/predictions/slice/{task_id}"
 
 #: ../../platform/api_reference.rst:291
 msgid "Query parameters:"
-msgstr ""
+msgstr "查询参数："
 
 #: ../../platform/api_reference.rst:293
 msgid "``h`` / ``k`` / ``l`` (int): Miller indices, default (1,0,0)"
-msgstr ""
+msgstr "``h`` / ``k`` / ``l`` (int)：Miller 指数，默认 (1,0,0)"
 
 #: ../../platform/api_reference.rst:294
 msgid "``distance`` (float): Distance along the normal direction, default 0.0"
-msgstr ""
+msgstr "``distance`` (float): 沿法线方向的距离，默认 0.0"
 
 #: ../../platform/api_reference.rst:297
 msgid "User Management"
-msgstr ""
+msgstr "用户管理"
 
 #: ../../platform/api_reference.rst:307
 msgid "``/api/user/files``"
-msgstr ""
+msgstr "``/api/user/files``"
 
 #: ../../platform/api_reference.rst:310
 msgid "Retrieve the list of files uploaded by the user"
-msgstr ""
+msgstr "获取用户上传的文件列表"
 
 #: ../../platform/api_reference.rst:311
 msgid "``/api/user/predictions``"
-msgstr ""
+msgstr "``/api/user/predictions``"
 
 #: ../../platform/api_reference.rst:314
 msgid "Retrieve user prediction history"
-msgstr ""
+msgstr "获取用户预测历史"
 
 #: ../../platform/api_reference.rst:315
 msgid "``/api/database/parse``"
-msgstr ""
+msgstr "``/api/database/parse``"
 
 #: ../../platform/api_reference.rst:318
 msgid "Parse an uploaded database file"
-msgstr ""
+msgstr "解析上传的数据库文件"
 
 #: ../../platform/api_reference.rst:319
 msgid "``/api/database/load-demo``"
-msgstr ""
+msgstr "``/api/database/load-demo``"
 
 #: ../../platform/api_reference.rst:322
 msgid "Load the demo database"
-msgstr ""
+msgstr "加载演示数据库"
 
 #: ../../platform/api_reference.rst:325
 msgid "System Status"
-msgstr ""
+msgstr "系统状态"
 
 #: ../../platform/api_reference.rst:335
 msgid "``/api/tasks/system/status``"
-msgstr ""
+msgstr "``/api/tasks/system/status``"
 
 #: ../../platform/api_reference.rst:338
 msgid "GPU status and task statistics"
-msgstr ""
+msgstr "GPU 状态与任务统计"
 
 #: ../../platform/api_reference.rst:339
 msgid "``/health``"
-msgstr ""
+msgstr "``/health``"
 
 #: ../../platform/api_reference.rst:342
 msgid "Health check"
-msgstr ""
+msgstr "健康检查"
 
 #: ../../platform/api_reference.rst:343
 msgid "``/api/docs``"
-msgstr ""
+msgstr "``/api/docs``"
 
 #: ../../platform/api_reference.rst:346
 msgid "Swagger interactive documentation"
-msgstr ""
+msgstr "Swagger 交互式文档"
 
 #: ../../platform/api_reference.rst:347
 msgid "``/api/redoc``"
-msgstr ""
+msgstr "``/api/redoc``"
 
 #: ../../platform/api_reference.rst:350
 msgid "ReDoc documentation"
-msgstr ""
+msgstr "ReDoc 文档"
 
 #: ../../platform/api_reference.rst:353
 msgid "GET /api/tasks/system/status"
-msgstr ""
+msgstr "GET /api/tasks/system/status"
 
 #: ../../platform/api_reference.rst:381
 msgid "HTTP Status Codes"
-msgstr ""
+msgstr "HTTP 状态码"
 
 #: ../../platform/api_reference.rst:386
 msgid "Status Code"
-msgstr ""
+msgstr "状态码"
 
 #: ../../platform/api_reference.rst:387
 msgid "Meaning"
-msgstr ""
+msgstr "含义"
 
 #: ../../platform/api_reference.rst:388
 msgid "Action"
-msgstr ""
+msgstr "处理方式"
 
 #: ../../platform/api_reference.rst:389
 msgid "200"
-msgstr ""
+msgstr "200"
 
 #: ../../platform/api_reference.rst:390
 msgid "Success"
-msgstr ""
+msgstr "成功"
 
 #: ../../platform/api_reference.rst:391
 msgid "Handle normally"
-msgstr ""
+msgstr "正常处理"
 
 #: ../../platform/api_reference.rst:392
 msgid "400"
-msgstr ""
+msgstr "400"
 
 #: ../../platform/api_reference.rst:393
 msgid "Bad request"
-msgstr ""
+msgstr "请求错误"
 
 #: ../../platform/api_reference.rst:394
 msgid "Check request parameters"
-msgstr ""
+msgstr "检查请求参数"
 
 #: ../../platform/api_reference.rst:395
 msgid "401"
-msgstr ""
+msgstr "401"
 
 #: ../../platform/api_reference.rst:396
 msgid "Unauthorized"
-msgstr ""
+msgstr "未经授权"
 
 #: ../../platform/api_reference.rst:397
 msgid "Check if token is valid"
-msgstr ""
+msgstr "检查令牌是否有效"
 
 #: ../../platform/api_reference.rst:398
 msgid "404"
-msgstr ""
+msgstr "404"
 
 #: ../../platform/api_reference.rst:399
 msgid "Not found"
-msgstr ""
+msgstr "未找到"
 
 #: ../../platform/api_reference.rst:400
 msgid "Check if ID is correct"
-msgstr ""
+msgstr "检查 ID 是否正确"
 
 #: ../../platform/api_reference.rst:401
 msgid "422"
-msgstr ""
+msgstr "422"
 
 #: ../../platform/api_reference.rst:402
 msgid "Validation error"
-msgstr ""
+msgstr "验证错误"
 
 #: ../../platform/api_reference.rst:403
 msgid "Check parameter format (e.g. missing required nx/ny/nz)"
-msgstr ""
+msgstr "检查参数格式（例如缺少所需的 nx/ny/nz）"
 
 #: ../../platform/api_reference.rst:404
 msgid "500"
-msgstr ""
+msgstr "500"
 
 #: ../../platform/api_reference.rst:405
 msgid "Server error"
-msgstr ""
+msgstr "服务器错误"
 
 #: ../../platform/api_reference.rst:406
 msgid "Check backend logs"
-msgstr ""
+msgstr "检查后端日志"
 
 #: ../../platform/api_reference.rst:407
 msgid "503"
-msgstr ""
+msgstr "503"
 
 #: ../../platform/api_reference.rst:408
 msgid "Service unavailable"
-msgstr ""
+msgstr "服务不可用"
 
 #: ../../platform/api_reference.rst:409
 msgid "ML component not loaded or converter unavailable"
-msgstr ""
+msgstr "ML 组件未加载或转换器不可用"

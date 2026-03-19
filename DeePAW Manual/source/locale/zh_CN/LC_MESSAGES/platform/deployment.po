@@ -3,204 +3,218 @@
 # This file is distributed under the same license as the DeePAW package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DeePAW \n"
+"Project-Id-Version: DeePAW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-19 23:20+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-03-20 00:00+0800\n"
+"Last-Translator: DeePAW Documentation Team <docs@deepaw.tech>\n"
+"Language-Team: Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../platform/deployment.rst:2
 msgid "Local CLI Deployment"
-msgstr ""
+msgstr "本地 CLI 部署"
 
 #: ../../platform/deployment.rst:4
-msgid "DeePAW provides a containerized local CLI deployment, running encrypted neural network model inference via Podman/Docker containers."
-msgstr ""
+msgid ""
+"DeePAW provides a containerized local CLI deployment, running encrypted "
+"neural network model inference via Podman/Docker containers."
+msgstr "DeePAW 提供容器化本地 CLI 部署方案，通过 Podman/Docker 容器运行加密神经网络模型推理。"
 
 #: ../../platform/deployment.rst:7
 msgid "Requirements"
-msgstr ""
+msgstr "环境要求"
 
 #: ../../platform/deployment.rst:9
 msgid "Linux x86_64"
-msgstr ""
+msgstr "Linux x86_64"
 
 #: ../../platform/deployment.rst:10
 msgid "NVIDIA GPU (CUDA support)"
-msgstr ""
+msgstr "NVIDIA GPU（支持 CUDA）"
 
 #: ../../platform/deployment.rst:11
 msgid "Podman or Docker"
-msgstr ""
+msgstr "Podman 或 Docker"
 
 #: ../../platform/deployment.rst:12
 msgid "NVIDIA driver"
-msgstr ""
+msgstr "NVIDIA 驱动"
 
 #: ../../platform/deployment.rst:15
 msgid "Quick Start"
-msgstr ""
+msgstr "快速开始"
 
 #: ../../platform/deployment.rst:17
 msgid "**1. Load the container image (first-time setup)**"
-msgstr ""
+msgstr "**1. 加载容器镜像（首次配置）**"
 
 #: ../../platform/deployment.rst:27
 msgid "**2. Start the container**"
-msgstr ""
+msgstr "**2. 启动容器**"
 
 #: ../../platform/deployment.rst:37
 msgid "The ``start.sh`` script automatically performs the following:"
-msgstr ""
+msgstr "``start.sh`` 脚本会自动执行以下操作："
 
 #: ../../platform/deployment.rst:39
 msgid "Detects the NVIDIA driver version"
-msgstr ""
+msgstr "检测 NVIDIA 驱动版本"
 
 #: ../../platform/deployment.rst:40
 msgid "Mounts GPU devices and libraries"
-msgstr ""
+msgstr "挂载 GPU 设备与库文件"
 
 #: ../../platform/deployment.rst:41
 msgid "Sets the required environment variables"
-msgstr ""
+msgstr "设置所需环境变量"
 
 #: ../../platform/deployment.rst:42
 msgid "Mounts data and output directories"
-msgstr ""
+msgstr "挂载数据与输出目录"
 
 #: ../../platform/deployment.rst:44
 msgid "**3. Run inference**"
-msgstr ""
+msgstr "**3. 执行推理**"
 
 #: ../../platform/deployment.rst:46
 msgid "Execute inside the container:"
-msgstr ""
+msgstr "在容器内执行："
 
 #: ../../platform/deployment.rst:62
-msgid "After exiting the container, output files are located in the ``output/`` directory on the host."
-msgstr ""
+msgid ""
+"After exiting the container, output files are located in the ``output/`` "
+"directory on the host."
+msgstr "退出容器后，输出文件位于宿主机的 ``output/`` 目录。"
 
 #: ../../platform/deployment.rst:65
 msgid "Important Notes"
-msgstr ""
+msgstr "重要说明"
 
 #: ../../platform/deployment.rst:67
 msgid "**CUDA only**"
-msgstr ""
+msgstr "**仅支持 CUDA**"
 
 #: ../../platform/deployment.rst:69
-msgid "The decryption logic for the encrypted models is compiled into the C++ engine and can only be initialized on a CUDA device. Using ``--device cpu`` will cause silent model initialization failure."
+msgid ""
+"The decryption logic for the encrypted models is compiled into the C++ "
+"engine and can only be initialized on a CUDA device. Using ``--device cpu`` "
+"will cause silent model initialization failure."
 msgstr ""
+"加密模型的解密逻辑已编译进 C++ 引擎，且仅可在 CUDA 设备上初始化。使用 ``--device cpu`` 会导致模型初始化静默失败。"
 
 #: ../../platform/deployment.rst:71
 msgid "**GPU mounting**"
-msgstr ""
+msgstr "**GPU 挂载**"
 
 #: ../../platform/deployment.rst:73
-msgid "On some systems (e.g., Rocky Linux 9.2), CDI mode (``--device nvidia.com/gpu=all``) may not work correctly. ``start.sh`` resolves this by manually mounting ``/dev/nvidia*`` devices and the host NVIDIA libraries."
+msgid ""
+"On some systems (e.g., Rocky Linux 9.2), CDI mode (``--device "
+"nvidia.com/gpu=all``) may not work correctly. ``start.sh`` resolves this by "
+"manually mounting ``/dev/nvidia*`` devices and the host NVIDIA libraries."
 msgstr ""
+"在部分系统（如 Rocky Linux 9.2）中，CDI 模式（``--device "
+"nvidia.com/gpu=all``）可能无法正常工作。``start.sh`` 通过手动挂载 ``/dev/nvidia*`` 设备及宿主机 "
+"NVIDIA 库文件解决该问题。"
 
 #: ../../platform/deployment.rst:76
 msgid "Container Structure"
-msgstr ""
+msgstr "容器结构"
 
 #: ../../platform/deployment.rst:93
 msgid "Manual Run"
-msgstr ""
+msgstr "手动运行"
 
 #: ../../platform/deployment.rst:95
 msgid "If ``start.sh`` does not suit your environment:"
-msgstr ""
+msgstr "若 ``start.sh`` 不适配当前环境："
 
 #: ../../platform/deployment.rst:119
 msgid "Troubleshooting"
-msgstr ""
+msgstr "故障排查"
 
 #: ../../platform/deployment.rst:124
 msgid "Issue"
-msgstr ""
+msgstr "问题"
 
 #: ../../platform/deployment.rst:125
 msgid "Cause"
-msgstr ""
+msgstr "原因"
 
 #: ../../platform/deployment.rst:126
 msgid "Solution"
-msgstr ""
+msgstr "解决方案"
 
 #: ../../platform/deployment.rst:127
 msgid "\"Models not initialized\""
-msgstr ""
+msgstr "“模型未初始化”"
 
 #: ../../platform/deployment.rst:128
 msgid "Using ``--device cpu``"
-msgstr ""
+msgstr "使用了 ``--device cpu``"
 
 #: ../../platform/deployment.rst:129
 msgid "Switch to ``--device cuda``"
-msgstr ""
+msgstr "改用 ``--device cuda``"
 
 #: ../../platform/deployment.rst:130
 msgid "\"failed to stat CDI host device\""
-msgstr ""
+msgstr "“无法统计 CDI 主机设备”"
 
 #: ../../platform/deployment.rst:131
 msgid "CDI mode unavailable"
-msgstr ""
+msgstr "CDI 模式不可用"
 
 #: ../../platform/deployment.rst:132
 msgid "Use ``start.sh`` (handled manually)"
-msgstr ""
+msgstr "使用 ``start.sh``（已手动处理挂载）"
 
 #: ../../platform/deployment.rst:133
 msgid "``ModuleNotFoundError: deepaw_cpp``"
-msgstr ""
+msgstr "``ModuleNotFoundError: deepaw_cpp``"
 
 #: ../../platform/deployment.rst:134
 msgid "Missing environment variables"
-msgstr ""
+msgstr "缺少环境变量"
 
-#: ../../platform/deployment.rst:135
-#: ../../platform/deployment.rst:138
+#: ../../platform/deployment.rst:135 ../../platform/deployment.rst:138
 msgid "Use ``start.sh`` (sets automatically)"
-msgstr ""
+msgstr "使用 ``start.sh``（自动设置）"
 
 #: ../../platform/deployment.rst:136
 msgid "``libtorch.so: cannot open``"
-msgstr ""
+msgstr "``libtorch.so: cannot open``"
 
 #: ../../platform/deployment.rst:137
 msgid "LD_LIBRARY_PATH not set"
-msgstr ""
+msgstr "未设置 LD_LIBRARY_PATH"
 
 #: ../../platform/deployment.rst:139
 msgid "nvidia-smi unavailable inside container"
-msgstr ""
+msgstr "容器内无法使用 nvidia-smi"
 
 #: ../../platform/deployment.rst:140
 msgid "NVIDIA libraries not mounted"
-msgstr ""
+msgstr "NVIDIA 库未挂载"
 
 #: ../../platform/deployment.rst:141
 msgid "Use ``start.sh`` (mounts automatically)"
-msgstr ""
+msgstr "使用 ``start.sh``（自动挂载）"
 
 #: ../../platform/deployment.rst:142
 msgid "``.so`` file not found"
-msgstr ""
+msgstr "``.so`` 文件未找到"
 
 #: ../../platform/deployment.rst:143
 msgid "Driver version mismatch"
-msgstr ""
+msgstr "驱动版本不匹配"
 
 #: ../../platform/deployment.rst:144
 msgid "``start.sh`` detects driver version automatically"
-msgstr ""
+msgstr "``start.sh`` 会自动检测驱动版本"

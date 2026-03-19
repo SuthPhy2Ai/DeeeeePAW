@@ -1,25 +1,25 @@
-# SOME DESCRIPTIVE TITLE.
+# DeePAW Documentation - Chinese (Simplified) Translation
 # Copyright (C) 2024-2026, DeePAW Team
 # This file is distributed under the same license as the DeePAW package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DeePAW \n"
+"Project-Id-Version: DeePAW 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-19 23:20+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-03-20 12:00+0800\n"
+"Last-Translator: DeePAW Documentation Team <docs@deepaw.tech>\n"
+"Language-Team: Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../platform/changelog.rst:2
 msgid "Changelog"
-msgstr ""
+msgstr "更新日志"
 
 #: ../../platform/changelog.rst:4
 msgid "This is the first release. No update history yet."
-msgstr ""
+msgstr "这是首次发布，暂无更新历史。"

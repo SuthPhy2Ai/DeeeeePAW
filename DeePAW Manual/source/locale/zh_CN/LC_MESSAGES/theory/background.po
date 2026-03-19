@@ -3,95 +3,148 @@
 # This file is distributed under the same license as the DeePAW package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DeePAW \n"
+"Project-Id-Version: DeePAW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-19 23:20+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-03-20 00:00+0800\n"
+"Last-Translator: DeePAW Documentation Team <docs@deepaw.tech>\n"
+"Language-Team: Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../theory/background.rst:2
 msgid "Scientific Background"
-msgstr ""
+msgstr "科学背景"
 
 #: ../../theory/background.rst:5
 msgid "Electron Density and Density Functional Theory"
-msgstr ""
+msgstr "电子密度与密度泛函理论"
 
 #: ../../theory/background.rst:7
-msgid "The electron density is one of the most fundamental physical quantities in condensed matter physics and materials science. According to the Hohenberg-Kohn theorem, the ground-state electron density uniquely determines all ground-state properties of a many-electron system, including the total energy, forces, stress tensor, and related observables."
+msgid ""
+"The electron density is one of the most fundamental physical quantities in "
+"condensed matter physics and materials science. According to the Hohenberg-"
+"Kohn theorem, the ground-state electron density uniquely determines all "
+"ground-state properties of a many-electron system, including the total "
+"energy, forces, stress tensor, and related observables."
 msgstr ""
+"电子密度是凝聚态物理与材料科学中最基础的物理量之一。根据 Hohenberg-Kohn "
+"定理，体系的基态电子密度可以唯一决定多电子系统的全部基态性质，包括总能量、受力、应力张量及相关可观测量。"
 
 #: ../../theory/background.rst:9
-msgid "Traditionally, obtaining an accurate electron density distribution requires self-consistent field iterations within Kohn-Sham density functional theory (KSDFT). KSDFT obtains orbital wavefunctions by solving the single-particle Kohn-Sham equations, from which the electron density is constructed:"
+msgid ""
+"Traditionally, obtaining an accurate electron density distribution requires "
+"self-consistent field iterations within Kohn-Sham density functional theory "
+"(KSDFT). KSDFT obtains orbital wavefunctions by solving the single-particle "
+"Kohn-Sham equations, from which the electron density is constructed:"
 msgstr ""
+"传统上，获得高精度电子密度分布需要在 Kohn-Sham 密度泛函理论（KSDFT）框架下进行自洽场迭代。KSDFT 通过求解单粒子 Kohn-Sham"
+" 方程获得轨道波函数，并据此构建电子密度："
 
 #: ../../theory/background.rst:11
 msgid "n(\\mathbf{r}) = \\sum_i f_i |\\psi_i(\\mathbf{r})|^2"
-msgstr ""
+msgstr "n(\\mathbf{r}) = \\sum_i f_i |\\psi_i(\\mathbf{r})|^2"
 
 #: ../../theory/background.rst:15
-msgid "where :math:`\\psi_i` are the Kohn-Sham orbitals and :math:`f_i` are the corresponding occupation numbers. The computational complexity of this procedure scales steeply with system size, limiting its applicability to large-scale materials screening."
+msgid ""
+"where :math:`\\psi_i` are the Kohn-Sham orbitals and :math:`f_i` are the "
+"corresponding occupation numbers. The computational complexity of this "
+"procedure scales steeply with system size, limiting its applicability to "
+"large-scale materials screening."
 msgstr ""
+"其中，:math:`\\psi_i` 为 Kohn-Sham 轨道，:math:`f_i` "
+"为相应的占据数。该过程的计算复杂度会随体系规模显著上升，从而限制了其在大规模材料筛选中的应用。"
 
 #: ../../theory/background.rst:18
 msgid "Orbital-Free Density Functional Theory"
-msgstr ""
+msgstr "无轨道密度泛函理论"
 
 #: ../../theory/background.rst:20
-msgid "Orbital-free density functional theory (Orbital-Free DFT, OFDFT) provides an alternative route that bypasses the Kohn-Sham equations entirely. Within the OFDFT framework, ground-state materials properties are expressed directly through the variational minimization of an energy functional of the electron density, without explicitly solving for orbital wavefunctions."
+msgid ""
+"Orbital-free density functional theory (Orbital-Free DFT, OFDFT) provides an"
+" alternative route that bypasses the Kohn-Sham equations entirely. Within "
+"the OFDFT framework, ground-state materials properties are expressed "
+"directly through the variational minimization of an energy functional of the"
+" electron density, without explicitly solving for orbital wavefunctions."
 msgstr ""
+"无轨道密度泛函理论（Orbital-Free DFT, OFDFT）提供了一条可完全绕开 Kohn-Sham 方程的替代路径。在 OFDFT "
+"框架中，材料基态性质可通过对电子密度能量泛函进行变分极小化而直接给出，无需显式求解轨道波函数。"
 
 #: ../../theory/background.rst:23
 msgid "E(3) Equivariance"
-msgstr ""
+msgstr "E(3) 等变性"
 
 #: ../../theory/background.rst:25
-msgid "The electron density of a physical system must satisfy the symmetry constraints of the three-dimensional Euclidean group E(3), remaining equivariant under rotations, translations, and inversion:"
-msgstr ""
+msgid ""
+"The electron density of a physical system must satisfy the symmetry "
+"constraints of the three-dimensional Euclidean group E(3), remaining "
+"equivariant under rotations, translations, and inversion:"
+msgstr "物理体系的电子密度必须满足三维欧几里得群 E(3) 的对称性约束，即在旋转、平移与反演操作下保持等变性："
 
 #: ../../theory/background.rst:27
-msgid "**Translation equivariance**: A global translation of the atomic structure results in an identical translation of the electron density field."
-msgstr ""
+msgid ""
+"**Translation equivariance**: A global translation of the atomic structure "
+"results in an identical translation of the electron density field."
+msgstr "**平移等变性**：原子结构发生整体平移时，电子密度场应发生同样的平移。"
 
 #: ../../theory/background.rst:28
-msgid "**Rotation equivariance**: A rotation of the atomic structure induces the same rotation in the electron density field."
-msgstr ""
+msgid ""
+"**Rotation equivariance**: A rotation of the atomic structure induces the "
+"same rotation in the electron density field."
+msgstr "**旋转等变性**：原子结构发生旋转时，电子密度场应发生相同旋转。"
 
 #: ../../theory/background.rst:29
-msgid "**Inversion equivariance**: Spatial inversion of the atomic structure produces a corresponding inversion of the electron density field."
-msgstr ""
+msgid ""
+"**Inversion equivariance**: Spatial inversion of the atomic structure "
+"produces a corresponding inversion of the electron density field."
+msgstr "**反演等变性**：原子结构进行空间反演时，电子密度场应产生对应的反演。"
 
 #: ../../theory/background.rst:31
-msgid "Embedding E(3) equivariance as a hard constraint into the neural network architecture significantly improves data efficiency and generalization, ensuring that predicted electron densities are physically consistent by construction."
-msgstr ""
+msgid ""
+"Embedding E(3) equivariance as a hard constraint into the neural network "
+"architecture significantly improves data efficiency and generalization, "
+"ensuring that predicted electron densities are physically consistent by "
+"construction."
+msgstr "将 E(3) 等变性作为硬约束嵌入神经网络架构，能够显著提升数据效率与泛化能力，并从结构上保证预测电子密度的物理一致性。"
 
 #: ../../theory/background.rst:34
 msgid "Message Passing Neural Networks"
-msgstr ""
+msgstr "消息传递神经网络"
 
 #: ../../theory/background.rst:36
-msgid "Message passing neural networks (MPNNs), a class of graph neural networks (GNNs), are a natural framework for processing atomic structure data. Within the MPNN formalism:"
-msgstr ""
+msgid ""
+"Message passing neural networks (MPNNs), a class of graph neural networks "
+"(GNNs), are a natural framework for processing atomic structure data. Within"
+" the MPNN formalism:"
+msgstr "消息传递神经网络（MPNN）作为图神经网络（GNN）的一类，是处理原子结构数据的自然框架。在 MPNN 形式化中："
 
 #: ../../theory/background.rst:38
-msgid "Atoms are represented as nodes of a graph, carrying features such as element type."
-msgstr ""
+msgid ""
+"Atoms are represented as nodes of a graph, carrying features such as element"
+" type."
+msgstr "原子被表示为图中的节点，并携带元素类型等特征。"
 
 #: ../../theory/background.rst:39
-msgid "Chemical bonds or nearest-neighbor relationships between atoms are represented as edges of the graph."
-msgstr ""
+msgid ""
+"Chemical bonds or nearest-neighbor relationships between atoms are "
+"represented as edges of the graph."
+msgstr "原子间的化学键或近邻关系被表示为图中的边。"
 
 #: ../../theory/background.rst:40
-msgid "Through multiple rounds of message passing, each atom aggregates information from its neighbors, progressively building a representation of its local chemical environment."
-msgstr ""
+msgid ""
+"Through multiple rounds of message passing, each atom aggregates information"
+" from its neighbors, progressively building a representation of its local "
+"chemical environment."
+msgstr "通过多轮消息传递，每个原子从邻域聚合信息，逐步构建其局部化学环境表征。"
 
 #: ../../theory/background.rst:42
-msgid "This mechanism is naturally suited to describing interatomic interactions in materials and can handle crystal structures of arbitrary size and composition."
-msgstr ""
+msgid ""
+"This mechanism is naturally suited to describing interatomic interactions in"
+" materials and can handle crystal structures of arbitrary size and "
+"composition."
+msgstr "该机制天然适合描述材料中的原子间相互作用，并能够处理任意尺度与组分的晶体结构。"

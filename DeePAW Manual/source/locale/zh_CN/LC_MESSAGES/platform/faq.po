@@ -1,169 +1,169 @@
-# SOME DESCRIPTIVE TITLE.
+# DeePAW Documentation - Chinese (Simplified) Translation
 # Copyright (C) 2024-2026, DeePAW Team
 # This file is distributed under the same license as the DeePAW package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DeePAW \n"
+"Project-Id-Version: DeePAW 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-19 23:20+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-03-20 12:00+0800\n"
+"Last-Translator: DeePAW Documentation Team <docs@deepaw.tech>\n"
+"Language-Team: Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../platform/faq.rst:2
 msgid "Frequently Asked Questions"
-msgstr ""
+msgstr "常见问题"
 
 #: ../../platform/faq.rst:5
 msgid "How to choose grid dimensions nx/ny/nz?"
-msgstr ""
+msgstr "如何选择网格维度 nx/ny/nz？"
 
 #: ../../platform/faq.rst:7
 msgid "The grid dimensions nx/ny/nz should be determined based on the k-point density used in your first-principles calculation. Refer to the relevant VASP documentation for guidance on selecting appropriate grid dimensions."
-msgstr ""
+msgstr "网格维度 nx/ny/nz 应根据第一性原理计算中使用的 k 点密度确定。请参阅相关 VASP 文档以获取选择合适网格维度的指导。"
 
 #: ../../platform/faq.rst:9
 msgid "Larger grids produce larger CHGCAR files and consume more GPU VRAM."
-msgstr ""
+msgstr "更大的网格会生成更大的 CHGCAR 文件，并消耗更多 GPU 显存。"
 
 #: ../../platform/faq.rst:12
 msgid "Are nx/ny/nz required when uploading files?"
-msgstr ""
+msgstr "上传文件时是否必须指定 nx/ny/nz？"
 
 #: ../../platform/faq.rst:14
 msgid "Yes. The ``/api/files/upload-structures`` endpoint requires ``nx``, ``ny``, and ``nz`` to be specified explicitly. No default values are provided, in order to prevent users from inadvertently using an unsuitable grid size."
-msgstr ""
+msgstr "是的。``/api/files/upload-structures`` 接口要求显式指定 ``nx``、``ny`` 和 ``nz``。系统不提供默认值，以防止用户误用不合适的网格尺寸。"
 
 #: ../../platform/faq.rst:17
 msgid "If you upload a ``.db`` file directly (``/api/files/upload``), the grid settings already stored in the database are used."
-msgstr ""
+msgstr "若直接上传 ``.db`` 文件（``/api/files/upload``），则使用数据库中已存储的网格设置。"
 
 #: ../../platform/faq.rst:20
 msgid "How to troubleshoot failed predictions?"
-msgstr ""
+msgstr "预测失败时如何排查？"
 
 #: ../../platform/faq.rst:22
 msgid "Query the batch status to identify which tasks have failed"
-msgstr ""
+msgstr "查询批次状态以确定哪些任务失败"
 
 #: ../../platform/faq.rst:23
 msgid "Inspect the backend log: ``tail -f /tmp/deepaw_backend.log``"
-msgstr ""
+msgstr "查看后端日志：``tail -f /tmp/deepaw_backend.log``"
 
 #: ../../platform/faq.rst:24
 msgid "Check GPU status: ``curl http://localhost:8080/api/tasks/system/status``"
-msgstr ""
+msgstr "检查 GPU 状态：``curl http://localhost:8080/api/tasks/system/status``"
 
 #: ../../platform/faq.rst:27
 msgid "Are molecular structures supported?"
-msgstr ""
+msgstr "是否支持分子结构？"
 
 #: ../../platform/faq.rst:29
 msgid "Yes. When using the local CLI deployment, periodic boundary conditions must be disabled. When using the online version (deepaw.tech), setting periodic boundary conditions is not supported by default."
-msgstr ""
+msgstr "支持。使用本地 CLI 部署时，需要禁用周期性边界条件。使用在线版本（deepaw.tech）时，默认不支持设置周期性边界条件。"
 
 #: ../../platform/faq.rst:32
 msgid "How to visualize CHGCAR files?"
-msgstr ""
+msgstr "如何可视化 CHGCAR 文件？"
 
 #: ../../platform/faq.rst:34
 msgid "**VESTA** (free): open the CHGCAR file directly"
-msgstr ""
+msgstr "**VESTA**（免费）：直接打开 CHGCAR 文件"
 
 #: ../../platform/faq.rst:35
 msgid "**Ovito**: supports isosurface rendering"
-msgstr ""
+msgstr "**Ovito**：支持等值面渲染"
 
 #: ../../platform/faq.rst:36
 msgid "**Web Frontend**: built-in Plotly 3D isosurface visualization"
-msgstr ""
+msgstr "**Web 前端**：内置 Plotly 三维等值面可视化"
 
 #: ../../platform/faq.rst:37
 msgid "**Python**: plot manually using ASE + Plotly"
-msgstr ""
+msgstr "**Python**：使用 ASE + Plotly 手动绘图"
 
 #: ../../platform/faq.rst:40
 msgid "What to do if GPU VRAM is insufficient?"
-msgstr ""
+msgstr "GPU 显存不足时怎么办？"
 
 #: ../../platform/faq.rst:42
 msgid "Reduce the grid dimensions (e.g., from 64³ to 48³)"
-msgstr ""
+msgstr "降低网格维度（例如从 64³ 降至 48³）"
 
 #: ../../platform/faq.rst:43
 msgid "Reduce the number of GPUs used simultaneously: ``export DEEPAW_GPUS=\"1,2\"``"
-msgstr ""
+msgstr "减少同时使用的 GPU 数量：``export DEEPAW_GPUS=\"1,2\"``"
 
 #: ../../platform/faq.rst:44
 msgid "Check whether other processes are consuming VRAM: ``nvidia-smi``"
-msgstr ""
+msgstr "检查是否有其他进程占用显存：``nvidia-smi``"
 
 #: ../../platform/faq.rst:47
 msgid "What is the difference between the two upload methods?"
-msgstr ""
+msgstr "两种上传方式有何区别？"
 
 #: ../../platform/faq.rst:52
 msgid "Feature"
-msgstr ""
+msgstr "功能"
 
 #: ../../platform/faq.rst:53
 msgid "upload-structures"
-msgstr ""
+msgstr "upload-structures"
 
 #: ../../platform/faq.rst:54
 msgid "upload"
-msgstr ""
+msgstr "upload"
 
 #: ../../platform/faq.rst:55
 msgid "Supported formats"
-msgstr ""
+msgstr "支持格式"
 
 #: ../../platform/faq.rst:56
 msgid "15 formats"
-msgstr ""
+msgstr "15 种格式"
 
 #: ../../platform/faq.rst:57
 msgid ".db only"
-msgstr ""
+msgstr "仅 .db"
 
 #: ../../platform/faq.rst:58
 msgid "Format conversion"
-msgstr ""
+msgstr "格式转换"
 
 #: ../../platform/faq.rst:59
 msgid "Automatic"
-msgstr ""
+msgstr "自动"
 
 #: ../../platform/faq.rst:60
 msgid "Not required"
-msgstr ""
+msgstr "无需"
 
 #: ../../platform/faq.rst:61
 msgid "Grid dimensions"
-msgstr ""
+msgstr "网格维度"
 
 #: ../../platform/faq.rst:62
 msgid "Required parameter"
-msgstr ""
+msgstr "必需参数"
 
 #: ../../platform/faq.rst:63
 msgid "Uses existing database settings"
-msgstr ""
+msgstr "使用数据库已有设置"
 
 #: ../../platform/faq.rst:64
 msgid "Archive"
-msgstr ""
+msgstr "压缩包"
 
 #: ../../platform/faq.rst:65
 msgid "Supported"
-msgstr ""
+msgstr "支持"
 
 #: ../../platform/faq.rst:66
 msgid "Not supported"
-msgstr ""
+msgstr "不支持"

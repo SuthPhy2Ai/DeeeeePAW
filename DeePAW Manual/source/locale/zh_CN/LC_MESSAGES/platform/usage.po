@@ -3,187 +3,204 @@
 # This file is distributed under the same license as the DeePAW package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: DeePAW \n"
+"Project-Id-Version: DeePAW\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-19 23:20+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-03-20 00:00+0800\n"
+"Last-Translator: DeePAW Documentation Team <docs@deepaw.tech>\n"
+"Language-Team: Chinese <zh_CN@li.org>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../../platform/usage.rst:2
 msgid "Usage Guide"
-msgstr ""
+msgstr "使用指南"
 
 #: ../../platform/usage.rst:5
 msgid "Authentication"
-msgstr ""
+msgstr "身份认证"
 
 #: ../../platform/usage.rst:7
-msgid "All API requests (except login, register, and health check) require a JWT token in the request header:"
-msgstr ""
+msgid ""
+"All API requests (except login, register, and health check) require a JWT "
+"token in the request header:"
+msgstr "所有 API 请求（登录、注册和健康检查除外）都需要在请求标头中包含 JWT 令牌："
 
 #: ../../platform/usage.rst:13
 msgid "Tokens are valid for 24 hours."
-msgstr ""
+msgstr "令牌的有效期为 24 小时。"
 
 #: ../../platform/usage.rst:16
 msgid "Register Account"
-msgstr ""
+msgstr "注册帐号"
 
 #: ../../platform/usage.rst:18
 msgid "Register using an invitation code:"
-msgstr ""
+msgstr "使用邀请码注册："
 
 #: ../../platform/usage.rst:32
 msgid "Login and Obtain Token"
-msgstr ""
+msgstr "登录并获取令牌"
 
 #: ../../platform/usage.rst:40
-msgid "``data.access_token`` in the response is the JWT token required for subsequent requests."
-msgstr ""
+msgid ""
+"``data.access_token`` in the response is the JWT token required for "
+"subsequent requests."
+msgstr "响应中的“data.access_token”是后续请求所需的 JWT 令牌。"
 
 #: ../../platform/usage.rst:43
 msgid "Complete Workflow"
-msgstr ""
+msgstr "完整工作流程"
 
 #: ../../platform/usage.rst:45
-msgid "The typical workflow is: upload structure file → submit prediction → poll status → download results."
-msgstr ""
+msgid ""
+"The typical workflow is: upload structure file → submit prediction → poll "
+"status → download results."
+msgstr "典型工作流程为：上传结构文件 → 提交预测 → 轮询状态 → 下载结果。"
 
 #: ../../platform/usage.rst:48
 msgid "Step 1: Upload Structure Files"
-msgstr ""
+msgstr "第1步：上传结构文件"
 
 #: ../../platform/usage.rst:50
-msgid "Supports CIF, VASP (POSCAR/CONTCAR), XYZ, PDB, MOL, SDF, JSON, TRAJ, DB formats, as well as ZIP / TAR / TAR.GZ archives."
+msgid ""
+"Supports CIF, VASP (POSCAR/CONTCAR), XYZ, PDB, MOL, SDF, JSON, TRAJ, DB "
+"formats, as well as ZIP / TAR / TAR.GZ archives."
 msgstr ""
+"支持CIF、VASP (POSCAR/CONTCAR)、XYZ、PDB、MOL、SDF、JSON、TRAJ、DB格式，以及ZIP / TAR / "
+"TAR.GZ档案。"
 
 #: ../../platform/usage.rst:62
-msgid "``nx``, ``ny``, ``nz`` are required parameters that specify the three-dimensional grid dimensions for charge density prediction. Grid size directly affects prediction accuracy and computation time; choose appropriate values based on the actual structure."
-msgstr ""
+msgid ""
+"``nx``, ``ny``, ``nz`` are required parameters that specify the three-"
+"dimensional grid dimensions for charge density prediction. Grid size "
+"directly affects prediction accuracy and computation time; choose "
+"appropriate values based on the actual structure."
+msgstr “``nx``、``ny``、``nz`` 为必需参数，用于指定电荷密度预测的三维网格维度。网格大小直接影响预测精度与计算时间，请根据实际结构选择合适的值。”
 
 #: ../../platform/usage.rst:66
 msgid "Grid Size Reference:"
-msgstr ""
+msgstr "网格尺寸参考："
 
 #: ../../platform/usage.rst:71
 msgid "Grid Size"
-msgstr ""
+msgstr "网格尺寸"
 
 #: ../../platform/usage.rst:72
 msgid "Accuracy"
-msgstr ""
+msgstr "精度"
 
 #: ../../platform/usage.rst:73
 msgid "Recommended Use"
-msgstr ""
+msgstr "推荐用途"
 
 #: ../../platform/usage.rst:74
 msgid "32\\ :sup:`3`"
-msgstr ""
+msgstr "32\\ :sup:`3`"
 
 #: ../../platform/usage.rst:75
 msgid "Low"
-msgstr ""
+msgstr "低"
 
 #: ../../platform/usage.rst:76
 msgid "Quick test"
-msgstr ""
+msgstr "快速测试"
 
 #: ../../platform/usage.rst:77
 msgid "48\\ :sup:`3`"
-msgstr ""
+msgstr "48\\ :sup:`3`"
 
 #: ../../platform/usage.rst:78
 msgid "Medium"
-msgstr ""
+msgstr "中"
 
 #: ../../platform/usage.rst:79
 msgid "General use"
-msgstr ""
+msgstr "常规使用"
 
 #: ../../platform/usage.rst:80
 msgid "56\\ :sup:`3`"
-msgstr ""
+msgstr "56\\ :sup:`3`"
 
 #: ../../platform/usage.rst:81
 msgid "High"
-msgstr ""
+msgstr "高"
 
 #: ../../platform/usage.rst:82
 msgid "High precision"
-msgstr ""
+msgstr "高精度"
 
 #: ../../platform/usage.rst:83
 msgid "64\\ :sup:`3`"
-msgstr ""
+msgstr "64\\ :sup:`3`"
 
 #: ../../platform/usage.rst:84
 msgid "Very High"
-msgstr ""
+msgstr "极高"
 
 #: ../../platform/usage.rst:85
 msgid "Publication quality"
-msgstr ""
+msgstr "发表级精度"
 
 #: ../../platform/usage.rst:88
 msgid "Step 2: Submit Batch Prediction"
-msgstr ""
+msgstr "第 2 步：提交批量预测"
 
 #: ../../platform/usage.rst:98
 msgid "Step 3: Check Progress"
-msgstr ""
+msgstr "第 3 步：检查进度"
 
 #: ../../platform/usage.rst:105
 msgid "Batch status values:"
-msgstr ""
+msgstr "批次状态值："
 
 #: ../../platform/usage.rst:107
 msgid "``processing``: Job in progress"
-msgstr ""
+msgstr “``processing``：任务进行中”
 
 #: ../../platform/usage.rst:108
 msgid "``completed``: All tasks finished"
-msgstr ""
+msgstr "``completed``：所有任务已完成"
 
 #: ../../platform/usage.rst:109
 msgid "``failed``: All tasks failed"
-msgstr ""
+msgstr "``failed``：所有任务均失败"
 
 #: ../../platform/usage.rst:112
 msgid "Step 4: Download Results"
-msgstr ""
+msgstr "第 4 步：下载结果"
 
 #: ../../platform/usage.rst:114
 msgid "**Download CHGCAR file:**"
-msgstr ""
+msgstr "**下载 CHGCAR 文件：**"
 
 #: ../../platform/usage.rst:122
 msgid "**Retrieve results in JSON format:**"
-msgstr ""
+msgstr "**以 JSON 格式获取结果：**"
 
 #: ../../platform/usage.rst:129
-msgid "The JSON response contains ``gridDimensions`` (grid dimensions) and ``densityArray`` (flattened 3D density array)."
-msgstr ""
+msgid ""
+"The JSON response contains ``gridDimensions`` (grid dimensions) and "
+"``densityArray`` (flattened 3D density array)."
+msgstr “JSON 响应包含 ``gridDimensions``（网格维度）和 ``densityArray``（展平的三维密度数组）。”
 
 #: ../../platform/usage.rst:132
 msgid "Python Client"
-msgstr ""
+msgstr "Python 客户端"
 
 #: ../../platform/usage.rst:178
 msgid "Visualize Results"
-msgstr ""
+msgstr "结果可视化"
 
 #: ../../platform/usage.rst:180
 msgid "**VESTA (recommended):**"
-msgstr ""
+msgstr "**VESTA（推荐）：**"
 
 #: ../../platform/usage.rst:186
 msgid "**Python + ASE verification:**"
-msgstr ""
+msgstr "**Python + ASE 验证：**"

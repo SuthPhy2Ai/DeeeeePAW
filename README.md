@@ -33,10 +33,18 @@ DeePAW predicts three-dimensional electron charge density directly from atomic s
 4. Submit the job — monitor real-time GPU status
 5. Download the resulting **CHGCAR** from *My Files* (available for 3 days)
 
-<table><tr>
-<td><img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180338.jpg" height="260"/><br/><em>2D charge density slice along (hkl) plane</em></td>
-<td><img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180345.jpg" height="260"/><br/><em>Interactive 3D isosurface with unit cell boundary and lattice parameters</em></td>
-</tr></table>
+<table>
+<tr>
+<td width="50%" align="center" valign="top">
+<img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180338.jpg" width="100%"/><br/>
+<em>2D charge density slice along (hkl) plane</em>
+</td>
+<td width="50%" align="center" valign="top">
+<img src="https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180345.jpg" width="100%"/><br/>
+<em>Interactive 3D isosurface with unit cell boundary and lattice parameters</em>
+</td>
+</tr>
+</table>
 
 ### Option 2 — Local CLI (Podman/Docker)
 

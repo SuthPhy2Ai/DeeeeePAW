@@ -14,10 +14,10 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=54a955ad"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../_static/translations.js?v=beaddf03"></script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -62,11 +62,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="performance.html">预测性能</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="performance.html#id2">训练数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id3">电子密度预测精度</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id4">形成能预测</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id5">泛化能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id6">适用材料类型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id7">已知局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html#id3">泛化能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html#id4">适用材料类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html#id5">已知局限</a></li>
 </ul>
 </li>
 </ul>
@@ -97,20 +95,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../platform/deployment.html">部署指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id2">环境准备</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/deployment.html#id3">依赖安装</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/deployment.html#id4">必要文件</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id5">环境变量</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id6">快速启动（生产环境）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id7">手动启动（开发环境）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/deployment.html#id8">前端生产构建</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id9">远程访问</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id10">验证部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/deployment.html">本地 CLI 部署</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id1">环境要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id2">快速开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id3">重要说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id4">容器结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id5">手动运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id6">故障排除</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../platform/web_frontend.html">Web 前端应用</a><ul>
@@ -171,7 +162,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../platform/faq.html">常见问题</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#token">Token 过期怎么办？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#nx-ny-nz">如何选择网格尺寸 nx/ny/nz？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id2">上传文件时 nx/ny/nz 必须填吗？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id3">预测失败怎么排查？</a></li>
@@ -219,13 +209,13 @@
            <div itemprop="articleBody">
              
   <section id="deepaw">
-<h1>DeePAW 方法<a class="headerlink" href="#deepaw" title="Link to this heading"></a></h1>
+<h1>DeePAW 方法<a class="headerlink" href="#deepaw" title="链接到此标题。"></a></h1>
 <section id="id1">
-<h2>方法概述<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2>方法概述<a class="headerlink" href="#id1" title="链接到此标题。"></a></h2>
 <p>DeePAW (Deep Augmented Way) 是一种面向 OFDFT 电子密度泛函和形成能预测的通用机器学习方法。其命名灵感来源于投影缀加波 (Projector Augmented-Wave, PAW) 方法。DeePAW 采用基于 e3nn 库的 E(3) 等变图神经网络架构，通过端到端的自动化表征学习，同时实现电子密度和形成能的预测。</p>
 </section>
 <section id="id2">
-<h2>双图消息传递架构<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<h2>双图消息传递架构<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
 <p>DeePAW 采用双图消息传递神经网络 (Double Graph MPNN) 架构，包含两个协同工作的 MPNN 和一个输出头:</p>
 <p><strong>原子 MPNN (Atomic MPNN)</strong></p>
 <p>原子 MPNN 负责学习原子级别的表征。初始边嵌入通过高斯基函数 (Gaussian Basis Function, GBF) 构建:</p>
@@ -244,7 +234,7 @@
 </ul>
 </section>
 <section id="id3">
-<h2>电荷密度网格构建<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<h2>电荷密度网格构建<a class="headerlink" href="#id3" title="链接到此标题。"></a></h2>
 <p>DeePAW 采用 VASP 的粗-细网格方案 (coarse-fine grid scheme) 构建电子密度网格。网格密度的确定遵循 Nyquist-Shannon 采样定理，确保对电子密度场的充分采样。</p>
 <p>用户在使用平台时需要指定网格维度 (nx, ny, nz)，这三个参数决定了:</p>
 <ul class="simple">
@@ -258,7 +248,7 @@
 <p>其中 <span class="math notranslate nohighlight">\(\mathbf{a}, \mathbf{b}, \mathbf{c}\)</span> 为晶胞基矢。</p>
 </section>
 <section id="id4">
-<h2>训练策略<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<h2>训练策略<a class="headerlink" href="#id4" title="链接到此标题。"></a></h2>
 <p>DeePAW 的训练分为两个阶段，使用 L1 损失函数:</p>
 <ul class="simple">
 <li><p><strong>第一阶段</strong>: 联合训练 MLP 头和 GAT 头，同时优化电子密度和形成能</p></li>

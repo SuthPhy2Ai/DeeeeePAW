@@ -14,10 +14,10 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=54a955ad"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../_static/translations.js?v=beaddf03"></script>
-      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -62,11 +62,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="performance.html">预测性能</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="performance.html#id2">训练数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id3">电子密度预测精度</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id4">形成能预测</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id5">泛化能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id6">适用材料类型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id7">已知局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html#id3">泛化能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html#id4">适用材料类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html#id5">已知局限</a></li>
 </ul>
 </li>
 </ul>
@@ -97,20 +95,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../platform/deployment.html">部署指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id2">环境准备</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/deployment.html#id3">依赖安装</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/deployment.html#id4">必要文件</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id5">环境变量</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id6">快速启动（生产环境）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id7">手动启动（开发环境）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/deployment.html#id8">前端生产构建</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id9">远程访问</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id10">验证部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/deployment.html">本地 CLI 部署</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id1">环境要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id2">快速开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id3">重要说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id4">容器结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id5">手动运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id6">故障排除</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../platform/web_frontend.html">Web 前端应用</a><ul>
@@ -171,7 +162,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../platform/faq.html">常见问题</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#token">Token 过期怎么办？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#nx-ny-nz">如何选择网格尺寸 nx/ny/nz？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id2">上传文件时 nx/ny/nz 必须填吗？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id3">预测失败怎么排查？</a></li>
@@ -219,9 +209,9 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>科学背景<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<h1>科学背景<a class="headerlink" href="#id1" title="链接到此标题。"></a></h1>
 <section id="id2">
-<h2>电荷密度与密度泛函理论<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<h2>电荷密度与密度泛函理论<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
 <p>电子密度 (electron density) 是凝聚态物理和材料科学中最基本的物理量之一。根据 Hohenberg-Kohn 定理，基态电子密度唯一地决定了多电子体系的所有基态性质，包括总能量、力、应力等。</p>
 <p>传统上，获取精确的电子密度分布需要通过 Kohn-Sham 密度泛函理论 (KSDFT) 进行自洽场迭代计算。KSDFT 通过求解单电子 Kohn-Sham 方程获得轨道波函数，再由波函数构造电子密度:</p>
 <div class="math notranslate nohighlight">
@@ -229,12 +219,12 @@
 <p>其中 <span class="math notranslate nohighlight">\(\psi_i\)</span> 为 Kohn-Sham 轨道，<span class="math notranslate nohighlight">\(f_i\)</span> 为占据数。这一过程的计算复杂度随体系规模急剧增长，限制了大规模材料筛选的效率。</p>
 </section>
 <section id="id3">
-<h2>无轨道密度泛函理论<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<h2>无轨道密度泛函理论<a class="headerlink" href="#id3" title="链接到此标题。"></a></h2>
 <p>无轨道密度泛函理论 (Orbital-Free DFT, OFDFT) 提供了一条绕过 Kohn-Sham 方程的替代路径。在 OFDFT 框架下，基态材料性质可由电子密度泛函的最小内能原理直接表达，无需显式求解轨道波函数。这使得直接从晶体结构预测电子密度分布成为可能。</p>
 <p>深度学习电子密度模型为基于 OFDFT 的电子结构预测提供了一条有前景的路线。通过机器学习方法直接建立原子结构到电子密度的映射关系，可以在保持较高精度的同时大幅降低计算成本。</p>
 </section>
 <section id="e-3">
-<h2>E(3) 等变性<a class="headerlink" href="#e-3" title="Link to this heading"></a></h2>
+<h2>E(3) 等变性<a class="headerlink" href="#e-3" title="链接到此标题。"></a></h2>
 <p>物理系统的电子密度必须满足三维欧几里得群 E(3) 的对称性约束，即对旋转、平移和反演操作保持等变:</p>
 <ul class="simple">
 <li><p><strong>平移等变</strong>: 整体平移原子结构时，电子密度场随之平移</p></li>
@@ -244,7 +234,7 @@
 <p>将 E(3) 等变性作为硬约束嵌入神经网络架构，可以显著提高模型的数据效率和泛化能力，确保预测结果在物理上自洽。</p>
 </section>
 <section id="id4">
-<h2>消息传递神经网络<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<h2>消息传递神经网络<a class="headerlink" href="#id4" title="链接到此标题。"></a></h2>
 <p>图神经网络 (GNN) 中的消息传递神经网络 (Message Passing Neural Network, MPNN) 是处理原子结构数据的自然选择。在 MPNN 框架中:</p>
 <ul class="simple">
 <li><p>原子被表示为图的节点，携带元素类型等特征</p></li>

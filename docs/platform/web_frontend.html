@@ -14,14 +14,14 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=54a955ad"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../_static/translations.js?v=beaddf03"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="使用指南" href="usage.html" />
-    <link rel="prev" title="部署指南" href="deployment.html" /> 
+    <link rel="prev" title="本地 CLI 部署" href="deployment.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -61,11 +61,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../theory/performance.html">预测性能</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id2">训练数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">电子密度预测精度</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">形成能预测</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">泛化能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id6">适用材料类型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id7">已知局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">泛化能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">适用材料类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">已知局限</a></li>
 </ul>
 </li>
 </ul>
@@ -96,20 +94,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deployment.html">部署指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">环境准备</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id3">依赖安装</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id4">必要文件</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">环境变量</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">快速启动（生产环境）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id7">手动启动（开发环境）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id8">前端生产构建</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id9">远程访问</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id10">验证部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">本地 CLI 部署</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id1">环境要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">快速开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id3">重要说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id4">容器结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">手动运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">故障排除</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Web 前端应用</a><ul>
@@ -170,7 +161,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#token">Token 过期怎么办？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#nx-ny-nz">如何选择网格尺寸 nx/ny/nz？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#id2">上传文件时 nx/ny/nz 必须填吗？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#id3">预测失败怎么排查？</a></li>
@@ -218,17 +208,18 @@
            <div itemprop="articleBody">
              
   <section id="web">
-<h1>Web 前端应用<a class="headerlink" href="#web" title="Link to this heading"></a></h1>
-<p>DeePAW 提供了一个部署在 3000 端口的 React Web 应用，用户可通过浏览器直接进行电荷密度预测和可视化操作，无需编写任何代码。</p>
-<p>访问地址: <code class="docutils literal notranslate"><span class="pre">http://localhost:3000</span></code> (本地) 或通过 SSH 隧道远程访问。</p>
+<h1>Web 前端应用<a class="headerlink" href="#web" title="链接到此标题。"></a></h1>
+<p>DeePAW 提供了一个在线 Web 应用，用户可通过浏览器直接进行电荷密度预测和可视化操作，无需编写任何代码。</p>
+<p>访问地址: <strong>https://deepaw.tech</strong></p>
+<p>本地部署版本可通过 <code class="docutils literal notranslate"><span class="pre">http://localhost:3000</span></code> (本地) 或通过 SSH 隧道远程访问。</p>
 <section id="id1">
-<h2>登录与注册<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2>登录与注册<a class="headerlink" href="#id1" title="链接到此标题。"></a></h2>
 <p>首次使用需注册账户，注册时需要提供邀请码。</p>
 <figure class="align-default" id="id6">
 <a class="reference internal image-reference" href="../_images/20260319-180321.jpg"><img alt="DeePAW 登录页面" src="../_images/20260319-180321.jpg" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">登录页面，左侧为 DeePAW 品牌介绍，右侧为登录/注册表单</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+<p><span class="caption-text">登录页面，左侧为 DeePAW 品牌介绍，右侧为登录/注册表单</span><a class="headerlink" href="#id6" title="链接到此图片"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -239,7 +230,7 @@
 <p>已有账户直接输入用户名和密码登录。如忘记密码，可通过邮箱验证码重置。</p>
 </section>
 <section id="id2">
-<h2>主界面布局<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<h2>主界面布局<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
 <p>登录后进入主界面，顶部导航栏包含两个视图切换按钮:</p>
 <ul class="simple">
 <li><p><strong>Predictions</strong>: 预测工作台 (默认视图)</p></li>
@@ -248,17 +239,17 @@
 <p>右上角显示当前登录用户名和断开连接按钮。</p>
 </section>
 <section id="predictions">
-<h2>预测工作台 (Predictions)<a class="headerlink" href="#predictions" title="Link to this heading"></a></h2>
+<h2>预测工作台 (Predictions)<a class="headerlink" href="#predictions" title="链接到此标题。"></a></h2>
 <p>预测工作台采用三栏布局:</p>
 <figure class="align-default" id="id7">
 <a class="reference internal image-reference" href="../_images/20260319-180331.jpg"><img alt="预测工作台 - 上传文件与参数配置" src="../_images/20260319-180331.jpg" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">预测工作台界面: 左栏 GPU 集群状态，中栏文件上传与任务配置，右栏可视化区域</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+<p><span class="caption-text">预测工作台界面: 左栏 GPU 集群状态，中栏文件上传与任务配置，右栏可视化区域</span><a class="headerlink" href="#id7" title="链接到此图片"></a></p>
 </figcaption>
 </figure>
 <section id="gpu">
-<h3>左栏: GPU 集群状态<a class="headerlink" href="#gpu" title="Link to this heading"></a></h3>
+<h3>左栏: GPU 集群状态<a class="headerlink" href="#gpu" title="链接到此标题。"></a></h3>
 <p>实时显示各 GPU 的运行状态:</p>
 <ul class="simple">
 <li><p>GPU 名称和编号</p></li>
@@ -270,7 +261,7 @@
 <p>数据每 5 秒通过 WebSocket 自动刷新。</p>
 </section>
 <section id="id3">
-<h3>中栏: 预测任务配置<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<h3>中栏: 预测任务配置<a class="headerlink" href="#id3" title="链接到此标题。"></a></h3>
 <p><strong>上传结构文件</strong></p>
 <p>点击上传区域选择文件，支持 CIF、VASP、XYZ、PDB 等 15 种格式以及 ZIP/TAR 压缩包。上传时需指定网格维度 nx、ny、nz。</p>
 <p>也可点击 &quot;Load Demo&quot; 加载系统内置的演示数据库快速体验。</p>
@@ -289,7 +280,7 @@
 </ul>
 </section>
 <section id="id4">
-<h3>右栏: 可视化<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<h3>右栏: 可视化<a class="headerlink" href="#id4" title="链接到此标题。"></a></h3>
 <p>任务完成后，点击对应任务卡片即可在右栏查看预测结果，提供两种可视化模式:</p>
 <p><strong>2D 切片 (Slice)</strong></p>
 <p>沿指定 Miller 指数 (hkl) 平面的二维电荷密度切片:</p>
@@ -297,7 +288,7 @@
 <a class="reference internal image-reference" href="../_images/20260319-180338.jpg"><img alt="2D 电荷密度切片可视化" src="../_images/20260319-180338.jpg" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">2D 切片视图: 沿 (hkl) 平面的电荷密度分布热力图，支持等高线叠加和高斯模糊</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+<p><span class="caption-text">2D 切片视图: 沿 (hkl) 平面的电荷密度分布热力图，支持等高线叠加和高斯模糊</span><a class="headerlink" href="#id8" title="链接到此图片"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -313,7 +304,7 @@
 <a class="reference internal image-reference" href="../_images/20260319-180345.jpg"><img alt="3D 电荷密度等值面可视化" src="../_images/20260319-180345.jpg" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">3D 等值面视图: 交互式三维电荷密度渲染，显示晶胞边框和晶格参数</span><a class="headerlink" href="#id9" title="Link to this image"></a></p>
+<p><span class="caption-text">3D 等值面视图: 交互式三维电荷密度渲染，显示晶胞边框和晶格参数</span><a class="headerlink" href="#id9" title="链接到此图片"></a></p>
 </figcaption>
 </figure>
 <ul class="simple">
@@ -326,13 +317,13 @@
 </section>
 </section>
 <section id="my-files">
-<h2>文件管理 (My Files)<a class="headerlink" href="#my-files" title="Link to this heading"></a></h2>
+<h2>文件管理 (My Files)<a class="headerlink" href="#my-files" title="链接到此标题。"></a></h2>
 <p>切换到 &quot;My Files&quot; 视图，管理上传的文件和预测历史:</p>
 <figure class="align-default" id="id10">
 <a class="reference internal image-reference" href="../_images/20260319-180351.jpg"><img alt="文件管理与结果存储页面" src="../_images/20260319-180351.jpg" style="width: 100%;" />
 </a>
 <figcaption>
-<p><span class="caption-text">My Files 视图: 上传文件列表和预测历史记录，显示下载状态和有效期</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+<p><span class="caption-text">My Files 视图: 上传文件列表和预测历史记录，显示下载状态和有效期</span><a class="headerlink" href="#id10" title="链接到此图片"></a></p>
 </figcaption>
 </figure>
 <p><strong>上传文件列表</strong></p>
@@ -350,7 +341,7 @@
 </ul>
 </section>
 <section id="id5">
-<h2>性能建议<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<h2>性能建议<a class="headerlink" href="#id5" title="链接到此标题。"></a></h2>
 <p><strong>3D 可视化优化</strong></p>
 <ul class="simple">
 <li><p>大型 CHGCAR 文件 (网格 &gt; 48^3) 建议先降低分辨率预览</p></li>
@@ -370,7 +361,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="deployment.html" class="btn btn-neutral float-left" title="部署指南" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="deployment.html" class="btn btn-neutral float-left" title="本地 CLI 部署" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="usage.html" class="btn btn-neutral float-right" title="使用指南" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

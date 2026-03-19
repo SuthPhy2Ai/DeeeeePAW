@@ -14,9 +14,9 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=54a955ad"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../_static/translations.js?v=beaddf03"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -61,11 +61,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../theory/performance.html">预测性能</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id2">训练数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">电子密度预测精度</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">形成能预测</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">泛化能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id6">适用材料类型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id7">已知局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">泛化能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">适用材料类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">已知局限</a></li>
 </ul>
 </li>
 </ul>
@@ -96,20 +94,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deployment.html">部署指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">环境准备</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id3">依赖安装</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id4">必要文件</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">环境变量</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">快速启动（生产环境）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id7">手动启动（开发环境）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id8">前端生产构建</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id9">远程访问</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id10">验证部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">本地 CLI 部署</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id1">环境要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">快速开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id3">重要说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id4">容器结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">手动运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">故障排除</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="web_frontend.html">Web 前端应用</a><ul>
@@ -170,7 +161,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#token">Token 过期怎么办？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#nx-ny-nz">如何选择网格尺寸 nx/ny/nz？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#id2">上传文件时 nx/ny/nz 必须填吗？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#id3">预测失败怎么排查？</a></li>
@@ -218,9 +208,9 @@
            <div itemprop="articleBody">
              
   <section id="api">
-<h1>API 参考<a class="headerlink" href="#api" title="Link to this heading"></a></h1>
+<h1>API 参考<a class="headerlink" href="#api" title="链接到此标题。"></a></h1>
 <section id="id1">
-<h2>认证相关<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2>认证相关<a class="headerlink" href="#id1" title="链接到此标题。"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 35.0%" />
@@ -264,7 +254,7 @@
 </tbody>
 </table>
 <section id="post-api-auth-register-with-code">
-<h3>POST /api/auth/register-with-code<a class="headerlink" href="#post-api-auth-register-with-code" title="Link to this heading"></a></h3>
+<h3>POST /api/auth/register-with-code<a class="headerlink" href="#post-api-auth-register-with-code" title="链接到此标题。"></a></h3>
 <p>请求体：</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your_username&quot;</span><span class="p">,</span>
@@ -276,7 +266,7 @@
 </div>
 </section>
 <section id="post-api-auth-login">
-<h3>POST /api/auth/login<a class="headerlink" href="#post-api-auth-login" title="Link to this heading"></a></h3>
+<h3>POST /api/auth/login<a class="headerlink" href="#post-api-auth-login" title="链接到此标题。"></a></h3>
 <p>请求体：</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;demo_user&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Demo@2026&quot;</span><span class="p">}</span>
 </pre></div>
@@ -294,14 +284,14 @@
 </div>
 </section>
 <section id="post-api-auth-send-reset-code">
-<h3>POST /api/auth/send-reset-code<a class="headerlink" href="#post-api-auth-send-reset-code" title="Link to this heading"></a></h3>
+<h3>POST /api/auth/send-reset-code<a class="headerlink" href="#post-api-auth-send-reset-code" title="链接到此标题。"></a></h3>
 <p>请求体：</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user@example.com&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="post-api-auth-reset-password">
-<h3>POST /api/auth/reset-password<a class="headerlink" href="#post-api-auth-reset-password" title="Link to this heading"></a></h3>
+<h3>POST /api/auth/reset-password<a class="headerlink" href="#post-api-auth-reset-password" title="链接到此标题。"></a></h3>
 <p>请求体：</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
@@ -313,7 +303,7 @@
 </section>
 </section>
 <section id="id2">
-<h2>文件上传<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<h2>文件上传<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 35.0%" />
@@ -347,7 +337,7 @@
 </tbody>
 </table>
 <section id="post-api-files-upload-structures">
-<h3>POST /api/files/upload-structures<a class="headerlink" href="#post-api-files-upload-structures" title="Link to this heading"></a></h3>
+<h3>POST /api/files/upload-structures<a class="headerlink" href="#post-api-files-upload-structures" title="链接到此标题。"></a></h3>
 <p>上传结构文件并自动转换为 ASE 数据库。</p>
 <p>参数（multipart/form-data）：</p>
 <table class="docutils align-default">
@@ -412,7 +402,7 @@
 </section>
 </section>
 <section id="id3">
-<h2>预测相关<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<h2>预测相关<a class="headerlink" href="#id3" title="链接到此标题。"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 40.0%" />
@@ -456,7 +446,7 @@
 </tbody>
 </table>
 <section id="post-api-predictions-batch">
-<h3>POST /api/predictions/batch<a class="headerlink" href="#post-api-predictions-batch" title="Link to this heading"></a></h3>
+<h3>POST /api/predictions/batch<a class="headerlink" href="#post-api-predictions-batch" title="链接到此标题。"></a></h3>
 <p>请求体：</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;start_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
@@ -477,7 +467,7 @@
 </div>
 </section>
 <section id="get-api-predictions-batch-batch-id">
-<h3>GET /api/predictions/batch/{batch_id}<a class="headerlink" href="#get-api-predictions-batch-batch-id" title="Link to this heading"></a></h3>
+<h3>GET /api/predictions/batch/{batch_id}<a class="headerlink" href="#get-api-predictions-batch-batch-id" title="链接到此标题。"></a></h3>
 <p>响应：</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;batch_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;batch_abc123&quot;</span><span class="p">,</span>
@@ -496,7 +486,7 @@
 </div>
 </section>
 <section id="get-api-predictions-result-task-id">
-<h3>GET /api/predictions/result/{task_id}<a class="headerlink" href="#get-api-predictions-result-task-id" title="Link to this heading"></a></h3>
+<h3>GET /api/predictions/result/{task_id}<a class="headerlink" href="#get-api-predictions-result-task-id" title="链接到此标题。"></a></h3>
 <p>响应：</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -519,7 +509,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">gridDimensions</span></code> 由数据库中存储的 nx/ny/nz 决定，不同结构可能返回不同网格尺寸。</p>
 </section>
 <section id="get-api-predictions-slice-task-id">
-<h3>GET /api/predictions/slice/{task_id}<a class="headerlink" href="#get-api-predictions-slice-task-id" title="Link to this heading"></a></h3>
+<h3>GET /api/predictions/slice/{task_id}<a class="headerlink" href="#get-api-predictions-slice-task-id" title="链接到此标题。"></a></h3>
 <p>查询参数：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">h</span></code> / <code class="docutils literal notranslate"><span class="pre">k</span></code> / <code class="docutils literal notranslate"><span class="pre">l</span></code> (int): Miller 指数，默认 (1,0,0)</p></li>
@@ -528,7 +518,7 @@
 </section>
 </section>
 <section id="id4">
-<h2>用户管理<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<h2>用户管理<a class="headerlink" href="#id4" title="链接到此标题。"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 35.0%" />
@@ -568,7 +558,7 @@
 </table>
 </section>
 <section id="id5">
-<h2>系统相关<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<h2>系统相关<a class="headerlink" href="#id5" title="链接到此标题。"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 35.0%" />
@@ -607,7 +597,7 @@
 </tbody>
 </table>
 <section id="get-api-tasks-system-status">
-<h3>GET /api/tasks/system/status<a class="headerlink" href="#get-api-tasks-system-status" title="Link to this heading"></a></h3>
+<h3>GET /api/tasks/system/status<a class="headerlink" href="#get-api-tasks-system-status" title="链接到此标题。"></a></h3>
 <p>响应：</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
@@ -634,7 +624,7 @@
 </section>
 </section>
 <section id="http">
-<h2>HTTP 状态码<a class="headerlink" href="#http" title="Link to this heading"></a></h2>
+<h2>HTTP 状态码<a class="headerlink" href="#http" title="链接到此标题。"></a></h2>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>状态码</p></th>

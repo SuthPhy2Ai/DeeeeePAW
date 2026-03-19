@@ -14,9 +14,9 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=54a955ad"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../_static/translations.js?v=beaddf03"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -61,11 +61,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../theory/performance.html">预测性能</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id2">训练数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">电子密度预测精度</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">形成能预测</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">泛化能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id6">适用材料类型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id7">已知局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">泛化能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">适用材料类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">已知局限</a></li>
 </ul>
 </li>
 </ul>
@@ -96,20 +94,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deployment.html">部署指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">环境准备</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id3">依赖安装</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id4">必要文件</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">环境变量</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">快速启动（生产环境）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id7">手动启动（开发环境）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id8">前端生产构建</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id9">远程访问</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id10">验证部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">本地 CLI 部署</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id1">环境要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">快速开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id3">重要说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id4">容器结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">手动运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">故障排除</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="web_frontend.html">Web 前端应用</a><ul>
@@ -170,7 +161,6 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">常见问题</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#token">Token 过期怎么办？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#nx-ny-nz">如何选择网格尺寸 nx/ny/nz？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">上传文件时 nx/ny/nz 必须填吗？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id3">预测失败怎么排查？</a></li>
@@ -218,32 +208,20 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>常见问题<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
-<section id="token">
-<h2>Token 过期怎么办？<a class="headerlink" href="#token" title="Link to this heading"></a></h2>
-<p>Token 有效期 24 小时，过期后重新调用登录接口获取新 token。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;your_username&quot;</span><span class="p">,</span> <span class="s2">&quot;your_password&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
+<h1>常见问题<a class="headerlink" href="#id1" title="链接到此标题。"></a></h1>
 <section id="nx-ny-nz">
-<h2>如何选择网格尺寸 nx/ny/nz？<a class="headerlink" href="#nx-ny-nz" title="Link to this heading"></a></h2>
-<p>网格尺寸影响预测精度和计算时间。一般建议：</p>
-<ul class="simple">
-<li><p><strong>32³</strong>：快速测试、筛选</p></li>
-<li><p><strong>48³</strong>：日常使用</p></li>
-<li><p><strong>56³ ~ 64³</strong>：高精度计算、发表级结果</p></li>
-</ul>
+<h2>如何选择网格尺寸 nx/ny/nz？<a class="headerlink" href="#nx-ny-nz" title="链接到此标题。"></a></h2>
+<p>网格尺寸 nx/ny/nz 需要根据第一性原理计算的 k 点密度来设计，建议查阅 VASP 相关文档了解如何选择合适的网格尺寸。</p>
 <p>网格越大，CHGCAR 文件越大，GPU 显存占用越高。</p>
 </section>
 <section id="id2">
-<h2>上传文件时 nx/ny/nz 必须填吗？<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<h2>上传文件时 nx/ny/nz 必须填吗？<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
 <p>是的。<code class="docutils literal notranslate"><span class="pre">/api/files/upload-structures</span></code> 接口要求显式指定 <code class="docutils literal notranslate"><span class="pre">nx</span></code>、<code class="docutils literal notranslate"><span class="pre">ny</span></code>、<code class="docutils literal notranslate"><span class="pre">nz</span></code>，
 不再提供默认值，以避免用户无意中使用不合适的网格尺寸。</p>
 <p>如果直接上传 <code class="docutils literal notranslate"><span class="pre">.db</span></code> 文件（<code class="docutils literal notranslate"><span class="pre">/api/files/upload</span></code>），则使用数据库中已有的网格设置。</p>
 </section>
 <section id="id3">
-<h2>预测失败怎么排查？<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<h2>预测失败怎么排查？<a class="headerlink" href="#id3" title="链接到此标题。"></a></h2>
 <ol class="arabic simple">
 <li><p>查询批次状态，确认哪些 task 失败</p></li>
 <li><p>查看后端日志：<code class="docutils literal notranslate"><span class="pre">tail</span> <span class="pre">-f</span> <span class="pre">/tmp/deepaw_backend.log</span></code></p></li>
@@ -251,11 +229,11 @@
 </ol>
 </section>
 <section id="id4">
-<h2>支持分子结构吗？<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
-<p>主要面向晶体结构。分子结构需要周期性边界条件，建议手动构建超胞后上传。</p>
+<h2>支持分子结构吗？<a class="headerlink" href="#id4" title="链接到此标题。"></a></h2>
+<p>支持。使用本地 CLI 部署版本时，需要关闭周期性边界条件。使用在线版本 (deepaw.tech) 时，默认不支持设置周期性边界条件。</p>
 </section>
 <section id="chgcar">
-<h2>CHGCAR 文件如何可视化？<a class="headerlink" href="#chgcar" title="Link to this heading"></a></h2>
+<h2>CHGCAR 文件如何可视化？<a class="headerlink" href="#chgcar" title="链接到此标题。"></a></h2>
 <ul class="simple">
 <li><p><strong>VESTA</strong> (免费): 直接打开 CHGCAR 文件</p></li>
 <li><p><strong>Ovito</strong>: 支持等值面渲染</p></li>
@@ -264,7 +242,7 @@
 </ul>
 </section>
 <section id="gpu">
-<h2>GPU 显存不足怎么办？<a class="headerlink" href="#gpu" title="Link to this heading"></a></h2>
+<h2>GPU 显存不足怎么办？<a class="headerlink" href="#gpu" title="链接到此标题。"></a></h2>
 <ul class="simple">
 <li><p>减小网格尺寸（如从 64³ 降到 48³）</p></li>
 <li><p>减少同时使用的 GPU 数量：<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">DEEPAW_GPUS=&quot;1,2&quot;</span></code></p></li>
@@ -272,7 +250,7 @@
 </ul>
 </section>
 <section id="id5">
-<h2>两种上传方式有什么区别？<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<h2>两种上传方式有什么区别？<a class="headerlink" href="#id5" title="链接到此标题。"></a></h2>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>特性</p></th>

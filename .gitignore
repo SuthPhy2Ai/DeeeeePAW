@@ -14,3 +14,4 @@ __pycache__/
 
 # Claude Code 配置
 .claude/
+DeePAW Manual/build/

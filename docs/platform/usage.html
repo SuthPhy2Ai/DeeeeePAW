@@ -14,9 +14,9 @@
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="../_static/documentation_options.js?v=54a955ad"></script>
-      <script src="../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-      <script src="../_static/translations.js?v=beaddf03"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/translations.js?v=540d3cec"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -61,11 +61,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../theory/performance.html">预测性能</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id2">训练数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">电子密度预测精度</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">形成能预测</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">泛化能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id6">适用材料类型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id7">已知局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">泛化能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">适用材料类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">已知局限</a></li>
 </ul>
 </li>
 </ul>
@@ -96,20 +94,13 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="deployment.html">部署指南</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">环境准备</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id3">依赖安装</a></li>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id4">必要文件</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">环境变量</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">快速启动（生产环境）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id7">手动启动（开发环境）</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="deployment.html#id8">前端生产构建</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id9">远程访问</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id10">验证部署</a></li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">本地 CLI 部署</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id1">环境要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">快速开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id3">重要说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id4">容器结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">手动运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">故障排除</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="web_frontend.html">Web 前端应用</a><ul>
@@ -170,7 +161,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="faq.html#token">Token 过期怎么办？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#nx-ny-nz">如何选择网格尺寸 nx/ny/nz？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#id2">上传文件时 nx/ny/nz 必须填吗？</a></li>
 <li class="toctree-l2"><a class="reference internal" href="faq.html#id3">预测失败怎么排查？</a></li>
@@ -218,16 +208,16 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1>使用指南<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<h1>使用指南<a class="headerlink" href="#id1" title="链接到此标题。"></a></h1>
 <section id="id2">
-<h2>认证<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<h2>认证<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
 <p>所有 API 请求（除登录、注册、健康检查外）需要在 Header 中携带 JWT token：</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Authorization: Bearer &lt;your_token&gt;
 </pre></div>
 </div>
 <p>Token 有效期为 24 小时。</p>
 <section id="id3">
-<h3>注册账户<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<h3>注册账户<a class="headerlink" href="#id3" title="链接到此标题。"></a></h3>
 <p>使用邀请码注册：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/api/auth/register-with-code<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
@@ -241,7 +231,7 @@
 </div>
 </section>
 <section id="token">
-<h3>登录获取 Token<a class="headerlink" href="#token" title="Link to this heading"></a></h3>
+<h3>登录获取 Token<a class="headerlink" href="#token" title="链接到此标题。"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/api/auth/login<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;username&quot;:&quot;your_username&quot;,&quot;password&quot;:&quot;your_password&quot;}&#39;</span>
@@ -251,10 +241,10 @@
 </section>
 </section>
 <section id="id4">
-<h2>完整工作流<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<h2>完整工作流<a class="headerlink" href="#id4" title="链接到此标题。"></a></h2>
 <p>典型使用流程为：上传结构文件 → 提交预测 → 轮询状态 → 下载结果。</p>
 <section id="id5">
-<h3>步骤 1：上传结构文件<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<h3>步骤 1：上传结构文件<a class="headerlink" href="#id5" title="链接到此标题。"></a></h3>
 <p>支持 CIF、VASP（POSCAR/CONTCAR）、XYZ、PDB、MOL、SDF、JSON、TRAJ、DB 等格式，
 以及 ZIP / TAR / TAR.GZ 压缩包。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/api/files/upload-structures<span class="w"> </span><span class="se">\</span>
@@ -297,7 +287,7 @@
 </table>
 </section>
 <section id="id6">
-<h3>步骤 2：提交批量预测<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<h3>步骤 2：提交批量预测<a class="headerlink" href="#id6" title="链接到此标题。"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/api/predictions/batch<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
@@ -306,7 +296,7 @@
 </div>
 </section>
 <section id="id7">
-<h3>步骤 3：查询进度<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<h3>步骤 3：查询进度<a class="headerlink" href="#id7" title="链接到此标题。"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://localhost:8080/api/predictions/batch/<span class="o">{</span>batch_id<span class="o">}</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span>
 </pre></div>
@@ -319,7 +309,7 @@
 </ul>
 </section>
 <section id="id8">
-<h3>步骤 4：下载结果<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<h3>步骤 4：下载结果<a class="headerlink" href="#id8" title="链接到此标题。"></a></h3>
 <p><strong>下载 CHGCAR 文件：</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-o<span class="w"> </span>result.CHGCAR<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>http://localhost:8080/api/predictions/download/<span class="o">{</span>task_id<span class="o">}</span><span class="w"> </span><span class="se">\</span>
@@ -335,7 +325,7 @@
 </section>
 </section>
 <section id="python">
-<h2>Python 客户端<a class="headerlink" href="#python" title="Link to this heading"></a></h2>
+<h2>Python 客户端<a class="headerlink" href="#python" title="链接到此标题。"></a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
 
 <span class="n">BASE</span> <span class="o">=</span> <span class="s2">&quot;http://localhost:8080&quot;</span>
@@ -380,7 +370,7 @@
 </div>
 </section>
 <section id="id9">
-<h2>可视化结果<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<h2>可视化结果<a class="headerlink" href="#id9" title="链接到此标题。"></a></h2>
 <p><strong>VESTA（推荐）：</strong></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vesta<span class="w"> </span>result.CHGCAR
 </pre></div>

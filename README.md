@@ -33,6 +33,18 @@ DeePAW predicts three-dimensional electron charge density directly from atomic s
 4. Submit the job — monitor real-time GPU status
 5. Download the resulting **CHGCAR** from *My Files* (available for 3 days)
 
+![Prediction Workspace](https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180331.jpg)
+
+*Prediction workspace: GPU cluster status (left), file upload and task configuration (center), visualization (right)*
+
+![2D Slice Visualization](https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180338.jpg)
+
+*2D charge density slice along (hkl) plane*
+
+![3D Isosurface Visualization](https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180345.jpg)
+
+*Interactive 3D isosurface with unit cell boundary and lattice parameters*
+
 ### Option 2 — Local CLI (Podman/Docker)
 
 ```bash
@@ -50,6 +62,14 @@ Custom grid and output path:
 ```bash
 ./start.sh --db your_structure.db --id 1 --device cuda --grid 56 56 56 --output ./results/CHGCAR
 ```
+
+![CLI Container Launch](https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180247.png)
+
+*Launching the DeePAW C++ inference engine in the container*
+
+![CLI Prediction Running](https://raw.githubusercontent.com/SuthPhy2Ai/DeeeeePAW/main/DeePAW%20Manual/source/_static/20260319-180307.png)
+
+*Running charge density prediction via Python command*
 
 <details>
 <summary>Manual <code>podman run</code> (advanced)</summary>
@@ -76,18 +96,6 @@ podman run --rm -it \
 
 ---
 
-## Features
-
-- Predicts 3D electron charge density (CHGCAR) from 15+ structure file formats
-- E(3)-equivariant dual-graph MPNN backbone with KAN residual correction
-- Zero-shot generalization to 2D/1D materials and defect structures
-- Multi-GPU parallel scheduling with real-time WebSocket task status
-- Interactive 3D isosurface and 2D slice visualization in the browser
-- RESTful API for integration into automated high-throughput workflows
-- Self-contained container deployment — no environment configuration beyond Podman/Docker
-
----
-
 ## Method
 
 DeePAW uses a **dual-graph message-passing** architecture:
@@ -96,35 +104,6 @@ DeePAW uses a **dual-graph message-passing** architecture:
 - **Electronic Potential**: A second graph propagates atom embeddings to real-space probe grid points, from which an MLP head predicts the smooth electron density envelope.
 - **KAN Correction**: A Kolmogorov-Arnold Network applies a local residual correction, recovering fine-grained charge features near nuclei that long-range message passing tends to smooth over.
 - **Training**: Model weights are trained on VASP Kohn-Sham DFT charge densities from the [Materials Project](https://materialsproject.org/) database.
-
----
-
-## Supported Materials
-
-| Material Type | Support | Notes |
-|---|---|---|
-| Oxides | Full | Core training domain |
-| Metals & Alloys | Full | Wide elemental coverage |
-| Semiconductors | Full | Group IV, III-V, etc. |
-| 2D Materials | Zero-shot | e.g. CsF monolayer |
-| 1D Materials | Zero-shot | e.g. carbon nanotubes |
-| Defect Structures | Zero-shot | Vacancies, interstitials, substitutions |
-| Molecular | Partial | Periodic boundary conditions required |
-
-**Known limitations:**
-- Training data coverage is bounded by the Materials Project database; accuracy may decrease for underrepresented element combinations
-- Some elements may show electron count discrepancies due to POTCAR inconsistencies in the training dataset — per-case adjustment may be needed
-- Molecular structures require manually imposed periodic boundary conditions
-
----
-
-## Performance
-
-| System | Grid | Probe points | Time (RTX 4090) |
-|---|---|---|---|
-| HfO₂ (built-in test) | 40×40×40 | 64,000 | ~27 s |
-
-The model handles supercells up to 154 atoms per unit cell.
 
 ---
 

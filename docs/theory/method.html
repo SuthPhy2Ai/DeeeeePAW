@@ -61,10 +61,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="performance.html">预测性能</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id2">训练数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id3">泛化能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id4">适用材料类型</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html#id5">已知局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html#id2">泛化能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html#id3">适用材料类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html#id4">已知局限</a></li>
 </ul>
 </li>
 </ul>
@@ -199,20 +198,20 @@
 <section id="id2">
 <h2>双图消息传递架构<a class="headerlink" href="#id2" title="链接到此标题。"></a></h2>
 <p>DeePAW 采用双图消息传递神经网络 (Double Graph MPNN) 架构，包含两个协同工作的 MPNN 和一个输出头:</p>
-<p><strong>原子 MPNN (Atomic MPNN)</strong></p>
-<p>原子 MPNN 负责学习原子级别的表征。初始边嵌入通过高斯基函数 (Gaussian Basis Function, GBF) 构建:</p>
+<p><strong>原子表示</strong></p>
+<p>原子表示负责学习原子级别的表征。初始边嵌入通过高斯基函数 (Gaussian Basis Function, GBF) 构建:</p>
 <div class="math notranslate nohighlight">
 \[e_{ij} = \exp\left(-\frac{(d_{ij} - \mu)^2}{2\sigma^2}\right)\]</div>
 <p>其中 <span class="math notranslate nohighlight">\(d_{ij}\)</span> 为节点 i 和 j 之间的距离，<span class="math notranslate nohighlight">\(\mu\)</span> 在 0 到 6 Å 之间均匀分布。</p>
 <p>消息函数利用 Clebsch-Gordan 系数和球谐函数构建等变消息，每个原子聚合来自所有邻居的消息后更新节点嵌入。节点嵌入的更新过程中引入了动态旋转角机制，通过 e3nn 的门控机制动态调整等变特征的方向信息。</p>
-<p><strong>电子密度 MPNN (ED MPNN)</strong></p>
-<p>电子密度 MPNN 在网格点级别工作。原子 MPNN 的节点嵌入被馈入 ED MPNN，网格点通过聚合来自邻近原子核的信息来更新自身嵌入。嵌入更新过程中使用共享权重向量和交互权重向量来控制节点自身特征与邻居消息的相对贡献。</p>
+<p><strong>电子势能</strong></p>
+<p>电子势能模块在网格点级别工作。原子表示的节点嵌入被馈入电子势能模块，网格点通过聚合来自邻近原子核的信息来更新自身嵌入。嵌入更新过程中使用共享权重向量和交互权重向量来控制节点自身特征与邻居消息的相对贡献。</p>
 <p><strong>输出头</strong></p>
 <p>输出头包含三个模块:</p>
 <ul class="simple">
-<li><p><strong>GAT 头</strong>: 基于图注意力网络 (Graph Attention Network)，从原子 MPNN 所有层的节点嵌入中提取形成能或任何原子级的输出任务</p></li>
-<li><p><strong>MLP 头</strong>: 从 ED MPNN 所有层的节点嵌入中生成平滑变化的电子密度轮廓</p></li>
-<li><p><strong>KAN 头</strong>: 基于 Kolmogorov-Arnold 网络，从 ED MPNN 最后一层的节点嵌入中计算残差电子密度</p></li>
+<li><p><strong>GAT 头</strong>: 基于图注意力网络 (Graph Attention Network)，从原子表示所有层的节点嵌入中提取形成能或任何原子级的输出任务</p></li>
+<li><p><strong>MLP 头</strong>: 从电子势能模块所有层的节点嵌入中生成平滑变化的电子密度轮廓</p></li>
+<li><p><strong>KAN 头</strong>: 基于 Kolmogorov-Arnold 网络，从电子势能模块最后一层的节点嵌入中计算残差电子密度</p></li>
 </ul>
 </section>
 <section id="id3">
@@ -236,7 +235,7 @@
 <li><p><strong>第一阶段</strong>: 联合训练 MLP 头和 GAT 头，同时优化电子密度和形成能</p></li>
 <li><p><strong>第二阶段</strong>: MLP 头使用极小的学习率，KAN 头使用较大的学习率，进行 PAW 的自适应实现，捕获残差电子密度的精细结构</p></li>
 </ul>
-<p>训练数据来自 Materials Project (MP) 数据库，采用九折交叉验证。电子密度标签由 KSDFT 轨道波函数计算得到。</p>
+<p>训练数据来自 Materials Project (MP) 数据库。电子密度标签由基于 VASP 的 KSDFT 轨道波函数计算得到。</p>
 </section>
 </section>
 

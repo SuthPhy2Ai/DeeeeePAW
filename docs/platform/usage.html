@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>使用指南 &mdash; DeePAW Portable 2.2.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=54a955ad"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=beaddf03"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="API 参考" href="api_reference.html" />
+    <link rel="prev" title="Web 前端应用" href="web_frontend.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DeePAW Portable
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">第一部分：理论基础</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory/background.html">科学背景</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#id2">电荷密度与密度泛函理论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#id3">无轨道密度泛函理论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#e-3">E(3) 等变性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#id4">消息传递神经网络</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/method.html">DeePAW 方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id1">方法概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id2">双图消息传递架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id3">电荷密度网格构建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id4">训练策略</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/performance.html">预测性能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id2">训练数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">电子密度预测精度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">形成能预测</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">泛化能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id6">适用材料类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id7">已知局限</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">第二部分：C++ 软件使用说明</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cpp/placeholder.html">C++ 软件使用说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cpp/placeholder.html#id1">使用流程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/placeholder.html#id2">步骤 1: 启动 C++ 推理引擎</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/placeholder.html#id3">步骤 2: 执行预测任务</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">第三部分：API 调用与平台介绍</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">平台介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#id2">核心功能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#id3">技术栈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#id4">系统架构</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#gpu">GPU 任务调度</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#id5">系统要求</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#id6">服务器端</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#id7">客户端</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">部署指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">环境准备</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment.html#id3">依赖安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment.html#id4">必要文件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">环境变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">快速启动（生产环境）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id7">手动启动（开发环境）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment.html#id8">前端生产构建</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id9">远程访问</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id10">验证部署</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="web_frontend.html">Web 前端应用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="web_frontend.html#id1">登录与注册</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_frontend.html#id2">主界面布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_frontend.html#predictions">预测工作台 (Predictions)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_frontend.html#gpu">左栏: GPU 集群状态</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_frontend.html#id3">中栏: 预测任务配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_frontend.html#id4">右栏: 可视化</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_frontend.html#my-files">文件管理 (My Files)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_frontend.html#id5">性能建议</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">使用指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">认证</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">注册账户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#token">登录获取 Token</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">完整工作流</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">步骤 1：上传结构文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">步骤 2：提交批量预测</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">步骤 3：查询进度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">步骤 4：下载结果</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python">Python 客户端</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">可视化结果</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API 参考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id1">认证相关</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-auth-register-with-code">POST /api/auth/register-with-code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-auth-login">POST /api/auth/login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-auth-send-reset-code">POST /api/auth/send-reset-code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-auth-reset-password">POST /api/auth/reset-password</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id2">文件上传</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-files-upload-structures">POST /api/files/upload-structures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id3">预测相关</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-predictions-batch">POST /api/predictions/batch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#get-api-predictions-batch-batch-id">GET /api/predictions/batch/{batch_id}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#get-api-predictions-result-task-id">GET /api/predictions/result/{task_id}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#get-api-predictions-slice-task-id">GET /api/predictions/slice/{task_id}</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id4">用户管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id5">系统相关</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#get-api-tasks-system-status">GET /api/tasks/system/status</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#http">HTTP 状态码</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="faq.html">常见问题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#token">Token 过期怎么办？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#nx-ny-nz">如何选择网格尺寸 nx/ny/nz？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id2">上传文件时 nx/ny/nz 必须填吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id3">预测失败怎么排查？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id4">支持分子结构吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#chgcar">CHGCAR 文件如何可视化？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#gpu">GPU 显存不足怎么办？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html#id5">两种上传方式有什么区别？</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">更新日志</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v2-2-0-2026-03-19">v2.2.0 (2026-03-19)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#bug">Bug 修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id2">改进</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id3">新增功能</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v2-1-0-2026-03-10">v2.1.0 (2026-03-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v2-0-0-2026-03-07">v2.0.0 (2026-03-07)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DeePAW Portable</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">使用指南</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/platform/usage.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>使用指南<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="id2">
+<h2>认证<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>所有 API 请求（除登录、注册、健康检查外）需要在 Header 中携带 JWT token：</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Authorization: Bearer &lt;your_token&gt;
+</pre></div>
+</div>
+<p>Token 有效期为 24 小时。</p>
+<section id="id3">
+<h3>注册账户<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>使用邀请码注册：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/api/auth/register-with-code<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;username&quot;: &quot;your_username&quot;,</span>
+<span class="s1">    &quot;password&quot;: &quot;your_password&quot;,</span>
+<span class="s1">    &quot;email&quot;: &quot;your@email.com&quot;,</span>
+<span class="s1">    &quot;invitation_code&quot;: &quot;deepawdeepaw&quot;</span>
+<span class="s1">  }&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="token">
+<h3>登录获取 Token<a class="headerlink" href="#token" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/api/auth/login<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;username&quot;:&quot;your_username&quot;,&quot;password&quot;:&quot;your_password&quot;}&#39;</span>
+</pre></div>
+</div>
+<p>响应中 <code class="docutils literal notranslate"><span class="pre">data.access_token</span></code> 即为后续请求所需的 JWT token。</p>
+</section>
+</section>
+<section id="id4">
+<h2>完整工作流<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>典型使用流程为：上传结构文件 → 提交预测 → 轮询状态 → 下载结果。</p>
+<section id="id5">
+<h3>步骤 1：上传结构文件<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<p>支持 CIF、VASP（POSCAR/CONTCAR）、XYZ、PDB、MOL、SDF、JSON、TRAJ、DB 等格式，
+以及 ZIP / TAR / TAR.GZ 压缩包。</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/api/files/upload-structures<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="s2">&quot;file=@structure.cif&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="s2">&quot;nx=56&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;ny=56&quot;</span><span class="w"> </span>-F<span class="w"> </span><span class="s2">&quot;nz=80&quot;</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p><code class="docutils literal notranslate"><span class="pre">nx</span></code>、<code class="docutils literal notranslate"><span class="pre">ny</span></code>、<code class="docutils literal notranslate"><span class="pre">nz</span></code> 为必填参数，用于指定电荷密度预测的三维网格维度。
+网格尺寸直接影响预测精度和计算时间，需根据实际结构合理选择。</p>
+</div>
+<p>网格尺寸参考：</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>网格尺寸</p></th>
+<th class="head"><p>精度</p></th>
+<th class="head"><p>推荐用途</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>32³</p></td>
+<td><p>低</p></td>
+<td><p>快速测试</p></td>
+</tr>
+<tr class="row-odd"><td><p>48³</p></td>
+<td><p>中</p></td>
+<td><p>一般使用</p></td>
+</tr>
+<tr class="row-even"><td><p>56³</p></td>
+<td><p>高</p></td>
+<td><p>高精度需求</p></td>
+</tr>
+<tr class="row-odd"><td><p>64³</p></td>
+<td><p>很高</p></td>
+<td><p>发表级精度</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id6">
+<h3>步骤 2：提交批量预测<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>http://localhost:8080/api/predictions/batch<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;start_id&quot;:1,&quot;end_id&quot;:5,&quot;db_path&quot;:&quot;上传返回的db_path&quot;}&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3>步骤 3：查询进度<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://localhost:8080/api/predictions/batch/<span class="o">{</span>batch_id<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>批次状态值：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">processing</span></code>：任务进行中</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">completed</span></code>：全部完成</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failed</span></code>：全部失败</p></li>
+</ul>
+</section>
+<section id="id8">
+<h3>步骤 4：下载结果<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<p><strong>下载 CHGCAR 文件：</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-o<span class="w"> </span>result.CHGCAR<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>http://localhost:8080/api/predictions/download/<span class="o">{</span>task_id<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p><strong>获取 JSON 格式结果：</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>http://localhost:8080/api/predictions/result/<span class="o">{</span>task_id<span class="o">}</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer </span><span class="nv">$TOKEN</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>JSON 响应包含 <code class="docutils literal notranslate"><span class="pre">gridDimensions</span></code> (网格维度) 和 <code class="docutils literal notranslate"><span class="pre">densityArray</span></code> (展平的三维密度数组)。</p>
+</section>
+</section>
+<section id="python">
+<h2>Python 客户端<a class="headerlink" href="#python" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+
+<span class="n">BASE</span> <span class="o">=</span> <span class="s2">&quot;http://localhost:8080&quot;</span>
+
+<span class="c1"># 登录</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE</span><span class="si">}</span><span class="s2">/api/auth/login&quot;</span><span class="p">,</span>
+                  <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;demo_user&quot;</span><span class="p">,</span> <span class="s2">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;Demo@2026&quot;</span><span class="p">})</span>
+<span class="n">token</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;data&quot;</span><span class="p">][</span><span class="s2">&quot;access_token&quot;</span><span class="p">]</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
+
+<span class="c1"># 上传结构文件（nx/ny/nz 必填）</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;structure.cif&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE</span><span class="si">}</span><span class="s2">/api/files/upload-structures&quot;</span><span class="p">,</span>
+                      <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+                      <span class="n">files</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="n">f</span><span class="p">},</span>
+                      <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;nx&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span> <span class="s2">&quot;ny&quot;</span><span class="p">:</span> <span class="mi">56</span><span class="p">,</span> <span class="s2">&quot;nz&quot;</span><span class="p">:</span> <span class="mi">80</span><span class="p">})</span>
+<span class="n">db_path</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;db_path&quot;</span><span class="p">]</span>
+
+<span class="c1"># 提交预测</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE</span><span class="si">}</span><span class="s2">/api/predictions/batch&quot;</span><span class="p">,</span>
+                  <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+                  <span class="n">json</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;start_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;end_id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;db_path&quot;</span><span class="p">:</span> <span class="n">db_path</span><span class="p">})</span>
+<span class="n">batch_id</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s2">&quot;batch_id&quot;</span><span class="p">]</span>
+
+<span class="c1"># 等待完成</span>
+<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE</span><span class="si">}</span><span class="s2">/api/predictions/batch/</span><span class="si">{</span><span class="n">batch_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;进度: </span><span class="si">{</span><span class="n">status</span><span class="p">[</span><span class="s1">&#39;progress&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2">%&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">status</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;completed&quot;</span><span class="p">,</span> <span class="s2">&quot;failed&quot;</span><span class="p">):</span>
+        <span class="k">break</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># 下载 CHGCAR</span>
+<span class="n">task_id</span> <span class="o">=</span> <span class="n">status</span><span class="p">[</span><span class="s2">&quot;tasks&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s2">&quot;task_id&quot;</span><span class="p">]</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">BASE</span><span class="si">}</span><span class="s2">/api/predictions/download/</span><span class="si">{</span><span class="n">task_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+                 <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;result.CHGCAR&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h2>可视化结果<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
+<p><strong>VESTA（推荐）：</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vesta<span class="w"> </span>result.CHGCAR
+</pre></div>
+</div>
+<p><strong>Python + ASE 验证：</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">ase.calculators.vasp</span><span class="w"> </span><span class="kn">import</span> <span class="n">VaspChargeDensity</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">chg</span> <span class="o">=</span> <span class="n">VaspChargeDensity</span><span class="p">(</span><span class="s2">&quot;result.CHGCAR&quot;</span><span class="p">)</span>
+<span class="n">density</span> <span class="o">=</span> <span class="n">chg</span><span class="o">.</span><span class="n">chg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">atoms</span> <span class="o">=</span> <span class="n">chg</span><span class="o">.</span><span class="n">atoms</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;网格尺寸: </span><span class="si">{</span><span class="n">density</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;密度范围: </span><span class="si">{</span><span class="n">density</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> ~ </span><span class="si">{</span><span class="n">density</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;化学式: </span><span class="si">{</span><span class="n">atoms</span><span class="o">.</span><span class="n">get_chemical_formula</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="web_frontend.html" class="btn btn-neutral float-left" title="Web 前端应用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="api_reference.html" class="btn btn-neutral float-right" title="API 参考" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024-2026, DeePAW Team。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

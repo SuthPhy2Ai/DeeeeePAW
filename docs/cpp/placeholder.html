@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C++ 软件使用说明 &mdash; DeePAW Portable 2.2.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=54a955ad"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=beaddf03"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="平台介绍" href="../platform/overview.html" />
+    <link rel="prev" title="预测性能" href="../theory/performance.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DeePAW Portable
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">第一部分：理论基础</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory/background.html">科学背景</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#id2">电荷密度与密度泛函理论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#id3">无轨道密度泛函理论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#e-3">E(3) 等变性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#id4">消息传递神经网络</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/method.html">DeePAW 方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id1">方法概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id2">双图消息传递架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id3">电荷密度网格构建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id4">训练策略</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/performance.html">预测性能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id2">训练数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">电子密度预测精度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">形成能预测</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">泛化能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id6">适用材料类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id7">已知局限</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">第二部分：C++ 软件使用说明</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">C++ 软件使用说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">使用流程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">步骤 1: 启动 C++ 推理引擎</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">步骤 2: 执行预测任务</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">第三部分：API 调用与平台介绍</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform/overview.html">平台介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#id2">核心功能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#id3">技术栈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#id4">系统架构</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/overview.html#gpu">GPU 任务调度</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/overview.html#id5">系统要求</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/overview.html#id6">服务器端</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/overview.html#id7">客户端</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/deployment.html">部署指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id2">环境准备</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/deployment.html#id3">依赖安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/deployment.html#id4">必要文件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id5">环境变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id6">快速启动（生产环境）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id7">手动启动（开发环境）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/deployment.html#id8">前端生产构建</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id9">远程访问</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id10">验证部署</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/web_frontend.html">Web 前端应用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#id1">登录与注册</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#id2">主界面布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#predictions">预测工作台 (Predictions)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web_frontend.html#gpu">左栏: GPU 集群状态</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web_frontend.html#id3">中栏: 预测任务配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/web_frontend.html#id4">右栏: 可视化</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#my-files">文件管理 (My Files)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/web_frontend.html#id5">性能建议</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/usage.html">使用指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#id2">认证</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#id3">注册账户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#token">登录获取 Token</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#id4">完整工作流</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#id5">步骤 1：上传结构文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#id6">步骤 2：提交批量预测</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#id7">步骤 3：查询进度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/usage.html#id8">步骤 4：下载结果</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#python">Python 客户端</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/usage.html#id9">可视化结果</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/api_reference.html">API 参考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#id1">认证相关</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-auth-register-with-code">POST /api/auth/register-with-code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-auth-login">POST /api/auth/login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-auth-send-reset-code">POST /api/auth/send-reset-code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-auth-reset-password">POST /api/auth/reset-password</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#id2">文件上传</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-files-upload-structures">POST /api/files/upload-structures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#id3">预测相关</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#post-api-predictions-batch">POST /api/predictions/batch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#get-api-predictions-batch-batch-id">GET /api/predictions/batch/{batch_id}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#get-api-predictions-result-task-id">GET /api/predictions/result/{task_id}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#get-api-predictions-slice-task-id">GET /api/predictions/slice/{task_id}</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#id4">用户管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#id5">系统相关</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/api_reference.html#get-api-tasks-system-status">GET /api/tasks/system/status</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/api_reference.html#http">HTTP 状态码</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/faq.html">常见问题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#token">Token 过期怎么办？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#nx-ny-nz">如何选择网格尺寸 nx/ny/nz？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id2">上传文件时 nx/ny/nz 必须填吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id3">预测失败怎么排查？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id4">支持分子结构吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#chgcar">CHGCAR 文件如何可视化？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#gpu">GPU 显存不足怎么办？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id5">两种上传方式有什么区别？</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/changelog.html">更新日志</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/changelog.html#v2-2-0-2026-03-19">v2.2.0 (2026-03-19)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../platform/changelog.html#bug">Bug 修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/changelog.html#id2">改进</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../platform/changelog.html#id3">新增功能</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/changelog.html#v2-1-0-2026-03-10">v2.1.0 (2026-03-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/changelog.html#v2-0-0-2026-03-07">v2.0.0 (2026-03-07)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DeePAW Portable</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">C++ 软件使用说明</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/cpp/placeholder.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="c">
+<h1>C++ 软件使用说明<a class="headerlink" href="#c" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p>本部分详细内容正在编写中，将在后续版本中补充编译安装、配置文件说明和性能调优参数等。</p>
+</div>
+<section id="id1">
+<h2>使用流程<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p>DeePAW 提供 C++ 推理引擎用于命令行环境下的电荷密度预测。以下展示典型使用流程:</p>
+<section id="id2">
+<h3>步骤 1: 启动 C++ 推理引擎<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<p>通过命令行启动 DeePAW C++ 推理引擎，加载模型权重并初始化 GPU 计算环境:</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../_images/20260319-180247.png"><img alt="启动 DeePAW C++ 推理引擎" src="../_images/20260319-180247.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">命令行启动 DeePAW C++ 推理引擎</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id3">
+<h3>步骤 2: 执行预测任务<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<p>通过 Python 命令调用引擎，指定输入结构和参数，完成电荷密度预测:</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/20260319-180307.png"><img alt="Python 命令完成预测任务" src="../_images/20260319-180307.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-text">通过 Python 命令调用 DeePAW 完成电荷密度预测任务</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../theory/performance.html" class="btn btn-neutral float-left" title="预测性能" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../platform/overview.html" class="btn btn-neutral float-right" title="平台介绍" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024-2026, DeePAW Team。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

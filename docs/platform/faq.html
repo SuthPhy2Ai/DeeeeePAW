@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>常见问题 &mdash; DeePAW Portable 2.2.0 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=54a955ad"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=beaddf03"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="更新日志" href="changelog.html" />
+    <link rel="prev" title="API 参考" href="api_reference.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            DeePAW Portable
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">第一部分：理论基础</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../theory/background.html">科学背景</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#id2">电荷密度与密度泛函理论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#id3">无轨道密度泛函理论</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#e-3">E(3) 等变性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/background.html#id4">消息传递神经网络</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/method.html">DeePAW 方法</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id1">方法概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id2">双图消息传递架构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id3">电荷密度网格构建</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/method.html#id4">训练策略</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../theory/performance.html">预测性能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id2">训练数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id3">电子密度预测精度</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id4">形成能预测</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id5">泛化能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id6">适用材料类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../theory/performance.html#id7">已知局限</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">第二部分：C++ 软件使用说明</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../cpp/placeholder.html">C++ 软件使用说明</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cpp/placeholder.html#id1">使用流程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/placeholder.html#id2">步骤 1: 启动 C++ 推理引擎</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cpp/placeholder.html#id3">步骤 2: 执行预测任务</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">第三部分：API 调用与平台介绍</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">平台介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#id2">核心功能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#id3">技术栈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#id4">系统架构</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#gpu">GPU 任务调度</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#id5">系统要求</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#id6">服务器端</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overview.html#id7">客户端</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">部署指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">环境准备</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment.html#id3">依赖安装</a></li>
+<li class="toctree-l3"><a class="reference internal" href="deployment.html#id4">必要文件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">环境变量</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">快速启动（生产环境）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id7">手动启动（开发环境）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="deployment.html#id8">前端生产构建</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id9">远程访问</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id10">验证部署</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="web_frontend.html">Web 前端应用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="web_frontend.html#id1">登录与注册</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_frontend.html#id2">主界面布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_frontend.html#predictions">预测工作台 (Predictions)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="web_frontend.html#gpu">左栏: GPU 集群状态</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_frontend.html#id3">中栏: 预测任务配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="web_frontend.html#id4">右栏: 可视化</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="web_frontend.html#my-files">文件管理 (My Files)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="web_frontend.html#id5">性能建议</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">使用指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#id2">认证</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#id3">注册账户</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#token">登录获取 Token</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#id4">完整工作流</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#id5">步骤 1：上传结构文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#id6">步骤 2：提交批量预测</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#id7">步骤 3：查询进度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html#id8">步骤 4：下载结果</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#python">Python 客户端</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#id9">可视化结果</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_reference.html">API 参考</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id1">认证相关</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-auth-register-with-code">POST /api/auth/register-with-code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-auth-login">POST /api/auth/login</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-auth-send-reset-code">POST /api/auth/send-reset-code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-auth-reset-password">POST /api/auth/reset-password</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id2">文件上传</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-files-upload-structures">POST /api/files/upload-structures</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id3">预测相关</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#post-api-predictions-batch">POST /api/predictions/batch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#get-api-predictions-batch-batch-id">GET /api/predictions/batch/{batch_id}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#get-api-predictions-result-task-id">GET /api/predictions/result/{task_id}</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#get-api-predictions-slice-task-id">GET /api/predictions/slice/{task_id}</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id4">用户管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#id5">系统相关</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api_reference.html#get-api-tasks-system-status">GET /api/tasks/system/status</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api_reference.html#http">HTTP 状态码</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">常见问题</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#token">Token 过期怎么办？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nx-ny-nz">如何选择网格尺寸 nx/ny/nz？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">上传文件时 nx/ny/nz 必须填吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">预测失败怎么排查？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">支持分子结构吗？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#chgcar">CHGCAR 文件如何可视化？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gpu">GPU 显存不足怎么办？</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">两种上传方式有什么区别？</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">更新日志</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v2-2-0-2026-03-19">v2.2.0 (2026-03-19)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#bug">Bug 修复</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id2">改进</a></li>
+<li class="toctree-l3"><a class="reference internal" href="changelog.html#id3">新增功能</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v2-1-0-2026-03-10">v2.1.0 (2026-03-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="changelog.html#v2-0-0-2026-03-07">v2.0.0 (2026-03-07)</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">DeePAW Portable</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">常见问题</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/platform/faq.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>常见问题<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="token">
+<h2>Token 过期怎么办？<a class="headerlink" href="#token" title="Link to this heading"></a></h2>
+<p>Token 有效期 24 小时，过期后重新调用登录接口获取新 token。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="s2">&quot;your_username&quot;</span><span class="p">,</span> <span class="s2">&quot;your_password&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="nx-ny-nz">
+<h2>如何选择网格尺寸 nx/ny/nz？<a class="headerlink" href="#nx-ny-nz" title="Link to this heading"></a></h2>
+<p>网格尺寸影响预测精度和计算时间。一般建议：</p>
+<ul class="simple">
+<li><p><strong>32³</strong>：快速测试、筛选</p></li>
+<li><p><strong>48³</strong>：日常使用</p></li>
+<li><p><strong>56³ ~ 64³</strong>：高精度计算、发表级结果</p></li>
+</ul>
+<p>网格越大，CHGCAR 文件越大，GPU 显存占用越高。</p>
+</section>
+<section id="id2">
+<h2>上传文件时 nx/ny/nz 必须填吗？<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<p>是的。<code class="docutils literal notranslate"><span class="pre">/api/files/upload-structures</span></code> 接口要求显式指定 <code class="docutils literal notranslate"><span class="pre">nx</span></code>、<code class="docutils literal notranslate"><span class="pre">ny</span></code>、<code class="docutils literal notranslate"><span class="pre">nz</span></code>，
+不再提供默认值，以避免用户无意中使用不合适的网格尺寸。</p>
+<p>如果直接上传 <code class="docutils literal notranslate"><span class="pre">.db</span></code> 文件（<code class="docutils literal notranslate"><span class="pre">/api/files/upload</span></code>），则使用数据库中已有的网格设置。</p>
+</section>
+<section id="id3">
+<h2>预测失败怎么排查？<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>查询批次状态，确认哪些 task 失败</p></li>
+<li><p>查看后端日志：<code class="docutils literal notranslate"><span class="pre">tail</span> <span class="pre">-f</span> <span class="pre">/tmp/deepaw_backend.log</span></code></p></li>
+<li><p>检查 GPU 状态：<code class="docutils literal notranslate"><span class="pre">curl</span> <span class="pre">http://localhost:8080/api/tasks/system/status</span></code></p></li>
+</ol>
+</section>
+<section id="id4">
+<h2>支持分子结构吗？<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<p>主要面向晶体结构。分子结构需要周期性边界条件，建议手动构建超胞后上传。</p>
+</section>
+<section id="chgcar">
+<h2>CHGCAR 文件如何可视化？<a class="headerlink" href="#chgcar" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>VESTA</strong> (免费): 直接打开 CHGCAR 文件</p></li>
+<li><p><strong>Ovito</strong>: 支持等值面渲染</p></li>
+<li><p><strong>Web 前端</strong>：内置 Plotly 3D 等值面可视化</p></li>
+<li><p><strong>Python</strong>：使用 ASE + Plotly 自行绘制</p></li>
+</ul>
+</section>
+<section id="gpu">
+<h2>GPU 显存不足怎么办？<a class="headerlink" href="#gpu" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>减小网格尺寸（如从 64³ 降到 48³）</p></li>
+<li><p>减少同时使用的 GPU 数量：<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">DEEPAW_GPUS=&quot;1,2&quot;</span></code></p></li>
+<li><p>检查是否有其他进程占用显存：<code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code></p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>两种上传方式有什么区别？<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>特性</p></th>
+<th class="head"><p>upload-structures</p></th>
+<th class="head"><p>upload</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>支持格式</p></td>
+<td><p>15 种</p></td>
+<td><p>仅 .db</p></td>
+</tr>
+<tr class="row-odd"><td><p>格式转换</p></td>
+<td><p>自动</p></td>
+<td><p>不需要</p></td>
+</tr>
+<tr class="row-even"><td><p>网格尺寸</p></td>
+<td><p>必填参数</p></td>
+<td><p>使用数据库原有设置</p></td>
+</tr>
+<tr class="row-odd"><td><p>压缩包</p></td>
+<td><p>支持</p></td>
+<td><p>不支持</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="api_reference.html" class="btn btn-neutral float-left" title="API 参考" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="changelog.html" class="btn btn-neutral float-right" title="更新日志" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024-2026, DeePAW Team。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,155 +1,144 @@
-部署指南
-========
+本地 CLI 部署
+==============
 
-环境准备
+DeePAW 提供容器化的本地 CLI 部署版本，通过 Podman/Docker 容器运行加密的神经网络模型推理。
+
+环境要求
 --------
 
-依赖安装
-^^^^^^^^
+- Linux x86_64
+- NVIDIA GPU (CUDA 支持)
+- Podman 或 Docker
+- NVIDIA 驱动
 
-**后端依赖（需要 CUDA 环境）：**
+快速开始
+--------
 
-.. code-block:: bash
-
-   # 安装核心 ML 依赖
-   cd used
-   pip install -r requirements.txt
-
-   # 安装 Web 后端依赖
-   cd ../deepaw_integrated/backend
-   pip install -r requirements.txt
-
-**前端依赖：**
+**1. 加载容器镜像（首次使用）**
 
 .. code-block:: bash
 
-   cd deepaw_integrated/frontend
-   npm install
+   # 检查镜像是否已加载
+   podman images | grep deepaw
 
-必要文件
-^^^^^^^^
+   # 从 tar 包加载
+   podman load -i deepaw_dist_v1_cpp/deepaw-cppv1.tar.gz
 
-- ASE 数据库文件（``.db``）：包含原子结构数据
-- 模型权重文件（``.pth``）：默认路径 ``checkpoints_mpall/3-23.pth``
-- 输出目录：用于存放生成的 CHGCAR 文件
+**2. 启动容器**
 
-环境变量
+.. code-block:: bash
+
+   # 使用默认数据目录
+   ./start.sh
+
+   # 指定自定义数据目录
+   ./start.sh /path/to/your/data
+
+``start.sh`` 脚本自动完成以下操作：
+
+- 检测 NVIDIA 驱动版本
+- 挂载 GPU 设备和库
+- 设置所需的环境变量
+- 挂载数据和输出目录
+
+**3. 运行推理**
+
+容器内执行：
+
+.. code-block:: bash
+
+   # 使用内置测试数据
+   python predict_chgcar.py --db tests/hfo2.db --id 1 --device cuda
+
+   # 使用挂载的自定义数据
+   python predict_chgcar.py --db /data/your_database.db --id 1 --device cuda
+
+   # 指定输出路径
+   python predict_chgcar.py --db /data/your_database.db --id 1 --device cuda --output /output/CHGCAR_result
+
+   # 自定义网格密度
+   python predict_chgcar.py --db /data/your_database.db --id 1 --device cuda --grid 60 60 60
+
+退出容器后，输出文件在宿主机的 ``output/`` 目录。
+
+重要说明
+--------
+
+**CUDA only**
+
+加密模型的解密逻辑编译在 C++ 引擎中，只能在 CUDA 设备上初始化。使用 ``--device cpu`` 会导致模型初始化静默失败。
+
+**GPU 挂载**
+
+在某些系统上（如 Rocky Linux 9.2），CDI 模式（``--device nvidia.com/gpu=all``）可能无法正常工作。``start.sh`` 通过手动挂载 ``/dev/nvidia*`` 设备和宿主机 NVIDIA 库来解决此问题。
+
+容器结构
+--------
+
+::
+
+   /app/
+   ├── predict_chgcar.py          # 主推理脚本
+   ├── deepaw/
+   │   ├── __init__.py            # Python API
+   │   ├── deepaw_cpp.*.so        # pybind11 C++ 绑定
+   │   ├── libdeepaw_core.so      # C++ 核心库（含解密密钥）
+   │   └── data/                  # 图构建工具
+   ├── models/
+   │   ├── f_nonlocal.enc         # 加密的 GNN 模型
+   │   └── f_local.enc            # 加密的 KAN 校正模型
+   └── tests/hfo2.db              # 内置测试数据
+
+手动运行
+--------
+
+如果 ``start.sh`` 不适用于你的环境：
+
+.. code-block:: bash
+
+   DRIVER_VER=$(cat /sys/module/nvidia/version)
+
+   podman run -it --rm \
+       --security-opt=label=disable \
+       --device /dev/nvidia0 \
+       --device /dev/nvidiactl \
+       --device /dev/nvidia-uvm \
+       --device /dev/nvidia-uvm-tools \
+       --device /dev/nvidia-modeset \
+       -v /usr/lib64/libnvidia-ml.so.${DRIVER_VER}:/usr/lib64/libnvidia-ml.so.${DRIVER_VER}:ro \
+       -v /usr/lib64/libcuda.so.${DRIVER_VER}:/usr/lib64/libcuda.so.${DRIVER_VER}:ro \
+       -v /usr/lib64/libnvidia-ptxjitcompiler.so.${DRIVER_VER}:/usr/lib64/libnvidia-ptxjitcompiler.so.${DRIVER_VER}:ro \
+       -e PYTHONPATH=/app/deepaw \
+       -e LD_LIBRARY_PATH=/app/deepaw:/usr/local/lib/python3.12/dist-packages/torch/lib:/usr/lib64 \
+       -v /path/to/your/data:/data \
+       -v $(pwd)/output:/output \
+       deepaw-cpp:v1 \
+       bash
+
+故障排除
 --------
 
 .. list-table::
    :header-rows: 1
-   :widths: 30 50 20
 
-   * - 变量名
-     - 说明
-     - 默认值
-   * - ``DEEPAW_DB_PATH``
-     - ASE 数据库路径
-     - ``data/HfO2_demo.db``
-   * - ``DEEPAW_CHECKPOINT``
-     - 模型权重路径
-     - ``checkpoints_mpall/3-23.pth``
-   * - ``DEEPAW_GPUS``
-     - 可用 GPU 编号（逗号分隔）
-     - ``1,2,3``
-   * - ``DEEPAW_OUTPUT_DIR``
-     - CHGCAR 输出目录
-     - ``outputs/``
-   * - ``DEEPAW_SECRET_KEY``
-     - JWT 签名密钥
-     - 内置默认值
-   * - ``BACKEND_PORT``
-     - 后端端口
-     - ``8080``
-   * - ``FRONTEND_PORT``
-     - 前端端口
-     - ``3000``
-   * - ``CONDA_ENV_NAME``
-     - Conda 环境名称
-     - ``maceedl``
-
-快速启动（生产环境）
---------------------
-
-.. code-block:: bash
-
-   cd deepaw_integrated
-   ./start_deepaw.sh start
-
-启动脚本支持以下命令：
-
-.. code-block:: bash
-
-   ./start_deepaw.sh start     # 启动前后端服务
-   ./start_deepaw.sh stop      # 停止服务
-   ./start_deepaw.sh restart   # 重启服务
-   ./start_deepaw.sh status    # 查看运行状态
-   ./start_deepaw.sh logs      # 查看日志
-
-自定义启动示例：
-
-.. code-block:: bash
-
-   DEEPAW_GPUS="0,1" \
-   DEEPAW_DB_PATH=/path/to/custom.db \
-   BACKEND_PORT=9000 \
-   ./start_deepaw.sh start
-
-手动启动（开发环境）
---------------------
-
-**终端 1 — 后端（支持热重载）：**
-
-.. code-block:: bash
-
-   cd deepaw_integrated/backend
-   python -m uvicorn main_simple:app --host 0.0.0.0 --port 8080 --reload
-
-**终端 2 — 前端开发服务器：**
-
-.. code-block:: bash
-
-   cd deepaw_integrated/frontend
-   npm run dev -- --host 0.0.0.0 --port 3000
-
-前端生产构建
-^^^^^^^^^^^^
-
-.. code-block:: bash
-
-   cd deepaw_integrated/frontend
-   npm run build   # 输出到 dist/
-
-远程访问
---------
-
-通过 SSH 隧道从本地访问远程服务器上的 DeePAW：
-
-.. code-block:: bash
-
-   # 基本隧道
-   ssh -N -L 3000:localhost:3000 -L 8080:localhost:8080 user@server
-
-   # 或使用项目提供的脚本
-   ./scripts/connect_remote.sh              # 基本隧道
-   ./scripts/connect_remote_persistent.sh   # 自动重连隧道
-
-访问地址：
-
-- 前端界面：http://localhost:3000
-- API 文档：http://localhost:8080/api/docs
-
-验证部署
---------
-
-.. code-block:: bash
-
-   # 健康检查
-   curl http://localhost:8080/health
-
-   # GPU 状态
-   curl http://localhost:8080/api/tasks/system/status
-
-   # 测试推理流程（需要 GPU）
-   cd deepaw_integrated
-   python test_model_inference.py
+   * - 问题
+     - 原因
+     - 解决方案
+   * - "Models not initialized"
+     - 使用了 ``--device cpu``
+     - 改用 ``--device cuda``
+   * - "failed to stat CDI host device"
+     - CDI 模式不可用
+     - 使用 ``start.sh``（已手动处理）
+   * - ``ModuleNotFoundError: deepaw_cpp``
+     - 缺少环境变量
+     - 使用 ``start.sh``（自动设置）
+   * - ``libtorch.so: cannot open``
+     - LD_LIBRARY_PATH 未设置
+     - 使用 ``start.sh``（自动设置）
+   * - nvidia-smi 容器内不可用
+     - NVIDIA 库未挂载
+     - 使用 ``start.sh``（自动挂载）
+   * - ``.so`` 文件找不到
+     - 驱动版本不匹配
+     - ``start.sh`` 自动检测驱动版本

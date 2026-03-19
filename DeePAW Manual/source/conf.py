@@ -1,4 +1,4 @@
-project = 'DeePAW Portable'
+project = 'DeePAW'
 copyright = '2024-2026, DeePAW Team'
 author = 'DeePAW Team'
 release = '2.2.0'

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>更新日志 &mdash; DeePAW Portable 2.2.0 文档</title>
+  <title>更新日志 &mdash; DeePAW 2.2.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
@@ -32,7 +32,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            DeePAW Portable
+            DeePAW
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -66,14 +66,15 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">第二部分：C++ 软件使用说明</span></p>
+<p class="caption" role="heading"><span class="caption-text">第二部分：本地 CLI 部署</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../cpp/placeholder.html">C++ 软件使用说明</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cpp/placeholder.html#id1">使用流程</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../cpp/placeholder.html#id2">步骤 1: 启动 C++ 推理引擎</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cpp/placeholder.html#id3">步骤 2: 执行预测任务</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="deployment.html">本地 CLI 部署</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id1">环境要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">快速开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id3">重要说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id4">容器结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">手动运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">故障排除</a></li>
 </ul>
 </li>
 </ul>
@@ -91,15 +92,6 @@
 <li class="toctree-l3"><a class="reference internal" href="overview.html#id7">客户端</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="deployment.html">本地 CLI 部署</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id1">环境要求</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id2">快速开始</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id3">重要说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id4">容器结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id5">手动运行</a></li>
-<li class="toctree-l2"><a class="reference internal" href="deployment.html#id6">故障排除</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="web_frontend.html">Web 前端应用</a><ul>
@@ -169,17 +161,7 @@
 <li class="toctree-l2"><a class="reference internal" href="faq.html#id5">两种上传方式有什么区别？</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">更新日志</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#v2-2-0-2026-03-19">v2.2.0 (2026-03-19)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bug">Bug 修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id2">改进</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">新增功能</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#v2-1-0-2026-03-10">v2.1.0 (2026-03-10)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#v2-0-0-2026-03-07">v2.0.0 (2026-03-07)</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">更新日志</a></li>
 </ul>
 
         </div>
@@ -188,7 +170,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">DeePAW Portable</a>
+          <a href="../index.html">DeePAW</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -208,54 +190,7 @@
              
   <section id="id1">
 <h1>更新日志<a class="headerlink" href="#id1" title="链接到此标题。"></a></h1>
-<section id="v2-2-0-2026-03-19">
-<h2>v2.2.0 (2026-03-19)<a class="headerlink" href="#v2-2-0-2026-03-19" title="链接到此标题。"></a></h2>
-<section id="bug">
-<h3>Bug 修复<a class="headerlink" href="#bug" title="链接到此标题。"></a></h3>
-<ul class="simple">
-<li><p>修复 <code class="docutils literal notranslate"><span class="pre">check_download_permission</span></code> 中 <code class="docutils literal notranslate"><span class="pre">uploaded_at</span></code> 字符串与 <code class="docutils literal notranslate"><span class="pre">datetime</span></code> 直接相减导致 <code class="docutils literal notranslate"><span class="pre">TypeError</span></code></p></li>
-<li><p>修复 <code class="docutils literal notranslate"><span class="pre">/api/tasks/system/status</span></code> 返回硬编码 0 的问题，现在返回真实的任务统计数据</p></li>
-<li><p>修复批次状态在所有任务失败时仍显示 <code class="docutils literal notranslate"><span class="pre">processing</span></code> 的问题，新增 <code class="docutils literal notranslate"><span class="pre">failed</span></code> 状态</p></li>
-<li><p>移除 <code class="docutils literal notranslate"><span class="pre">execute_task</span></code> 中每次推理都全表扫描数据库的 DEBUG 日志</p></li>
-<li><p>修复 CHGCAR 写入时包含 Selective dynamics 导致 ASE 读取失败的问题</p></li>
-</ul>
-</section>
-<section id="id2">
-<h3>改进<a class="headerlink" href="#id2" title="链接到此标题。"></a></h3>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">/api/files/upload-structures</span></code> 的 <code class="docutils literal notranslate"><span class="pre">nx</span></code>、<code class="docutils literal notranslate"><span class="pre">ny</span></code>、<code class="docutils literal notranslate"><span class="pre">nz</span></code> 参数改为必填，不再使用默认值 48</p></li>
-<li><p>上传文件名增加时间戳，避免同名文件覆盖导致数据混淆</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">gridDimensions</span></code> 正确反映数据库中存储的 nx/ny/nz，不同结构可返回不同网格尺寸</p></li>
-</ul>
-</section>
-<section id="id3">
-<h3>新增功能<a class="headerlink" href="#id3" title="链接到此标题。"></a></h3>
-<ul class="simple">
-<li><p>密码重置功能（<code class="docutils literal notranslate"><span class="pre">/api/auth/send-reset-code</span></code>、<code class="docutils literal notranslate"><span class="pre">/api/auth/reset-password</span></code>）</p></li>
-<li><p>用户文件管理端点（<code class="docutils literal notranslate"><span class="pre">/api/user/files</span></code>）</p></li>
-<li><p>用户预测历史端点（<code class="docutils literal notranslate"><span class="pre">/api/user/predictions</span></code>）</p></li>
-</ul>
-</section>
-</section>
-<section id="v2-1-0-2026-03-10">
-<h2>v2.1.0 (2026-03-10)<a class="headerlink" href="#v2-1-0-2026-03-10" title="链接到此标题。"></a></h2>
-<ul class="simple">
-<li><p>多格式文件上传功能，支持 15 种结构文件格式</p></li>
-<li><p>自动格式识别和转换</p></li>
-<li><p>压缩包自动解压</p></li>
-<li><p>新增 <code class="docutils literal notranslate"><span class="pre">/api/files/upload-structures</span></code> 和 <code class="docutils literal notranslate"><span class="pre">/api/files/supported-formats</span></code> 端点</p></li>
-</ul>
-</section>
-<section id="v2-0-0-2026-03-07">
-<h2>v2.0.0 (2026-03-07)<a class="headerlink" href="#v2-0-0-2026-03-07" title="链接到此标题。"></a></h2>
-<ul class="simple">
-<li><p>批量电荷密度预测</p></li>
-<li><p>多 GPU 并行调度</p></li>
-<li><p>JWT 认证系统</p></li>
-<li><p>RESTful API</p></li>
-<li><p>WebSocket 实时更新</p></li>
-</ul>
-</section>
+<p>当前为第一版，暂无更新记录。</p>
 </section>
 
 

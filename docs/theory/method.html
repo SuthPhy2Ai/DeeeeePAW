@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DeePAW 方法 &mdash; DeePAW Portable 2.2.0 文档</title>
+  <title>DeePAW 方法 &mdash; DeePAW 2.2.0 文档</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
@@ -34,7 +34,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            DeePAW Portable
+            DeePAW
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -68,14 +68,15 @@
 </ul>
 </li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">第二部分：C++ 软件使用说明</span></p>
+<p class="caption" role="heading"><span class="caption-text">第二部分：本地 CLI 部署</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../cpp/placeholder.html">C++ 软件使用说明</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../cpp/placeholder.html#id1">使用流程</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../cpp/placeholder.html#id2">步骤 1: 启动 C++ 推理引擎</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../cpp/placeholder.html#id3">步骤 2: 执行预测任务</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/deployment.html">本地 CLI 部署</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id1">环境要求</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id2">快速开始</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id3">重要说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id4">容器结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id5">手动运行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id6">故障排除</a></li>
 </ul>
 </li>
 </ul>
@@ -93,15 +94,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../platform/overview.html#id7">客户端</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../platform/deployment.html">本地 CLI 部署</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id1">环境要求</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id2">快速开始</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id3">重要说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id4">容器结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id5">手动运行</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/deployment.html#id6">故障排除</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../platform/web_frontend.html">Web 前端应用</a><ul>
@@ -171,17 +163,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../platform/faq.html#id5">两种上传方式有什么区别？</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../platform/changelog.html">更新日志</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../platform/changelog.html#v2-2-0-2026-03-19">v2.2.0 (2026-03-19)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../platform/changelog.html#bug">Bug 修复</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/changelog.html#id2">改进</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../platform/changelog.html#id3">新增功能</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/changelog.html#v2-1-0-2026-03-10">v2.1.0 (2026-03-10)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../platform/changelog.html#v2-0-0-2026-03-07">v2.0.0 (2026-03-07)</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../platform/changelog.html">更新日志</a></li>
 </ul>
 
         </div>
@@ -190,7 +172,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">DeePAW Portable</a>
+          <a href="../index.html">DeePAW</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -228,7 +210,7 @@
 <p><strong>输出头</strong></p>
 <p>输出头包含三个模块:</p>
 <ul class="simple">
-<li><p><strong>GAT 头</strong>: 基于图注意力网络 (Graph Attention Network)，从原子 MPNN 所有层的节点嵌入中提取形成能</p></li>
+<li><p><strong>GAT 头</strong>: 基于图注意力网络 (Graph Attention Network)，从原子 MPNN 所有层的节点嵌入中提取形成能或任何原子级的输出任务</p></li>
 <li><p><strong>MLP 头</strong>: 从 ED MPNN 所有层的节点嵌入中生成平滑变化的电子密度轮廓</p></li>
 <li><p><strong>KAN 头</strong>: 基于 Kolmogorov-Arnold 网络，从 ED MPNN 最后一层的节点嵌入中计算残差电子密度</p></li>
 </ul>
@@ -252,7 +234,7 @@
 <p>DeePAW 的训练分为两个阶段，使用 L1 损失函数:</p>
 <ul class="simple">
 <li><p><strong>第一阶段</strong>: 联合训练 MLP 头和 GAT 头，同时优化电子密度和形成能</p></li>
-<li><p><strong>第二阶段</strong>: 冻结已训练的参数，单独训练 KAN 头以捕获残差电子密度的精细结构</p></li>
+<li><p><strong>第二阶段</strong>: MLP 头使用极小的学习率，KAN 头使用较大的学习率，进行 PAW 的自适应实现，捕获残差电子密度的精细结构</p></li>
 </ul>
 <p>训练数据来自 Materials Project (MP) 数据库，采用九折交叉验证。电子密度标签由 KSDFT 轨道波函数计算得到。</p>
 </section>

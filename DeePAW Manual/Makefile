@@ -1,4 +1,4 @@
-SPHINXBUILD   = /data/home/hzw111111/miniforge3/envs/maceedl/bin/sphinx-build
+SPHINXBUILD   = /home/sutianhao/miniforge3/bin/sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
 

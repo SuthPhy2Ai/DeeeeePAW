@@ -1,7 +1,7 @@
 # DeePAW
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://suthphy2ai.github.io/DeeeeePAW/)
+[![Docs](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://suthphy2ai.github.io/DeeeeePAW)
 [![Zenodo](https://img.shields.io/badge/model%20weights-Zenodo-blue)](https://zenodo.org/records/18311602)
 [![Platform](https://img.shields.io/badge/platform-Linux%20x86__64-lightgrey)]()
 [![Python](https://img.shields.io/badge/python-3.12-blue)]()
@@ -123,7 +123,7 @@ print(density.shape, atoms.get_chemical_formula())
 
 Full documentation — API reference, input format guide, web frontend guide, and troubleshooting — is available at:
 
-**[https://suthphy2ai.github.io/DeeeeePAW/](https://suthphy2ai.github.io/DeeeeePAW/)**
+**[https://suthphy2ai.github.io/DeeeeePAW](https://suthphy2ai.github.io/DeeeeePAW)**
 
 ---
 

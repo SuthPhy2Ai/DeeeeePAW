@@ -46,6 +46,12 @@ DeePAW predicts three-dimensional electron charge density directly from atomic s
 </tr>
 </table>
 
+<p align="center">
+  <img src="assets/gifs/deepaw-web-demo.gif" width="100%" alt="DeePAW web interface demo"/>
+</p>
+
+<p align="center"><em>Short demo of the DeePAW web workflow and interactive visualization</em></p>
+
 ### Option 2 — Local CLI (Podman/Docker)
 
 ```bash

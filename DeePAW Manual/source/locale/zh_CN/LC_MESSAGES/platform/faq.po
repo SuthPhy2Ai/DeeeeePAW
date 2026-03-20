@@ -74,7 +74,7 @@ msgstr "如何可视化 CHGCAR 文件？"
 
 #: ../../platform/faq.rst:34
 msgid "**VESTA** (free): open the CHGCAR file directly"
-msgstr "**VESTA**（免费）：直接打开 CHGCAR 文件"
+msgstr "VESTA（免费）：可直接打开 CHGCAR 文件"
 
 #: ../../platform/faq.rst:35
 msgid "**Ovito**: supports isosurface rendering"

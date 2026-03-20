@@ -51,7 +51,7 @@ msgstr "登录并获取令牌"
 msgid ""
 "``data.access_token`` in the response is the JWT token required for "
 "subsequent requests."
-msgstr "响应中的“data.access_token”是后续请求所需的 JWT 令牌。"
+msgstr "响应中的 ``data.access_token`` 是后续请求所需的 JWT 令牌。"
 
 #: ../../platform/usage.rst:43
 msgid "Complete Workflow"
@@ -81,7 +81,7 @@ msgid ""
 "dimensional grid dimensions for charge density prediction. Grid size "
 "directly affects prediction accuracy and computation time; choose "
 "appropriate values based on the actual structure."
-msgstr “``nx``、``ny``、``nz`` 为必需参数，用于指定电荷密度预测的三维网格维度。网格大小直接影响预测精度与计算时间，请根据实际结构选择合适的值。”
+msgstr "``nx``、``ny``、``nz`` 为必需参数，用于指定电荷密度预测的三维网格维度。网格大小直接影响预测精度与计算时间，请根据实际结构选择合适的值。"
 
 #: ../../platform/usage.rst:66
 msgid "Grid Size Reference:"
@@ -161,7 +161,7 @@ msgstr "批次状态值："
 
 #: ../../platform/usage.rst:107
 msgid "``processing``: Job in progress"
-msgstr “``processing``：任务进行中”
+msgstr "``processing``：任务进行中"
 
 #: ../../platform/usage.rst:108
 msgid "``completed``: All tasks finished"
@@ -187,7 +187,7 @@ msgstr "**以 JSON 格式获取结果：**"
 msgid ""
 "The JSON response contains ``gridDimensions`` (grid dimensions) and "
 "``densityArray`` (flattened 3D density array)."
-msgstr “JSON 响应包含 ``gridDimensions``（网格维度）和 ``densityArray``（展平的三维密度数组）。”
+msgstr "JSON 响应包含两个字段：gridDimensions（网格维度）和 densityArray（展平后的三维密度数组）。"
 
 #: ../../platform/usage.rst:132
 msgid "Python Client"

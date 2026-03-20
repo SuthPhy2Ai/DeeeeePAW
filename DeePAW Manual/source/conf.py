@@ -19,6 +19,8 @@ gettext_compact = False   # Keep separate .pot files for each document
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+html_css_files = ['language-switcher.css']
+html_js_files = ['language-switcher.js']
 html_theme_options = {
     'navigation_depth': 3,
     'collapse_navigation': False,

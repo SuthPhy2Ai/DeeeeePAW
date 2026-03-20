@@ -36,7 +36,7 @@ msgstr "访问地址：**https://deepaw.tech**"
 msgid ""
 "The locally deployed version is accessible via ``http://localhost:3000`` "
 "(local) or remotely through an SSH tunnel."
-msgstr "本地部署版本可通过 ``http://localhost:3000``（本地）或 SSH 隧道远程访问。"
+msgstr "本地部署版本在本机可通过 ``http://localhost:3000`` 访问，也可通过 SSH 隧道远程访问。"
 
 #: ../../platform/web_frontend.rst:11
 msgid "Login and Registration"

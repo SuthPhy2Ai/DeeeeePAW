@@ -153,7 +153,7 @@ msgstr "解决方案"
 
 #: ../../platform/deployment.rst:127
 msgid "\"Models not initialized\""
-msgstr "“模型未初始化”"
+msgstr "\"模型未初始化\""
 
 #: ../../platform/deployment.rst:128
 msgid "Using ``--device cpu``"
@@ -165,7 +165,7 @@ msgstr "改用 ``--device cuda``"
 
 #: ../../platform/deployment.rst:130
 msgid "\"failed to stat CDI host device\""
-msgstr "“无法统计 CDI 主机设备”"
+msgstr "\"无法统计 CDI 主机设备\""
 
 #: ../../platform/deployment.rst:131
 msgid "CDI mode unavailable"
@@ -173,7 +173,7 @@ msgstr "CDI 模式不可用"
 
 #: ../../platform/deployment.rst:132
 msgid "Use ``start.sh`` (handled manually)"
-msgstr "使用 ``start.sh``（已手动处理挂载）"
+msgstr "请使用 ``start.sh``，脚本会手动处理挂载。"
 
 #: ../../platform/deployment.rst:133
 msgid "``ModuleNotFoundError: deepaw_cpp``"
@@ -185,7 +185,7 @@ msgstr "缺少环境变量"
 
 #: ../../platform/deployment.rst:135 ../../platform/deployment.rst:138
 msgid "Use ``start.sh`` (sets automatically)"
-msgstr "使用 ``start.sh``（自动设置）"
+msgstr "请使用 ``start.sh``，脚本会自动完成设置。"
 
 #: ../../platform/deployment.rst:136
 msgid "``libtorch.so: cannot open``"
@@ -205,7 +205,7 @@ msgstr "NVIDIA 库未挂载"
 
 #: ../../platform/deployment.rst:141
 msgid "Use ``start.sh`` (mounts automatically)"
-msgstr "使用 ``start.sh``（自动挂载）"
+msgstr "请使用 ``start.sh``，脚本会自动完成挂载。"
 
 #: ../../platform/deployment.rst:142
 msgid "``.so`` file not found"

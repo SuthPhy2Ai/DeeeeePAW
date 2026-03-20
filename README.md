@@ -12,7 +12,7 @@
   <img src="assets/gifs/deepaw-web-demo.gif" width="72%" alt="DeePAW web interface demo"/>
 </p>
 
-DeePAW predicts three-dimensional electron charge density directly from atomic structure using E(3)-equivariant dual-graph message passing. It is trained on PAW (Projector Augmented-Wave, plane-wave augmented-wave) charge density data from Materials Project bulk crystals, and generalizes zero-shot to 2D materials, 1D nanotubes, and defect structures. Output is a VASP-compatible CHGCAR file, ready for post-processing with VESTA, Ovito, Device Studio, or standard DFT toolchains.
+DeePAW predicts three-dimensional electron charge density directly from atomic structure using E(3)-equivariant dual-graph message passing. It is trained on PAW (Projector Augmented-Wave, plane-wave augmented-wave) charge density data from Materials Project bulk crystals, and generalizes zero-shot to 2D materials, 1D nanotubes, and defect structures.
 
 ---
 

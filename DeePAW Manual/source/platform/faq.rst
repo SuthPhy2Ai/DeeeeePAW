@@ -33,6 +33,7 @@ How to visualize CHGCAR files?
 
 - **VESTA** (free): open the CHGCAR file directly
 - **Ovito**: supports isosurface rendering
+- **Device Studio**: integrated materials modeling platform with CHGCAR visualization support
 - **Web Frontend**: built-in Plotly 3D isosurface visualization
 - **Python**: plot manually using ASE + Plotly
 

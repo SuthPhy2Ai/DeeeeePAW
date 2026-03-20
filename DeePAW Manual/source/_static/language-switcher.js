@@ -9,7 +9,7 @@
       label = 'English';
     } else if (path.indexOf('/en/') !== -1) {
       targetHref = path.replace('/en/', '/zh_CN/');
-      label = '中文';
+      label = 'Chinese';
     } else {
       return;
     }

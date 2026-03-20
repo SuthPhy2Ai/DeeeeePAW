@@ -137,11 +137,11 @@ jobs:
           <body>
               <div class="container">
                   <h1>DeePAW Documentation</h1>
-                  <p class="subtitle">Choose your language / 选择语言</p>
+                  <p class="subtitle">Choose your language</p>
                   <p class="note">Select a documentation language below. You can also switch languages later from the documentation navigation bar.</p>
                   <div class="languages">
                       <a href="en/index.html">English</a>
-                      <a href="zh_CN/index.html" class="chinese">中文</a>
+                      <a href="zh_CN/index.html" class="chinese">Chinese</a>
                   </div>
               </div>
           </body>

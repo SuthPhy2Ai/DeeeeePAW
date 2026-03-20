@@ -1,21 +1,21 @@
-# 容器镜像 tar 包（太大，不适合 Git）
+# Container image tarballs (too large for Git)
 *.tar
 *.tar.gz
 
-# archive 目录（旧文件，不需要版本控制）
+# Archive directory (legacy files, not tracked)
 archive/
 
-# 推理输出文件
+# Inference output files
 output/
 
-# Python 缓存
+# Python cache
 __pycache__/
 *.pyc
 
-# Claude Code 配置
+# Claude Code configuration
 .claude/
 
-# Sphinx 文档构建产物
+# Sphinx build artifacts
 DeePAW Manual/build/
 DeePAW Manual/_build/
 DeePAW Manual/source/_build/

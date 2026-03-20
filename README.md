@@ -8,6 +8,12 @@
 
 > Neural network prediction of 3D electron charge density from crystal structures.
 
+<p align="center">
+  <img src="assets/gifs/deepaw-web-demo.gif" width="72%" alt="DeePAW web interface demo"/>
+</p>
+
+<p align="center"><em>Short demo of the DeePAW web workflow and interactive visualization</em></p>
+
 DeePAW predicts three-dimensional electron charge density directly from atomic structure using E(3)-equivariant dual-graph message passing. It is trained on PAW (Projector Augmented-Wave, plane-wave augmented-wave) charge density data from Materials Project bulk crystals, and generalizes zero-shot to 2D materials, 1D nanotubes, and defect structures. Output is a VASP-compatible CHGCAR file, ready for post-processing with VESTA, Ovito, Device Studio, or standard DFT toolchains.
 
 ---
@@ -45,12 +51,6 @@ DeePAW predicts three-dimensional electron charge density directly from atomic s
 </td>
 </tr>
 </table>
-
-<p align="center">
-  <img src="assets/gifs/deepaw-web-demo.gif" width="100%" alt="DeePAW web interface demo"/>
-</p>
-
-<p align="center"><em>Short demo of the DeePAW web workflow and interactive visualization</em></p>
 
 ### Option 2 — Local CLI (Podman/Docker)
 

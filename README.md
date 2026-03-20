@@ -6,9 +6,9 @@
 [![Platform](https://img.shields.io/badge/platform-Linux%20x86__64-lightgrey)]()
 [![Python](https://img.shields.io/badge/python-3.12-blue)]()
 
-> Neural network prediction of 3D electron charge density from crystal structures — VASP-compatible CHGCAR output, no SCF loop required.
+> Neural network prediction of 3D electron charge density from crystal structures.
 
-DeePAW predicts three-dimensional electron charge density directly from atomic structure using E(3)-equivariant dual-graph message passing. Trained on Materials Project bulk crystals, it generalizes zero-shot to 2D materials, 1D nanotubes, and defect structures. Output is a VASP-compatible CHGCAR file, ready for post-processing with VESTA, Ovito, or standard DFT toolchains.
+DeePAW predicts three-dimensional electron charge density directly from atomic structure using E(3)-equivariant dual-graph message passing. It is trained on PAW (Projector Augmented-Wave, plane-wave augmented-wave) charge density data from Materials Project bulk crystals, and generalizes zero-shot to 2D materials, 1D nanotubes, and defect structures. Output is a VASP-compatible CHGCAR file, ready for post-processing with VESTA, Ovito, Device Studio, or standard DFT toolchains.
 
 ---
 
